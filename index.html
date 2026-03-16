@@ -292,14 +292,16 @@
       text-decoration: none; transition: color 0.2s;
     }
     .nav__links a:hover { color: var(--text); }
+    .nav__links a.nav__cta,
     .nav__cta {
       display: inline-flex; align-items: center;
-      background: var(--dark); color: #fff;
+      background: var(--dark); color: #fff !important;
       padding: 0.6rem 1.5rem; border-radius: 999px;
-      font-size: 0.875rem; font-weight: 600; text-decoration: none;
-      transition: background 0.2s; min-height: 44px;
+      font-size: 0.875rem; font-weight: 700; text-decoration: none;
+      transition: background 0.2s, transform 0.2s; min-height: 44px;
     }
-    .nav__cta:hover { background: #000; }
+    .nav__links a.nav__cta:hover,
+    .nav__cta:hover { background: #000; color: #fff !important; transform: translateY(-1px); }
     .nav__lang {
       display: flex; align-items: center; gap: 0.35rem;
       font-size: 0.875rem; font-weight: 500; color: var(--text-secondary);
@@ -344,6 +346,16 @@
     .hero__desc {
       font-size: 1.1rem; color: var(--text-secondary);
       max-width: 620px; margin: 0 auto 2.5rem; line-height: 1.7;
+    }
+    .hero__vsl {
+      width: 100%; max-width: 640px; margin: 0 auto 2.5rem;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+      aspect-ratio: 16 / 9;
+    }
+    .hero__vsl video {
+      width: 100%; height: 100%; display: block; object-fit: cover;
+      background: #000;
     }
     .hero__cta {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -732,38 +744,135 @@
     }
     .blog-card__link:hover { color: var(--green); }
     .blog-card__link svg { width: 16px; height: 16px; }
+    .blog-card { cursor: pointer; }
+
+    /* Blog Modal */
+    .blog-modal-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; transition: all 0.3s ease;
+      padding: 2rem;
+    }
+    .blog-modal-overlay.active { opacity: 1; visibility: visible; }
+    .blog-modal {
+      background: #fff; border-radius: 16px; max-width: 720px; width: 100%;
+      max-height: 85vh; overflow-y: auto; position: relative;
+      transform: translateY(20px) scale(0.97); transition: transform 0.3s ease;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+    }
+    .blog-modal-overlay.active .blog-modal { transform: translateY(0) scale(1); }
+    .blog-modal__header {
+      position: sticky; top: 0; background: #fff; z-index: 1;
+      padding: 1.5rem 2rem 1rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
+    }
+    .blog-modal__badge {
+      display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--green); background: var(--green-light);
+      padding: 0.3rem 0.75rem; border-radius: 999px; margin-bottom: 0.5rem;
+    }
+    .blog-modal__title { font-size: 1.35rem; font-weight: 800; color: var(--text); line-height: 1.3; }
+    .blog-modal__close {
+      width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border);
+      background: var(--bg-soft); display: flex; align-items: center; justify-content: center;
+      cursor: pointer; flex-shrink: 0; transition: all 0.2s;
+    }
+    .blog-modal__close:hover { background: var(--border); }
+    .blog-modal__close svg { width: 18px; height: 18px; color: var(--text-secondary); }
+    .blog-modal__body {
+      padding: 1.75rem 2rem 2.5rem; color: var(--text); font-size: 0.95rem; line-height: 1.8;
+    }
+    .blog-modal__body h2 {
+      font-size: 1.15rem; font-weight: 800; color: var(--dark); margin: 2rem 0 0.75rem; padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .blog-modal__body h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+    .blog-modal__body p { margin-bottom: 1rem; color: var(--text-secondary); }
+    .blog-modal__body strong { color: var(--text); }
+    .blog-modal__body ul { margin: 0.5rem 0 1.25rem 1.25rem; color: var(--text-secondary); }
+    .blog-modal__body li { margin-bottom: 0.4rem; }
+    .blog-modal__body .blog-modal__callout {
+      background: var(--bg-soft); border-left: 3px solid var(--green); border-radius: 8px;
+      padding: 1rem 1.25rem; margin: 1.25rem 0; font-size: 0.9rem;
+    }
+    .blog-modal__cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--green); color: #fff; font-weight: 700; font-size: 0.95rem;
+      padding: 0.85rem 1.75rem; border-radius: 12px; text-decoration: none;
+      margin-top: 0.5rem; transition: all 0.2s;
+    }
+    .blog-modal__cta:hover { background: #43a047; transform: translateY(-1px); }
+    .blog-modal__cta svg { width: 16px; height: 16px; }
 
     /* ===== CONTACT (dark) ===== */
     .contact-section {
       background: var(--dark); color: #fff;
-      padding: clamp(4rem, 8vh, 6rem) clamp(1.5rem, 5vw, 6rem);
+      padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 5vw, 6rem);
+      position: relative; overflow: hidden;
+    }
+    .contact-section::before {
+      content: ''; position: absolute; top: -120px; left: -120px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(76,175,80,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
     .contact-grid {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem;
+      max-width: 640px; margin: 0 auto; text-align: center;
     }
+    .contact__label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 1rem;
+    }
+    .contact__label svg { width: 14px; height: 14px; }
     .contact__heading {
-      font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem;
+      font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 800; margin-bottom: 0.75rem;
+      line-height: 1.15;
     }
-    .contact__text { font-size: 0.95rem; color: #94a3b8; line-height: 1.7; margin-bottom: 2rem; }
+    .contact__heading span { color: var(--green); }
+    .contact__text { font-size: 0.95rem; color: #94a3b8; line-height: 1.7; margin-bottom: 2.25rem; }
+    .contact__divider {
+      width: 48px; height: 2px; background: rgba(255,255,255,0.1); margin-bottom: 2rem;
+    }
     .contact__item {
-      display: flex; align-items: center; gap: 0.75rem;
-      margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.85rem;
+      margin-bottom: 1.25rem; padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px; transition: all 0.25s ease;
+    }
+    .contact__item:hover {
+      background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12);
+      transform: translateX(4px);
     }
     .contact__item-icon {
-      width: 36px; height: 36px; border-radius: 8px;
-      background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(76,175,80,0.12); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
-    .contact__item-icon svg { width: 18px; height: 18px; color: #94a3b8; }
+    .contact__item-icon svg { width: 18px; height: 18px; color: var(--green); }
     .contact__item-text { font-size: 0.95rem; color: #e2e8f0; }
-    .contact__item-text a { color: #e2e8f0; text-decoration: none; }
+    .contact__item-text a { color: #e2e8f0; text-decoration: none; transition: color 0.2s; }
     .contact__item-text a:hover { color: #fff; }
-    .contact__cal-placeholder {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center;
-      color: #94a3b8; font-size: 0.9rem;
+    .contact__item-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; margin-bottom: 0.15rem; }
+    .contact__book-btn {
+      display: inline-flex; align-items: center; gap: 0.65rem;
+      background: var(--green); color: #fff; font-size: 1.05rem; font-weight: 700;
+      padding: 1rem 2rem; border-radius: 14px; text-decoration: none;
+      transition: all 0.3s ease; margin-bottom: 2.25rem;
+      box-shadow: 0 4px 24px rgba(76,175,80,0.3);
     }
-
+    .contact__book-btn:hover {
+      background: #43a047; transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(76,175,80,0.4);
+    }
+    .contact__book-btn svg { width: 20px; height: 20px; }
+    .contact__book-arrow { transition: transform 0.3s ease; }
+    .contact__book-btn:hover .contact__book-arrow { transform: translateX(4px); }
+    .contact__info-row {
+      display: flex; gap: 1rem; justify-content: center;
+    }
+    .contact__info-row .contact__item { flex: 1; max-width: 280px; }
     /* ===== FOOTER ===== */
     .footer {
       background: var(--dark); border-top: 1px solid rgba(255,255,255,0.08);
@@ -814,7 +923,8 @@
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .footer__inner { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
+      .contact__info-row { flex-direction: column; align-items: center; }
+      .contact__info-row .contact__item { max-width: 100%; }
       .tx-card { grid-template-columns: 200px 1fr; }
       .blog-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -873,7 +983,7 @@
         EN
       </span>
     </li>
-    <li><a href="#contact" class="nav__cta">Book a Call</a></li>
+    <li><a href="#" class="nav__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>Book a Call</a></li>
   </ul>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -891,11 +1001,16 @@
     </div>
     <h1 class="hero__title reveal reveal-d1">Scale Your Real Estate Empire</h1>
     <p class="hero__desc reveal reveal-d2">Expert multifamily mortgage broker helping investors unlock better financing, lower downpayments, and higher ROI with Canada Mortgage and Housing Corporation (CMHC) advantages.</p>
-    <a href="#contact" class="hero__cta reveal reveal-d3">
+    <div class="hero__vsl reveal reveal-d3">
+      <video controls playsinline preload="metadata">
+        <source src="VSL/English VSL.mp4" type="video/mp4">
+      </video>
+    </div>
+    <a href="#" class="hero__cta reveal reveal-d4" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
       Book Your Strategy Call
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
-    <div class="hero__stats reveal reveal-d4">
+    <div class="hero__stats reveal reveal-d5">
       <div>
         <div class="hero__stat-value">7+</div>
         <div class="hero__stat-label">Years Expertise</div>
@@ -1129,7 +1244,7 @@
   <div class="cta-band__inner reveal">
     <h2 class="cta-band__title">Ready to Improve Your Deal Terms?</h2>
     <p class="cta-band__text">See how strategic financing can transform your multifamily investment returns.</p>
-    <a href="#contact" class="btn-dark">Schedule Your Consultation</a>
+    <a href="#" class="btn-dark" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>Schedule Your Consultation</a>
   </div>
 </section>
 
@@ -1434,28 +1549,28 @@
       <p class="section__subtitle">Educational content to help you make smarter multifamily investment decisions.</p>
     </div>
     <div class="blog-grid">
-      <article class="blog-card reveal">
+      <article class="blog-card reveal" data-blog="cmhc-guide">
         <div class="blog-card__body">
           <span class="blog-card__badge">CMHC Guide</span>
           <h3 class="blog-card__title">CMHC Multifamily Financing: The Complete Guide for Quebec Investors</h3>
           <p class="blog-card__excerpt">Everything you need to know about CMHC-insured financing for 5+ unit properties — eligibility, down payments, amortization, and how to maximize leverage.</p>
-          <a href="#" class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </article>
-      <article class="blog-card reveal reveal-d1">
+      <article class="blog-card reveal reveal-d1" data-blog="proforma">
         <div class="blog-card__body">
           <span class="blog-card__badge">Deal Analysis</span>
           <h3 class="blog-card__title">How to Build a Proforma for Your First Multifamily Property</h3>
           <p class="blog-card__excerpt">Step-by-step breakdown of how to create a proforma that lenders respect — including NOI calculation, DSCR targets, and expense assumptions.</p>
-          <a href="#" class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </article>
-      <article class="blog-card reveal reveal-d2">
+      <article class="blog-card reveal reveal-d2" data-blog="5-percent-down">
         <div class="blog-card__body">
           <span class="blog-card__badge">Strategy</span>
           <h3 class="blog-card__title">5% Down on a 5-Plex: How CMHC Makes It Possible</h3>
           <p class="blog-card__excerpt">How strategic use of CMHC insurance lets investors acquire multifamily properties with minimal capital — and why this changes the math on portfolio scaling.</p>
-          <a href="#" class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </article>
     </div>
@@ -1466,22 +1581,17 @@
 <section class="contact-section" id="contact">
   <div class="contact-grid">
     <div class="reveal">
-      <h2 class="contact__heading">Let's Talk Multifamily</h2>
+      <div class="contact__label">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Book a Call
+      </div>
+      <h2 class="contact__heading">Let's Talk<br><span>Multifamily</span></h2>
       <p class="contact__text">Ready to discuss your next deal? Book a strategy call to learn how CMHC advantages and specialized lending can improve your returns.</p>
-      <div class="contact__item">
-        <div class="contact__item-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-        <div class="contact__item-text"><a href="mailto:multifamilymortgage@outlook.com">multifamilymortgage@outlook.com</a></div>
-      </div>
-      <div class="contact__item">
-        <div class="contact__item-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
-        <div class="contact__item-text"><a href="tel:4389908124">438-990-8124</a></div>
-      </div>
-    </div>
-    <div class="reveal reveal-d2">
-      <div class="contact__cal-placeholder">
-        <p style="font-size:1.1rem; font-weight:600; color:#e2e8f0; margin-bottom:0.5rem;">Quick Scheduler</p>
-        <p>Cal.com scheduling widget loads here</p>
-      </div>
+      <a href="#" class="contact__book-btn" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Schedule Your 30-Min Call
+        <svg class="contact__book-arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -1529,6 +1639,219 @@
   </div>
 </footer>
 
+<!-- Blog Article Modals -->
+<div class="blog-modal-overlay" id="modal-cmhc-guide">
+  <div class="blog-modal">
+    <div class="blog-modal__header">
+      <div>
+        <span class="blog-modal__badge">CMHC Guide</span>
+        <h2 class="blog-modal__title">CMHC Multifamily Financing: The Complete Guide for Quebec Investors</h2>
+      </div>
+      <button type="button" class="blog-modal__close" aria-label="Close">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="blog-modal__body">
+      <h2>What Is CMHC Multifamily Insurance?</h2>
+      <p>Canada Mortgage and Housing Corporation (CMHC) offers mortgage loan insurance for rental properties with <strong>5 or more units</strong>. This insurance protects lenders against borrower default, which allows them to offer significantly better terms than conventional financing.</p>
+      <p>For Quebec investors, CMHC-insured financing is one of the most powerful tools available. It reduces your required down payment, extends your amortization period, and typically offers lower interest rates than conventional mortgages.</p>
+
+      <h2>Eligibility Requirements</h2>
+      <p>To qualify for CMHC multifamily insurance, your property must meet several criteria:</p>
+      <ul>
+        <li><strong>Minimum 5 residential rental units</strong> — this is the threshold that separates multifamily from residential</li>
+        <li><strong>Property must be in Canada</strong> and meet CMHC's physical condition standards</li>
+        <li><strong>Minimum Debt Service Coverage Ratio (DSCR) of 1.1x</strong> — meaning the property's net operating income must cover at least 110% of the mortgage payments</li>
+        <li><strong>Environmental assessment</strong> may be required depending on the property</li>
+        <li><strong>Property appraisal</strong> from a CMHC-approved appraiser</li>
+      </ul>
+      <p>In Quebec specifically, properties must comply with the Régie du logement regulations, and rental income projections must reflect Quebec market rents.</p>
+
+      <h2>Down Payment: As Low as 5%</h2>
+      <p>This is the headline benefit. With CMHC insurance, you can acquire a multifamily property with <strong>as little as 5% down</strong>. Compare that to conventional financing, which typically requires 20-25% down for the same property.</p>
+      <p>On a $1,000,000 six-plex, that is the difference between putting down $50,000 and $200,000. That freed-up capital can go toward your next acquisition or property improvements.</p>
+
+      <h2>Amortization: Up to 50 Years</h2>
+      <p>Through the <strong>CMHC MLI Select</strong> program, qualifying properties can access amortization periods of up to 50 years. Standard CMHC-insured multifamily loans typically offer up to 40 years, and MLI Select extends this further for properties that meet specific social, accessibility, or climate compatibility criteria.</p>
+      <p>Longer amortization means lower monthly payments, which improves your cash flow from day one. A 50-year amortization versus a 25-year amortization can reduce your monthly payment by roughly 30%.</p>
+      <div class="blog-modal__callout">
+        <strong>MLI Select Scoring:</strong> Properties earn points for affordability (rents below median market rent), accessibility (barrier-free units), and energy efficiency (GHG reductions). Higher scores unlock longer amortization and lower insurance premiums.
+      </div>
+
+      <h2>Insurance Premiums</h2>
+      <p>CMHC charges an insurance premium based on the loan-to-value ratio and the amortization period. Premiums typically range from <strong>1.00% to 6.25%</strong> of the loan amount. This premium can be added to the mortgage, so you do not need to pay it upfront out of pocket.</p>
+      <p>While the premium adds to your total cost, the math usually works in your favour: the lower interest rate you receive with CMHC insurance often more than offsets the premium cost over the life of the loan.</p>
+
+      <h2>Interest Rates</h2>
+      <p>Because CMHC insurance eliminates lender risk, insured multifamily mortgages typically carry interest rates that are <strong>50 to 150 basis points lower</strong> than conventional rates. On a million-dollar mortgage, that can save you $5,000 to $15,000 per year in interest.</p>
+
+      <h2>Quebec-Specific Considerations</h2>
+      <ul>
+        <li><strong>Régie du logement:</strong> Quebec's rental regulations affect how quickly you can increase rents, which impacts your proforma projections</li>
+        <li><strong>Municipal taxes:</strong> Property transfer taxes (welcome tax) in Quebec are calculated on a progressive scale and can be significant on multifamily transactions</li>
+        <li><strong>Language requirements:</strong> Documentation and tenant communications in Quebec must comply with language laws</li>
+        <li><strong>Energy efficiency:</strong> Quebec's climate programs can complement MLI Select scoring for better terms</li>
+      </ul>
+
+      <h2>When CMHC Makes Sense</h2>
+      <p>CMHC-insured financing is not always the right choice. It works best when you want to <strong>maximize leverage</strong>, preserve capital for multiple acquisitions, or when the property meets MLI Select criteria for extended amortization. If you are buying a property that needs significant renovation, conventional financing with a value-add strategy may be more appropriate.</p>
+      <p>The best approach is to run the numbers both ways — CMHC-insured versus conventional — and see which path delivers better returns for your specific situation.</p>
+
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Discuss Your CMHC Options
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="blog-modal-overlay" id="modal-proforma">
+  <div class="blog-modal">
+    <div class="blog-modal__header">
+      <div>
+        <span class="blog-modal__badge">Deal Analysis</span>
+        <h2 class="blog-modal__title">How to Build a Proforma for Your First Multifamily Property</h2>
+      </div>
+      <button type="button" class="blog-modal__close" aria-label="Close">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="blog-modal__body">
+      <h2>What Is a Proforma and Why Does It Matter?</h2>
+      <p>A proforma is a financial projection that estimates a property's income, expenses, and cash flow. It is the single most important document in your financing application. Lenders use it to determine whether your property can service the debt, and they will scrutinize every line.</p>
+      <p>A well-built proforma does not just help you get approved — it helps you make better investment decisions. If the numbers do not work on paper, they will not work in reality.</p>
+
+      <h2>Step 1: Calculate Gross Potential Revenue</h2>
+      <p>Start with the total rental income the property could generate if every unit were occupied at market rent for the full year.</p>
+      <ul>
+        <li><strong>List each unit</strong> with its current rent and the market rent for comparable units in the area</li>
+        <li><strong>Include other income</strong> such as parking, laundry, storage lockers, or any other revenue the property generates</li>
+        <li>In Quebec, be realistic about rent increases — the Tribunal administratif du logement publishes annual guidelines that limit how much you can raise rents on existing tenants</li>
+      </ul>
+
+      <h2>Step 2: Apply Vacancy and Bad Debt Allowance</h2>
+      <p>No property stays 100% occupied year-round. Lenders expect you to account for vacancy, typically <strong>3% to 5%</strong> of gross revenue for well-located Quebec multifamily properties. If the property is in a secondary market or has higher turnover, use 5% or more.</p>
+      <p>This gives you your <strong>Effective Gross Income (EGI)</strong> — the revenue you can realistically expect to collect.</p>
+
+      <h2>Step 3: Itemize Operating Expenses</h2>
+      <p>This is where most first-time investors make mistakes. Lenders will reject a proforma with unrealistic expense assumptions. Key expense categories include:</p>
+      <ul>
+        <li><strong>Municipal and school taxes:</strong> Verify the exact amounts from the municipal tax bill. In Quebec, these are publicly available through the role d'évaluation</li>
+        <li><strong>Insurance:</strong> Get an actual quote for the specific property. Multifamily insurance costs vary significantly based on building age, construction type, and location</li>
+        <li><strong>Heating and utilities:</strong> If the landlord pays heating (common in older Quebec buildings), this is a major expense line. Budget $800–$1,500 per unit annually depending on the building</li>
+        <li><strong>Maintenance and repairs:</strong> Budget 3–5% of gross revenue for ongoing maintenance. Older buildings need more</li>
+        <li><strong>Property management:</strong> Even if you self-manage, lenders typically want to see 3–5% of EGI allocated here. If you hire a manager, the actual cost is usually 4–7%</li>
+        <li><strong>Snow removal and landscaping:</strong> A Quebec-specific line item that is often overlooked. Budget $1,500–$4,000+ depending on property size</li>
+        <li><strong>Common area electricity:</strong> Hallway lighting, exterior lights, laundry room — typically $500–$1,500 per year</li>
+      </ul>
+
+      <h2>Step 4: Calculate Net Operating Income (NOI)</h2>
+      <p>NOI is the most important number in your proforma:</p>
+      <div class="blog-modal__callout">
+        <strong>NOI = Effective Gross Income – Total Operating Expenses</strong><br><br>
+        This number represents the property's income before debt service. It is what the lender uses to evaluate the deal, and it is the basis for the property's value in the income approach to appraisal.
+      </div>
+
+      <h2>Step 5: Calculate DSCR</h2>
+      <p>The <strong>Debt Service Coverage Ratio</strong> tells the lender whether the property generates enough income to cover the mortgage payments:</p>
+      <p><strong>DSCR = NOI ÷ Annual Debt Service (mortgage payments)</strong></p>
+      <p>CMHC requires a minimum DSCR of <strong>1.10x</strong>, meaning the property must produce at least 10% more income than the mortgage costs. Most lenders prefer to see 1.15x or higher for conventional deals. The higher your DSCR, the stronger your application.</p>
+
+      <h2>Step 6: Cap Rate Analysis</h2>
+      <p>The capitalization rate helps you evaluate whether the purchase price is reasonable:</p>
+      <p><strong>Cap Rate = NOI ÷ Purchase Price</strong></p>
+      <p>In Montreal, multifamily cap rates currently range from <strong>4% to 6%</strong> depending on location and building quality. South Shore and Laval properties may offer slightly higher cap rates. A lower cap rate means you are paying more per dollar of income.</p>
+
+      <h2>What Lenders Look For</h2>
+      <p>Lenders want to see conservative, defensible assumptions. They will compare your projected rents to market data, verify your expense ratios against industry benchmarks, and stress-test your numbers at higher interest rates. The most common reasons proformas get rejected:</p>
+      <ul>
+        <li>Rents above market without justification</li>
+        <li>Missing expense categories</li>
+        <li>Vacancy allowance below 3%</li>
+        <li>No management fee even if self-managing</li>
+      </ul>
+
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Get Help With Your Proforma
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="blog-modal-overlay" id="modal-5-percent-down">
+  <div class="blog-modal">
+    <div class="blog-modal__header">
+      <div>
+        <span class="blog-modal__badge">Strategy</span>
+        <h2 class="blog-modal__title">5% Down on a 5-Plex: How CMHC Makes It Possible</h2>
+      </div>
+      <button type="button" class="blog-modal__close" aria-label="Close">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="blog-modal__body">
+      <h2>The Conventional Problem</h2>
+      <p>If you want to buy a multifamily property with conventional financing, most lenders require a <strong>20% to 25% down payment</strong>. On a $1,000,000 five-plex, that means you need $200,000 to $250,000 in cash just for the down payment — before closing costs, inspections, and reserves.</p>
+      <p>For most investors, especially those building their first portfolio, that kind of capital requirement is a barrier. It slows down acquisition timelines and limits how many properties you can purchase.</p>
+
+      <h2>How CMHC Changes the Math</h2>
+      <p>CMHC mortgage loan insurance allows you to purchase a multifamily property (5+ units) with <strong>as little as 5% down</strong>. On that same $1,000,000 five-plex, your down payment drops to $50,000.</p>
+      <div class="blog-modal__callout">
+        <strong>The Numbers Side by Side:</strong><br><br>
+        <strong>Conventional (20% down):</strong> $200,000 down payment on a $1M property<br>
+        <strong>CMHC-insured (5% down):</strong> $50,000 down payment on the same $1M property<br><br>
+        That is $150,000 in freed-up capital — enough for a down payment on two or three additional properties.
+      </div>
+
+      <h2>The Insurance Premium Trade-Off</h2>
+      <p>CMHC insurance is not free. You pay a premium based on your loan-to-value ratio. At 95% LTV (5% down), the premium is at the higher end of the scale — typically around <strong>4.00% to 6.25%</strong> of the loan amount depending on the amortization period and MLI Select scoring.</p>
+      <p>On a $950,000 mortgage (95% of $1M), that could mean a premium of $38,000 to $59,000. The good news: this premium gets added to the mortgage, so you do not pay it out of pocket. You pay it down gradually over the life of the loan.</p>
+
+      <h2>Why the Premium Is Worth It</h2>
+      <p>Three factors usually make the premium worthwhile:</p>
+      <ul>
+        <li><strong>Lower interest rate:</strong> CMHC-insured mortgages typically carry rates 50–150 basis points below conventional. On a $950,000 mortgage, a 1% rate difference saves you roughly $9,500 per year</li>
+        <li><strong>Longer amortization:</strong> Access to 40–50 year amortization (versus 25–30 conventional) lowers your monthly payments significantly, improving cash flow</li>
+        <li><strong>Capital efficiency:</strong> The money you did not spend on a larger down payment can be deployed elsewhere for higher returns</li>
+      </ul>
+
+      <h2>The Portfolio Scaling Strategy</h2>
+      <p>This is where CMHC financing becomes a portfolio accelerator. Consider two investors, each starting with $200,000 in capital:</p>
+      <p><strong>Investor A (conventional):</strong> Buys one $1M property with 20% down. Entire capital is deployed in a single asset.</p>
+      <p><strong>Investor B (CMHC):</strong> Buys four $1M properties with 5% down ($50,000 each). Capital is spread across four assets generating four streams of rental income.</p>
+      <p>Investor B now controls $4,000,000 in real estate versus $1,000,000. If property values increase by 5%, Investor A gains $50,000 in equity. Investor B gains $200,000. The leverage effect is significant.</p>
+
+      <h2>The Risks to Understand</h2>
+      <p>Higher leverage is a double-edged sword. Important considerations:</p>
+      <ul>
+        <li><strong>Cash flow sensitivity:</strong> With 95% LTV, your mortgage payments are higher relative to income. Even small increases in vacancy or expenses can pressure your cash flow</li>
+        <li><strong>Interest rate risk:</strong> At renewal, higher rates hit harder on larger mortgages. Stress-test your proforma at rates 2% above current levels</li>
+        <li><strong>Property condition:</strong> CMHC has physical condition standards. Properties needing major repairs may not qualify</li>
+        <li><strong>DSCR requirements:</strong> The property must meet CMHC's minimum 1.1x DSCR, which means not every property qualifies at 5% down</li>
+      </ul>
+
+      <h2>Who Should Use This Strategy?</h2>
+      <p>The 5% down CMHC strategy works best for investors who:</p>
+      <ul>
+        <li>Want to scale their portfolio faster than conventional financing allows</li>
+        <li>Are targeting properties that already cash flow positively (not value-add plays)</li>
+        <li>Understand the risks of leverage and have reserves for unexpected expenses</li>
+        <li>Are buying in markets with stable rental demand — Montreal, Laval, South Shore, and Quebec City all qualify</li>
+      </ul>
+      <p>It is not the right strategy if you are buying a distressed property that needs heavy renovation, or if the property's current income does not meet DSCR requirements.</p>
+
+      <h2>Getting Started</h2>
+      <p>The first step is building a proforma to see if your target property qualifies for CMHC insurance. You need to know the NOI, the DSCR at current rates, and whether the property meets CMHC's physical and financial standards. A broker who specializes in multifamily financing can run these numbers with you and identify the best path forward.</p>
+
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Plan Your Acquisition Strategy
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
 <script>
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
@@ -1559,6 +1882,39 @@
     });
   });
 
+  // Blog modals
+  document.querySelectorAll('.blog-card[data-blog]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = card.getAttribute('data-blog');
+      const modal = document.getElementById('modal-' + id);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+  document.querySelectorAll('.blog-modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+    overlay.querySelector('.blog-modal__close').addEventListener('click', () => {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.blog-modal-overlay.active').forEach(m => {
+        m.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -1569,6 +1925,13 @@
       }
     });
   });
+</script>
+
+<!-- Cal.com popup embed -->
+<script>
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"hideEventTypeDetails":false,"layout":"modal"});
 </script>
 </body>
 </html>
