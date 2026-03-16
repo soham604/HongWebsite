@@ -302,11 +302,32 @@
     }
     .nav__links a.nav__cta:hover,
     .nav__cta:hover { background: #000; color: #fff !important; transform: translateY(-1px); }
+    .nav__lang-wrap { position: relative; }
     .nav__lang {
       display: flex; align-items: center; gap: 0.35rem;
       font-size: 0.875rem; font-weight: 500; color: var(--text-secondary);
+      background: none; border: none; cursor: pointer; font-family: inherit;
+      padding: 0.25rem 0.5rem; border-radius: 6px; transition: background 0.15s;
     }
+    .nav__lang:hover { background: rgba(0,0,0,0.05); }
     .nav__lang svg { width: 16px; height: 16px; }
+    .nav__lang-caret { transition: transform 0.2s; }
+    .nav__lang-wrap.open .nav__lang-caret { transform: rotate(180deg); }
+    .nav__lang-menu {
+      display: none; position: absolute; right: 0; top: calc(100% + 6px);
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      list-style: none; padding: 4px; min-width: 160px; z-index: 1001;
+    }
+    .nav__lang-wrap.open .nav__lang-menu { display: block; }
+    .nav__lang-opt {
+      display: block; width: 100%; text-align: left;
+      padding: 0.5rem 0.875rem; border: none; background: none; cursor: pointer;
+      font-family: inherit; font-size: 0.875rem; color: var(--text-secondary);
+      border-radius: 6px; transition: background 0.15s;
+    }
+    .nav__lang-opt:hover { background: var(--surface); color: var(--dark); }
+    .nav__lang-opt.active { font-weight: 700; color: var(--dark); }
     .nav__sep { width: 1px; height: 24px; background: var(--border); }
     .nav__toggle {
       display: none; background: none; border: none; cursor: pointer; padding: 4px;
@@ -423,36 +444,51 @@
 
     /* ===== AUDIENCE + CHALLENGES (2-col split) ===== */
     .split-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
     }
     .split-block__title {
       font-size: 1.75rem; font-weight: 800; color: var(--text);
       margin-bottom: 0.5rem; letter-spacing: -0.01em;
     }
     .split-block__sub {
-      font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;
+      font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;
     }
     .audience-item {
-      display: flex; gap: 1rem; margin-bottom: 1.5rem;
+      display: flex; gap: 1rem; margin-bottom: 1rem;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.25rem 1.5rem;
+      transition: box-shadow 0.2s;
     }
+    .audience-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
     .audience-item__icon {
       width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
-      background: var(--bg-card); display: flex; align-items: center; justify-content: center;
-      color: var(--text-secondary);
+      background: var(--dark); display: flex; align-items: center; justify-content: center;
+      color: #fff;
     }
     .audience-item__icon svg { width: 20px; height: 20px; }
-    .audience-item__title { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+    .audience-item__title { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.2rem; }
     .audience-item__text { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
 
     .challenge-block__title {
-      font-size: 1.25rem; font-weight: 800; color: var(--text);
-      margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;
+      font-size: 1.75rem; font-weight: 800; color: var(--text);
+      margin-bottom: 0.5rem; letter-spacing: -0.01em;
     }
-    .challenge-block__title svg { width: 20px; height: 20px; color: var(--text-muted); }
+    .challenge-block__sub {
+      font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;
+    }
+    .challenge-list { counter-reset: challenge; }
     .challenge-item {
-      padding: 1rem 0; border-bottom: 1px solid var(--border);
+      display: flex; gap: 1rem; padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border); align-items: flex-start;
     }
     .challenge-item:first-child { border-top: 1px solid var(--border); }
+    .challenge-item__num {
+      counter-increment: challenge;
+      min-width: 28px; height: 28px; border-radius: 8px;
+      background: var(--dark); color: #fff; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 800;
+    }
     .challenge-item__title { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
     .challenge-item__text { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
 
@@ -642,11 +678,11 @@
 
     /* ===== ABOUT ===== */
     .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+      display: grid; grid-template-columns: 5fr 7fr; gap: 4.5rem; align-items: center;
     }
     .about__photo {
-      border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 3/4;
-      margin-bottom: 1.5rem;
+      border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/5;
+      margin-bottom: 0;
     }
     .about__photo img {
       width: 100%; height: 100%; object-fit: cover; display: block;
@@ -656,7 +692,7 @@
     }
     .about__values {
       background: var(--bg); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.5rem;
+      border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.25rem;
     }
     .about__values-title { font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 1rem; }
     .about__values-grid {
@@ -675,7 +711,7 @@
     .about__stats-row {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
       background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg);
-      overflow: hidden; margin-top: 2rem;
+      overflow: hidden; margin-top: 2rem; margin-bottom: 0;
     }
     .about__stat-cell {
       background: var(--bg); padding: 1.5rem; text-align: center;
@@ -916,6 +952,8 @@
     .btn-dark:hover { background: #000; transform: translateY(-1px); }
     .btn-dark svg { width: 16px; height: 16px; }
 
+    .carousel-dots { display: none; }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
       .diff-grid { grid-template-columns: repeat(2, 1fr); }
@@ -936,27 +974,97 @@
         background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
         padding: 1.5rem; padding-left: max(1.5rem, env(safe-area-inset-left));
         padding-right: max(1.5rem, env(safe-area-inset-right));
-        gap: 1rem; border-bottom: 1px solid var(--border);
+        gap: 0.75rem; border-bottom: 1px solid var(--border);
       }
       .nav__toggle { display: block; }
-      .nav__sep, .nav__lang { display: none; }
+      .nav__sep, .nav__lang-wrap { display: none; }
+      /* Show language selector when mobile nav is open */
+      .nav__links.open .nav__lang-wrap {
+        display: flex; align-items: center;
+        border-top: 1px solid var(--border); padding-top: 0.75rem; margin-top: 0.25rem;
+      }
+      .nav__links.open .nav__lang-menu {
+        top: auto; bottom: calc(100% + 6px);
+      }
       .hero { padding-top: 8rem; }
-      .hero__stats { flex-direction: column; gap: 1.5rem; align-items: center; }
-      .diff-grid, .services-grid { grid-template-columns: 1fr; }
-      .results-grid { grid-template-columns: 1fr 1fr; }
-      .split-grid { grid-template-columns: 1fr; }
-      .story-milestones { grid-template-columns: 1fr; }
-      .tx-card { grid-template-columns: 1fr; }
-      .tx-card__img { height: 200px; }
+      /* Hero stats: stay horizontal on mobile */
+      .hero__stats { flex-wrap: wrap; gap: 1.25rem 2.5rem; }
+      /* --- Mobile carousels --- */
+      .carousel-wrap { position: relative; }
+      .diff-grid, .services-grid, .results-grid, .blog-grid, .tx-track {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      .diff-grid::-webkit-scrollbar,
+      .services-grid::-webkit-scrollbar,
+      .results-grid::-webkit-scrollbar,
+      .blog-grid::-webkit-scrollbar,
+      .tx-track::-webkit-scrollbar { display: none; }
+      .tx-card {
+        flex: 0 0 calc(100% - 1rem);
+        scroll-snap-align: start;
+        margin-bottom: 0;
+        grid-template-columns: 1fr !important;
+      }
+      .tx-card__img { height: 220px; }
       .tx-card__stats { grid-template-columns: repeat(2, 1fr); }
+      .diff-card, .service-card, .result-card {
+        flex: 0 0 calc(100% - 3.5rem);
+        scroll-snap-align: start;
+      }
+      .blog-card {
+        flex: 0 0 calc(100% - 2rem);
+        scroll-snap-align: start;
+      }
+      /* Dot indicators (mobile only) */
+      .carousel-dots {
+        display: flex; justify-content: center;
+        gap: 6px; margin-top: 1rem;
+      }
+      .carousel-dots span {
+        width: 6px; height: 6px; border-radius: 50%;
+        background: var(--border); display: block; transition: all 0.25s;
+      }
+      .carousel-dots span.active {
+        background: var(--dark); width: 18px; border-radius: 3px;
+      }
+      .carousel-wrap { overflow: hidden; }
+      /* Process timeline: tighten for narrow screens */
+      .timeline::before { left: 19px; }
+      .tl-item { padding-left: 56px; padding-bottom: 1.75rem; }
+      .tl-item__dot { width: 40px; height: 40px; font-size: 0.8rem; box-shadow: 0 0 0 4px var(--bg-soft); }
+      .tl-item__content { padding: 1.1rem 1.25rem; }
+      .tl-item__content:hover { transform: none; box-shadow: none; }
+      .tl-item__text { margin-left: 0; }
+      .split-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      /* Story milestones: keep 3-col on mobile */
+      .story-milestones { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .story-ms__icon { width: 44px; height: 44px; }
+      .story-ms__icon svg { width: 20px; height: 20px; }
+      .story-ms__title { font-size: 0.85rem; }
+      .story-ms__text { font-size: 0.75rem; }
+      /* About: portrait crop, face centred */
+      .about__photo { aspect-ratio: 3/4; max-height: 420px; }
+      .about__photo img { object-position: center 12%; }
       .about__values-grid { grid-template-columns: repeat(2, 1fr); }
-      .about__stats-row { grid-template-columns: 1fr; }
-      .footer__inner { grid-template-columns: 1fr; }
-      .blog-grid { grid-template-columns: 1fr; }
+      /* About stats: keep 3-col on mobile */
+      .about__stats-row { grid-template-columns: repeat(3, 1fr); }
+      .about__stat-num { font-size: 1.4rem; }
+      /* Footer: 2-col grid on mobile */
+      .footer__inner { grid-template-columns: 1fr 1fr; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
     }
     @media (max-width: 480px) {
-      .results-grid { grid-template-columns: 1fr; }
-      .about__values-grid { grid-template-columns: 1fr; }
+      .about__values-grid { grid-template-columns: repeat(3, 1fr); }
+      .about__value-item { flex-direction: column; align-items: center; text-align: center; gap: 0.3rem; }
+      .about__value-item span { font-size: 0.7rem; }
+      .footer__inner { grid-template-columns: 1fr; }
+      .hero__stats { gap: 1rem 2rem; }
     }
   </style>
   <noscript><style>.faq-item__a { max-height: none !important; padding: 0 1.5rem 1.25rem !important; } .reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
@@ -978,10 +1086,18 @@
     <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
     <li><div class="nav__sep"></div></li>
     <li>
-      <button type="button" id="langToggle" class="nav__lang" style="background:none;border:none;cursor:pointer;font-family:inherit;">
-        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10A15 15 0 0112 2z"/></svg>
-        EN
-      </button>
+      <div class="nav__lang-wrap" id="langDropdown">
+        <button type="button" id="langToggle" class="nav__lang" aria-haspopup="listbox" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10A15 15 0 0112 2z"/></svg>
+          <span id="langToggleLabel">EN</span>
+          <svg class="nav__lang-caret" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="12" height="12"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="nav__lang-menu" role="listbox">
+          <li><button type="button" class="nav__lang-opt active" data-lang="en">EN — English</button></li>
+          <li><button type="button" class="nav__lang-opt" data-lang="fr">FR — Français</button></li>
+          <li><button type="button" class="nav__lang-opt" data-lang="zh">中文 — Chinese</button></li>
+        </ul>
+      </div>
     </li>
     <li><a href="#" class="nav__cta" data-i18n="nav-cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>Book a Call</a></li>
   </ul>
@@ -1034,7 +1150,8 @@
       <h2 class="section__title" data-i18n="diff-title">What Makes Me Different</h2>
       <p class="section__subtitle" data-i18n="diff-sub">Not just another mortgage broker. A specialized partner in your multifamily investment journey.</p>
     </div>
-    <div class="diff-grid">
+    <div class="carousel-wrap">
+    <div class="diff-grid" id="carousel-diff">
       <div class="diff-card reveal reveal-d1">
         <div class="diff-card__icon">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -1063,6 +1180,10 @@
         <h3 class="diff-card__title" data-i18n="diff-card4-title">Efficient &amp; Honest</h3>
         <p class="diff-card__text" data-i18n="diff-card4-text">No games, no surprises. Fast turnarounds, transparent communication, and solutions for complex financing scenarios.</p>
       </div>
+    </div>
+    <div class="carousel-dots" data-for="carousel-diff">
+      <span class="active"></span><span></span><span></span><span></span>
+    </div>
     </div>
   </div>
 </section>
@@ -1094,21 +1215,30 @@
         </div>
       </div>
       <div>
-        <div class="challenge-block__title">
-          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
-          <span data-i18n="challenges-title">Common Challenges I Solve</span>
-        </div>
-        <div class="challenge-item">
-          <div class="challenge-item__title" data-i18n="challenge1-title">Large Downpayment Requirements</div>
-          <div class="challenge-item__text" data-i18n="challenge1-text">Reduce upfront capital needs with CMHC financing strategies and optimized deal structuring.</div>
-        </div>
-        <div class="challenge-item">
-          <div class="challenge-item__title" data-i18n="challenge2-title">Salary Limitations</div>
-          <div class="challenge-item__text" data-i18n="challenge2-text">Your financing amount won't be capped by your salary.</div>
-        </div>
-        <div class="challenge-item">
-          <div class="challenge-item__title" data-i18n="challenge3-title">Lack of Investment Knowledge</div>
-          <div class="challenge-item__text" data-i18n="challenge3-text">Full education on deal analysis, proformas, NOI, and DSCR so you understand every aspect of your investment.</div>
+        <h2 class="split-block__title" data-i18n="challenges-title">Common Challenges I Solve</h2>
+        <p class="challenge-block__sub" data-i18n="challenges-sub">The most common obstacles investors face — and how I eliminate them.</p>
+        <div class="challenge-list">
+          <div class="challenge-item">
+            <div class="challenge-item__num">1</div>
+            <div>
+              <div class="challenge-item__title" data-i18n="challenge1-title">Large Downpayment Requirements</div>
+              <div class="challenge-item__text" data-i18n="challenge1-text">Reduce upfront capital needs with CMHC financing strategies and optimized deal structuring.</div>
+            </div>
+          </div>
+          <div class="challenge-item">
+            <div class="challenge-item__num">2</div>
+            <div>
+              <div class="challenge-item__title" data-i18n="challenge2-title">Salary Limitations</div>
+              <div class="challenge-item__text" data-i18n="challenge2-text">Your financing amount won't be capped by your salary.</div>
+            </div>
+          </div>
+          <div class="challenge-item">
+            <div class="challenge-item__num">3</div>
+            <div>
+              <div class="challenge-item__title" data-i18n="challenge3-title">Lack of Investment Knowledge</div>
+              <div class="challenge-item__text" data-i18n="challenge3-text">Full education on deal analysis, proformas, NOI, and DSCR so you understand every aspect of your investment.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1122,7 +1252,8 @@
       <h2 class="section__title" data-i18n="services-title">Your Complete Multifamily Financing Partner</h2>
       <p class="section__subtitle" data-i18n="services-sub">Beyond just finding you a mortgage. I optimize your entire financing strategy for maximum returns.</p>
     </div>
-    <div class="services-grid">
+    <div class="carousel-wrap">
+    <div class="services-grid" id="carousel-services">
       <div class="service-card reveal reveal-d1">
         <div class="service-card__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11m16-11v11M8 14v3m4-3v3m4-3v3"/></svg></div>
         <h3 class="service-card__title" data-i18n="svc1-title">CMHC Financing Expertise</h3>
@@ -1153,6 +1284,10 @@
         <h3 class="service-card__title" data-i18n="svc6-title">Deal Analysis Education</h3>
         <p class="service-card__text" data-i18n="svc6-text">Hands-on teaching so you become a more sophisticated investor with every transaction.</p>
       </div>
+    </div>
+    <div class="carousel-dots" data-for="carousel-services">
+      <span class="active"></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
     </div>
   </div>
 </section>
@@ -1255,7 +1390,8 @@
       <h2 class="section__title" data-i18n="results-title">Client Results</h2>
       <p class="section__subtitle" data-i18n="results-sub">Numbers that speak for themselves.</p>
     </div>
-    <div class="results-grid">
+    <div class="carousel-wrap">
+    <div class="results-grid" id="carousel-results">
       <div class="result-card reveal reveal-d1">
         <div class="result-card__value">1.5%</div>
         <div class="result-card__label" data-i18n="result1-label">Lower Interest Rates</div>
@@ -1277,6 +1413,10 @@
         <div class="result-card__desc" data-i18n="result4-desc">Leave every conversation understanding your numbers, strategy, and why each decision was made.</div>
       </div>
     </div>
+    <div class="carousel-dots" data-for="carousel-results">
+      <span class="active"></span><span></span><span></span><span></span>
+    </div>
+    </div>
   </div>
 </section>
 
@@ -1288,6 +1428,8 @@
       <p class="section__subtitle" data-i18n="tx-sub">Real deals, real results. I help investors secure high-leverage financing with optimal terms.</p>
     </div>
 
+    <div class="carousel-wrap">
+    <div class="tx-track" id="carousel-tx">
     <div class="tx-card reveal">
       <div class="tx-card__img"><img src="assets/pic1-laval-6plex.jpeg" alt="6plex in Laval" loading="lazy" width="480" height="362"></div>
       <div class="tx-card__body">
@@ -1402,6 +1544,11 @@
         </div>
       </div>
     </div>
+    </div><!-- /tx-track -->
+    <div class="carousel-dots" data-for="carousel-tx">
+      <span class="active"></span><span></span><span></span><span></span><span></span>
+    </div>
+    </div><!-- /carousel-wrap -->
 
     <p class="tx-note reveal" data-i18n="tx-note">* All deals represent actual client successes. Detailed proformas available upon request.</p>
     <div style="text-align:center; margin-top:1.5rem;" class="reveal">
@@ -1449,25 +1596,16 @@
       <h2 class="section__title" data-i18n="about-title">About Me</h2>
     </div>
     <div class="about-grid">
+      <!-- Photo column (left) -->
       <div class="reveal">
-        <p class="about__text" data-i18n="about-p1">With over 7 years of specialized experience in multifamily investing and financing, I have helped investors close $80M+ in annual volume. My unique background as both investor and broker means I understand your goals, challenges, and the questions you're afraid to ask.</p>
-        <p class="about__text" data-i18n="about-p2">I educate while I finance, ensuring every client becomes a more sophisticated investor. My approach combines technical expertise in CMHC financing and deal analysis with a genuine commitment to transparent, honest communication. No surprises, no games, just results.</p>
-        <div class="about__values">
-          <div class="about__values-title" data-i18n="about-values-title">Core Values</div>
-          <div class="about__values-grid">
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div> <span data-i18n="val-authentic">Authentic</span></div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div> <span data-i18n="val-honest">Honest</span></div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> <span data-i18n="val-responsible">Responsible</span></div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div> <span data-i18n="val-efficient">Efficient</span></div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> <span data-i18n="val-fast">Fast</span></div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg></div> <span data-i18n="val-integrous">Integrous</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="reveal reveal-d2">
         <div class="about__photo">
           <img src="assets/profile-photo.jpeg" alt="Hong Yue - Multifamily Mortgage Broker" loading="lazy" width="600" height="899">
         </div>
+      </div>
+      <!-- Content column (right) -->
+      <div class="reveal reveal-d2">
+        <p class="about__text" data-i18n="about-p1">With over 7 years of specialized experience in multifamily investing and financing, I have helped investors close $80M+ in annual volume. My unique background as both investor and broker means I understand your goals, challenges, and the questions you're afraid to ask.</p>
+        <p class="about__text" data-i18n="about-p2">I educate while I finance, ensuring every client becomes a more sophisticated investor. My approach combines technical expertise in CMHC financing and deal analysis with a genuine commitment to transparent, honest communication. No surprises, no games, just results.</p>
         <div class="about__stats-row">
           <div class="about__stat-cell">
             <div class="about__stat-num">7+</div>
@@ -1480,6 +1618,17 @@
           <div class="about__stat-cell">
             <div class="about__stat-num">$80M+</div>
             <div class="about__stat-text" data-i18n="about-stat-volume">Annual Volume</div>
+          </div>
+        </div>
+        <div class="about__values">
+          <div class="about__values-title" data-i18n="about-values-title">Core Values</div>
+          <div class="about__values-grid">
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div> <span data-i18n="val-authentic">Authentic</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div> <span data-i18n="val-honest">Honest</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> <span data-i18n="val-responsible">Responsible</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div> <span data-i18n="val-efficient">Efficient</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> <span data-i18n="val-fast">Fast</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg></div> <span data-i18n="val-integrous">Integrous</span></div>
           </div>
         </div>
       </div>
@@ -1548,7 +1697,8 @@
       <h2 class="section__title" data-i18n="blog-title">Resources & Insights</h2>
       <p class="section__subtitle" data-i18n="blog-sub">Educational content to help you make smarter multifamily investment decisions.</p>
     </div>
-    <div class="blog-grid">
+    <div class="carousel-wrap">
+    <div class="blog-grid" id="carousel-blog">
       <article class="blog-card reveal" data-blog="cmhc-guide">
         <div class="blog-card__body">
           <span class="blog-card__badge" data-i18n="blog1-badge">CMHC Guide</span>
@@ -1573,6 +1723,10 @@
           <span class="blog-card__link"><span data-i18n="blog-read-more">Read More →</span> <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </article>
+    </div>
+    <div class="carousel-dots" data-for="carousel-blog">
+      <span class="active"></span><span></span><span></span>
+    </div>
     </div>
   </div>
 </section>
@@ -1625,7 +1779,11 @@
       <span class="footer__link" style="cursor:default;" data-i18n="footer-hours-text">Mon - Fri: 9:00 AM - 6:00 PM EST</span>
       <div style="margin-top:1rem;">
         <div class="footer__col-title" data-i18n="footer-lang-title">Language</div>
-        <button type="button" id="footerLangToggle" class="footer__link" style="border:1px solid rgba(255,255,255,0.15); display:inline-block; padding:0.4rem 1rem; border-radius:6px; cursor:pointer; background:none; font-family:inherit; font-size:inherit; color:inherit;">Passer au Français</button>
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.25rem;">
+          <button type="button" class="footer__lang-opt active" data-lang="en" style="padding:0.3rem 0.75rem;border-radius:6px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);color:#fff;cursor:pointer;font-family:inherit;font-size:0.8rem;font-weight:700;">EN</button>
+          <button type="button" class="footer__lang-opt" data-lang="fr" style="padding:0.3rem 0.75rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:none;color:rgba(255,255,255,0.6);cursor:pointer;font-family:inherit;font-size:0.8rem;">FR</button>
+          <button type="button" class="footer__lang-opt" data-lang="zh" style="padding:0.3rem 0.75rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:none;color:rgba(255,255,255,0.6);cursor:pointer;font-family:inherit;font-size:0.8rem;">中文</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1966,6 +2124,7 @@
       'audience-item2-title': 'First-Time Investors',
       'audience-item2-text': 'New investors entering multifamily with proper education and financing strategy from day one.',
       'challenges-title': 'Common Challenges I Solve',
+      'challenges-sub': 'The most common obstacles investors face — and how I eliminate them.',
       'challenge1-title': 'Large Downpayment Requirements',
       'challenge1-text': 'Reduce upfront capital needs with CMHC financing strategies and optimized deal structuring.',
       'challenge2-title': 'Salary Limitations',
@@ -2290,6 +2449,7 @@
       'audience-item2-title': 'Investisseurs débutants',
       'audience-item2-text': 'Nouveaux investisseurs qui entrent dans le multifamilial avec une éducation adéquate et une stratégie de financement dès le premier jour.',
       'challenges-title': 'Défis courants que je résous',
+      'challenges-sub': 'Les obstacles les plus fréquents auxquels font face les investisseurs — et comment je les élimine.',
       'challenge1-title': 'Exigences élevées de mise de fonds',
       'challenge1-text': 'Réduisez les besoins en capital initial grâce aux stratégies de financement SCHL et à une structuration optimisée des transactions.',
       'challenge2-title': 'Limitations de revenu salarial',
@@ -2577,6 +2737,331 @@
         Planifiez votre stratégie d'acquisition
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>`,
+    },
+    zh: {
+      // NAV
+      'nav-sub': '多户住宅抵押贷款经纪人',
+      'nav-expertise': '专业能力',
+      'nav-process': '服务流程',
+      'nav-results': '客户成果',
+      'nav-about': '关于我',
+      'nav-contact': '联系',
+      'nav-cta': '预约通话',
+      // HERO
+      'hero-badge': '多户住宅融资专家',
+      'hero-title': '扩大您的房地产投资版图',
+      'hero-desc': '专业多户住宅抵押贷款经纪人，协助投资者获得更优融资方案、降低首付要求，并充分利用加拿大住房和抵押贷款公司（CMHC）的政策优势，实现更高投资回报。',
+      'hero-cta': '预约策略通话 →',
+      'hero-stat-years': '年专业经验',
+      'hero-stat-doors': '自持套数',
+      'hero-stat-volume': '年交易额',
+      // DIFFERENTIATORS
+      'diff-title': '我的核心优势',
+      'diff-sub': '不只是另一位抵押贷款经纪人，而是您多户住宅投资之路的专业合作伙伴。',
+      'diff-card1-title': '100% 专注多户住宅',
+      'diff-card1-text': '专注于多户住宅融资，无任何分心，为您的投资组合增长提供深厚专业知识。',
+      'diff-card2-title': '实时掌握贷款政策',
+      'diff-card2-text': '与贷款机构建立直接合作关系，能在政策变化和市场机会公开前第一时间获取信息。',
+      'diff-card3-title': '内部风控核保',
+      'diff-card3-text': '提前审核您的交易，确保万无一失。内部核保团队能及早发现问题，为您的成功奠定基础。',
+      'diff-card4-title': '高效诚信',
+      'diff-card4-text': '没有套路，没有意外。快速响应、透明沟通，为复杂融资场景提供解决方案。',
+      // AUDIENCE
+      'audience-title': '我的服务对象',
+      'audience-sub': '从首次投资多户住宅到经验丰富的投资组合构建者，均在服务范围之内。',
+      'audience-item1-title': '多户住宅投资者',
+      'audience-item1-text': '通过战略性融资扩大多户住宅持有量的投资组合持有人和投资者。',
+      'audience-item2-title': '首次投资者',
+      'audience-item2-text': '从第一天起就获得专业教育和融资策略指导，进入多户住宅投资领域的新投资者。',
+      'challenges-title': '我能解决的常见难题',
+      'challenges-sub': '投资者最常面临的障碍——以及我如何帮助消除它们。',
+      'challenge1-title': '高额首付要求',
+      'challenge1-text': '通过CMHC融资策略和优化的交易结构，降低前期资金需求。',
+      'challenge2-title': '薪资收入限制',
+      'challenge2-text': '您的融资额度不受个人薪资水平限制。',
+      'challenge3-title': '缺乏投资知识',
+      'challenge3-text': '全面的投资教育，涵盖交易分析、预估财务报表、净经营收入（NOI）和债务覆盖率（DSCR），让您深入了解投资的每个环节。',
+      // SERVICES
+      'services-title': '您的多户住宅融资全程合作伙伴',
+      'services-sub': '不仅仅是为您找到一笔抵押贷款，而是优化您的整体融资策略，实现最大回报。',
+      'svc1-title': 'CMHC融资专业知识',
+      'svc1-text': '以更低的首付和有竞争力的利率，为符合条件的房产申请政府担保融资。',
+      'svc2-title': '多户住宅贷款机构网络',
+      'svc2-text': '独家对接专注多户住宅投资的贷款机构，获取更优贷款条件。',
+      'svc3-title': '构建NOI、DSCR及预测',
+      'svc3-text': '专业财务建模，提升交易吸引力，确保获得最优融资条件。',
+      'svc4-title': '制作与解读预估报表',
+      'svc4-text': '详细的预估报表制作与清晰说明，让您完全理解投资数据。',
+      'svc5-title': '优化融资策略',
+      'svc5-text': '战略规划，合理架构交易，实现最大杠杆效应、现金流和长期投资组合增长。',
+      'svc6-title': '交易分析培训',
+      'svc6-text': '手把手教学，让您在每笔交易中成为更成熟的投资者。',
+      // PROCESS
+      'process-title': '客户服务流程',
+      'process-sub': '经过验证的7步系统，从房产分析到拿到钥匙，全程陪伴。',
+      'step1-title': '制作预估报表',
+      'step1-text': '为您的房产构建详细的财务预测，包括NOI、DSCR和现金流分析。',
+      'step2-title': '策略讲解',
+      'step2-text': '梳理融资选项、CMHC优势及针对您具体交易的最优架构方案。',
+      'step3-title': '建立融资档案',
+      'step3-text': '整合完整的文件包，通过内部核保确保获批准备就绪。',
+      'step4-title': '提交给贷款机构',
+      'step4-text': '将您的交易呈交给多户住宅专业贷款机构网络，并在适用时提交CMHC。',
+      'step5-title': '跟进与审批',
+      'step5-text': '管理与贷款机构的沟通，解答问题，推进审批流程直至放款。',
+      'step6-title': '审核条款',
+      'step6-text': '详细审核承诺函、利率、条款和条件，确保您全面了解每项内容。',
+      'step7-title': '协调交割',
+      'step7-text': '与公证人及各方协作，确保所有文件就位，顺利按时完成交割。',
+      // CTA BAND
+      'cta-band-title': '准备好改善您的交易条款了吗？',
+      'cta-band-text': '了解战略性融资如何改变您的多户住宅投资回报。',
+      'cta-band-btn': '预约咨询',
+      // RESULTS
+      'results-title': '客户成果',
+      'results-sub': '数字胜于雄辩。',
+      'result1-label': '更低利率',
+      'result1-desc': '对接专业贷款机构和CMHC项目，获得比常规融资更低的利率。',
+      'result2-label': '首付大幅降低',
+      'result2-desc': 'CMHC融资可显著降低符合条件房产的首付要求。',
+      'result3-label': '审批成功率',
+      'result3-desc': '内部核保和专业档案准备，减少意外，加快交割速度。',
+      'result4-label': '投资者教育',
+      'result4-desc': '每次沟通后，您都能深入理解自己的数字、策略以及每个决策背后的原因。',
+      // TRANSACTIONS
+      'tx-title': '近期交易案例',
+      'tx-sub': '真实交易，真实成果。我帮助投资者以最优条款获得高杠杆融资。',
+      'tx-purchase-price': '购买价格',
+      'tx-down-payment': '首付金额',
+      'tx-interest-rate': '利率',
+      'tx-amortization': '还款期限',
+      'tx-date-jun': '2025年6月放款',
+      'tx-date-jul': '2025年7月放款',
+      'tx-date-feb': '2025年2月放款',
+      'tx-date-apr': '2025年4月放款',
+      'tx-type-refinance': '住宅再融资',
+      'tx-type-construction': '新建工程',
+      'tx-type-acquisition': '战略收购',
+      'tx-type-portfolio': '投资组合扩张',
+      'tx-type-cmhc': 'CMHC高杠杆融资',
+      'tx-fixed-term': '5年固定利率锁定',
+      'tx-opt-leverage': '杠杆优化',
+      'tx-note': '* 所有案例均代表真实客户成果。详细预估报表可根据需求提供。',
+      'tx-cta': '分析您的交易',
+      // STORY
+      'story-title': '我如何成为抵押贷款经纪人',
+      'story-p1': '我从未想过自己会成为一名抵押贷款经纪人。和你们很多人一样，我最初是一位多户住宅投资者，希望通过房地产积累财富。在自己的投资过程中，我亲身体验了与那些不了解多户住宅的经纪人合作的挫败感。',
+      'story-p2': '他们无法解释数字，不了解CMHC的优势，把每笔交易都当成普通住宅按揭来处理。在试图解决自己融资难题的过程中，我误打误撞地成了一名经纪人。',
+      'story-p3': '从学习如何正确分析和融资自己的项目开始，逐渐演变为一种热情——帮助其他投资者避免我曾经犯过的错误，抓住我发现的机遇。',
+      'story-p4': '如今，我专注于多户住宅融资，因为我了解你的疑问、你面临的挑战，以及真正有效的策略。我不只是你的经纪人，我是一位恰好持有执照并拥有贷款机构关系的投资者，致力于帮助你走向成功。',
+      'ms1-title': '从投资者起步',
+      'ms1-text': '通过真实经历学习，而非纸上谈兵',
+      'ms2-title': '成为专家',
+      'ms2-text': '100% 专注于真正重要的事',
+      'ms3-title': '现在帮助他人',
+      'ms3-text': '分享积累的知识与资源',
+      // ABOUT
+      'about-title': '关于我',
+      'about-p1': '凭借超过7年的多户住宅投资与融资专业经验，我已协助投资者完成超过8000万加元的年交易量。作为既是投资者又是经纪人的独特背景，让我深刻理解您的目标、挑战，以及那些您不敢开口问的问题。',
+      'about-p2': '我在提供融资服务的同时传授知识，确保每位客户在每次合作后都成为更成熟的投资者。我的方法将CMHC融资和交易分析的专业技术，与真诚透明、诚实沟通的承诺相结合。没有意外，没有套路，只有成果。',
+      'about-values-title': '核心价值观',
+      'val-authentic': '真诚',
+      'val-honest': '诚实',
+      'val-responsible': '负责',
+      'val-efficient': '高效',
+      'val-fast': '快速',
+      'val-integrous': '正直',
+      'about-stat-years': '年',
+      'about-stat-doors': '自持套数',
+      'about-stat-volume': '年交易额',
+      // FAQ
+      'faq-title': '常见问题',
+      'faq-sub': '关于多户住宅融资和CMHC流程的常见问题。',
+      'faq-q1': 'CMHC多户住宅融资是什么？对投资者有何帮助？',
+      'faq-a1': '<p>加拿大住房和抵押贷款公司（CMHC）为拥有5个或更多单元的出租物业提供抵押贷款保险。这使投资者能够以低至5%的首付获得融资，享受更低的利率（比常规融资低达1.5%），并受益于长达50年的还款期——显著降低每月还款额，改善现金流。</p>',
+      'faq-q2': '在加拿大购买多户住宅物业的最低首付是多少？',
+      'faq-a2': '<p>通过CMHC保险融资，购买多户住宅物业（5个单元及以上）的最低首付可低至购买价格的5%。这远低于常规商业抵押贷款通常要求的20-35%，让投资者能够保留资金并更快速地扩大投资组合。</p>',
+      'faq-q3': '申请多户住宅融资需要高薪吗？',
+      'faq-a3': '<p>不需要。与住宅抵押贷款不同，多户住宅商业融资主要基于物业收入（NOI——净经营收入）及其债务覆盖率（DSCR），而非您的个人薪资。这意味着物业产生租金收入的能力是关键资格因素，薪资有限的投资者也可以为价值数百万的物业融资。</p>',
+      'faq-q4': '什么是多户住宅投资中的NOI和DSCR？',
+      'faq-a4': '<p>NOI（净经营收入）是总租金收入减去运营支出（不含抵押贷款还款）。DSCR（债务覆盖率）衡量物业是否产生足够收入来覆盖债务还款——计算方式为NOI除以总债务服务额。贷款机构通常要求DSCR达到1.1倍或以上。这两项是多户住宅融资中最重要的指标。</p>',
+      'faq-q5': '什么是预估报表？为何对多户住宅投资至关重要？',
+      'faq-a5': '<p>预估报表是概述物业预期收入、支出、NOI、DSCR及投资回报率的财务预测文件。它对于获得贷款机构批准以及评估交易是否符合您的投资标准至关重要。一份完善的预估报表应包含当前及预计租金、空置率、运营支出和融资条款。</p>',
+      'faq-q6': '多户住宅抵押贷款流程需要多长时间？',
+      'faq-a6': '<p>典型的多户住宅抵押贷款流程从最初制作预估报表到交割通常需要4至8周。这包括预估报表和策略制定、建立融资档案、提交给贷款机构、跟进与审批、审核条款，以及与公证人和各方协调完成交割。</p>',
+      // BLOG CARDS
+      'blog-title': '资源与见解',
+      'blog-sub': '教育性内容，助您做出更明智的多户住宅投资决策。',
+      'blog1-badge': 'CMHC指南',
+      'blog1-title': 'CMHC多户住宅融资：魁北克投资者完整指南',
+      'blog1-excerpt': '您需要了解的关于5个及以上单元物业CMHC保险融资的一切——资格条件、首付、还款期限，以及如何最大化杠杆效应。',
+      'blog2-badge': '交易分析',
+      'blog2-title': '如何为您的第一个多户住宅物业制作预估报表',
+      'blog2-excerpt': '逐步拆解如何制作贷款机构认可的预估报表——包括NOI计算、DSCR目标和支出假设。',
+      'blog3-badge': '策略',
+      'blog3-title': '5套公寓5%首付：CMHC如何实现这一可能',
+      'blog3-excerpt': '战略性使用CMHC保险如何让投资者以最少资金购入多户住宅物业，以及为何这改变了投资组合扩张的计算逻辑。',
+      'blog-read-more': '阅读更多 →',
+      // CONTACT
+      'contact-label': '预约通话',
+      'contact-heading': '让我们谈谈<br><span>多户住宅投资</span>',
+      'contact-text': '准备好讨论您的下一笔交易了吗？预约策略通话，了解CMHC优势和专业贷款如何提升您的投资回报。',
+      'contact-btn': '预约30分钟通话',
+      // FOOTER
+      'footer-brand-text': '您值得信赖的合作伙伴，为多户住宅房地产投资获取有竞争力的融资方案。',
+      'footer-quick-links': '快速链接',
+      'footer-contact-info': '联系方式',
+      'footer-office-hours': '办公时间',
+      'footer-hours-text': '周一至周五：东部时间 9:00 - 18:00',
+      'footer-lang-title': '语言',
+      'footer-lang-btn': 'Switch to English',
+      'footer-rights': '版权所有。',
+      'footer-disclaimer': '经纪人免责声明',
+      'footer-privacy': '隐私政策',
+      'footer-terms': '服务条款',
+      // BLOG MODAL 1 (ZH)
+      'modal1-body': `<h2>什么是CMHC多户住宅保险？</h2>
+      <p>加拿大住房和抵押贷款公司（CMHC）为拥有<strong>5个或更多单元</strong>的出租物业提供抵押贷款保险。这种保险保护贷款机构免受借款人违约风险，使他们能够提供比常规融资条件优越得多的方案。</p>
+      <p>对于魁北克的投资者而言，CMHC保险融资是最强大的工具之一。它降低了所需首付、延长了还款期，且通常提供比常规抵押贷款更低的利率。</p>
+      <h2>资格条件</h2>
+      <p>要申请CMHC多户住宅保险，您的物业必须满足以下几个条件：</p>
+      <ul>
+        <li><strong>至少5个住宅出租单元</strong>——这是多户住宅与住宅的分界线</li>
+        <li><strong>物业必须位于加拿大</strong>，且符合CMHC的物理状态标准</li>
+        <li><strong>最低债务覆盖率（DSCR）达到1.1倍</strong>——物业净经营收入至少须覆盖110%的抵押贷款还款额</li>
+        <li>根据物业情况，可能需要进行<strong>环境评估</strong></li>
+        <li>需要由CMHC认可评估师出具的<strong>物业评估报告</strong></li>
+      </ul>
+      <p>特别是在魁北克，物业必须符合住房行政法庭（TAL）的规定，且租金收入预测必须反映魁北克市场租金水平。</p>
+      <h2>首付：低至5%</h2>
+      <p>这是最核心的优势。通过CMHC保险，您可以以<strong>低至5%的首付</strong>购入多户住宅物业。相比之下，常规融资通常要求同一物业缴纳20-25%的首付。</p>
+      <p>对于一栋100万加元的六单元公寓楼，这意味着首付差距在5万和20万之间。节省下来的资金可用于下一次收购或物业改善。</p>
+      <h2>还款期：长达50年</h2>
+      <p>通过<strong>CMHC MLI Select</strong>项目，符合条件的物业可获得长达50年的还款期。标准CMHC保险多户住宅贷款通常提供最长40年的还款期，而MLI Select为满足特定社会、无障碍或气候兼容标准的物业进一步延长了年限。</p>
+      <p>更长的还款期意味着更低的月供，从第一天起就改善您的现金流。50年还款期与25年相比，月供可降低约30%。</p>
+      <div class="blog-modal__callout">
+        <strong>MLI Select评分：</strong>物业在可负担性（租金低于市场中位数）、无障碍设施（无障碍单元）和能源效率（温室气体减排）三个方面获得积分。积分越高，可获得更长还款期和更低保险费率。
+      </div>
+      <h2>保险费率</h2>
+      <p>CMHC根据贷款价值比和还款期收取保险费。保险费通常在贷款金额的<strong>1.00%至6.25%</strong>之间。该保险费可计入抵押贷款，无需提前垫付现金。</p>
+      <p>虽然保险费增加了您的总成本，但计算通常对您有利：CMHC保险带来的更低利率，往往足以在贷款期限内抵消保费支出。</p>
+      <h2>利率</h2>
+      <p>由于CMHC保险消除了贷款机构的风险，受保多户住宅抵押贷款的利率通常比常规利率<strong>低50至150个基点</strong>。以100万加元的贷款为例，每年可节省5,000至15,000加元的利息。</p>
+      <h2>魁北克特有注意事项</h2>
+      <ul>
+        <li><strong>住房行政法庭（TAL）：</strong>魁北克的租赁法规限制了加租速度，影响您的预估报表预测</li>
+        <li><strong>市政税费：</strong>魁北克的房产转让税（欢迎税）按累进税率计算，在多户住宅交易中数额可观</li>
+        <li><strong>语言要求：</strong>魁北克的文件和租户沟通必须符合语言法律</li>
+        <li><strong>能源效率：</strong>魁北克的气候项目可与MLI Select评分相结合，获得更优条款</li>
+      </ul>
+      <h2>何时选择CMHC</h2>
+      <p>CMHC保险融资并非总是最佳选择。它最适合您希望<strong>最大化杠杆</strong>、保留资金用于多次收购，或物业符合MLI Select延长还款期标准的情形。如果您购买的物业需要大规模翻新，配合增值策略的常规融资可能更合适。</p>
+      <p>最佳方案是对CMHC保险与常规融资两种方式进行数字比较，看哪条路能为您的具体情况带来更好的回报。</p>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        讨论您的CMHC选项
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+      // BLOG MODAL 2 (ZH)
+      'modal2-body': `<h2>什么是预估报表？为何重要？</h2>
+      <p>预估报表是估算物业收入、支出和现金流的财务预测文件，是融资申请中最重要的材料。贷款机构用它来判断您的物业能否覆盖债务，并会逐行审查。</p>
+      <p>一份完善的预估报表不仅帮助您获得审批，更能帮助您做出更好的投资决策。如果数字在纸面上不成立，现实中也不会成立。</p>
+      <h2>第一步：计算总潜在收入</h2>
+      <p>从物业在全年所有单元均以市场租金出租的情况下能产生的总租金收入开始。</p>
+      <ul>
+        <li><strong>列出每个单元</strong>的当前租金和区域同类单元的市场租金</li>
+        <li><strong>纳入其他收入</strong>，如停车位、洗衣房、储物间或物业产生的其他任何收入</li>
+        <li>在魁北克，要对租金涨幅保持现实——住房行政法庭每年发布指导方针，限制对现有租户的加租幅度</li>
+      </ul>
+      <h2>第二步：扣除空置和坏账准备</h2>
+      <p>没有物业能全年保持100%的出租率。贷款机构要求您计提空置率，魁北克地段较好的多户住宅通常为总收入的<strong>3%至5%</strong>。若物业位于二级市场或人员流动性较高，应采用5%或更高。</p>
+      <p>由此得出您的<strong>有效总收入（EGI）</strong>——您可以合理预期收取的实际收入。</p>
+      <h2>第三步：详列运营支出</h2>
+      <p>这是大多数首次投资者容易出错的地方。支出假设不切实际的预估报表会被贷款机构拒绝。主要支出类别包括：</p>
+      <ul>
+        <li><strong>市政税和学校税：</strong>从市政税单核实确切金额。在魁北克，可通过评估档案公开查询</li>
+        <li><strong>保险：</strong>为具体物业获取实际报价。多户住宅保险成本因楼龄、建筑类型和地点而差异显著</li>
+        <li><strong>供暖和水电：</strong>若房东负责供暖（魁北克老楼常见），这是主要支出项。根据建筑情况，每套每年预算800至1,500加元</li>
+        <li><strong>维护和修缮：</strong>预算总收入的3%-5%用于日常维护。老旧建筑需要更多</li>
+        <li><strong>物业管理：</strong>即便自管，贷款机构通常也要求计列EGI的3%-5%。若聘请管理公司，实际成本通常为4%-7%</li>
+        <li><strong>除雪和园艺：</strong>魁北克特有的常被忽视支出项目。根据物业规模预算1,500至4,000加元以上</li>
+        <li><strong>公共区域电费：</strong>走廊照明、室外灯、洗衣房——通常每年500至1,500加元</li>
+      </ul>
+      <h2>第四步：计算净经营收入（NOI）</h2>
+      <p>NOI是您预估报表中最重要的数字：</p>
+      <div class="blog-modal__callout">
+        <strong>NOI = 有效总收入 – 总运营支出</strong><br><br>
+        这个数字代表物业在债务还款前的收入，是贷款机构评估交易的依据，也是收入法物业估值的基础。
+      </div>
+      <h2>第五步：计算DSCR</h2>
+      <p><strong>债务覆盖率</strong>告诉贷款机构物业是否产生足够收入来覆盖抵押贷款还款：</p>
+      <p><strong>DSCR = NOI ÷ 年债务服务额（抵押贷款还款）</strong></p>
+      <p>CMHC要求最低DSCR为<strong>1.10倍</strong>，即物业收入至少须比抵押贷款成本高出10%。大多数贷款机构对于常规交易更倾向看到1.15倍或以上。DSCR越高，申请越有力。</p>
+      <h2>第六步：资本化率分析</h2>
+      <p>资本化率帮助您评估购买价格是否合理：</p>
+      <p><strong>资本化率 = NOI ÷ 购买价格</strong></p>
+      <p>蒙特利尔目前多户住宅资本化率在<strong>4%至6%</strong>之间，视地段和建筑质量而定。南岸和拉瓦尔的物业可能提供略高的资本化率。资本化率越低，意味着每元收入的购买成本越高。</p>
+      <h2>贷款机构的关注点</h2>
+      <p>贷款机构希望看到保守、可辩护的假设。他们会将您预测的租金与市场数据进行比较，核查您的支出比率是否符合行业基准，并在较高利率情景下对数字进行压力测试。预估报表被拒绝最常见的原因：</p>
+      <ul>
+        <li>租金高于市场水平却无法说明理由</li>
+        <li>遗漏支出类别</li>
+        <li>空置率低于3%</li>
+        <li>即便自管也未计列管理费</li>
+      </ul>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        获取预估报表制作帮助
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+      // BLOG MODAL 3 (ZH)
+      'modal3-body': `<h2>常规融资的困境</h2>
+      <p>如果您想通过常规融资购买多户住宅物业，大多数贷款机构要求<strong>20%至25%的首付</strong>。一栋100万加元的五单元公寓楼，仅首付就需要20至25万加元——这还不包括交割费用、检测和储备金。</p>
+      <p>对于大多数投资者，尤其是构建第一个投资组合的人来说，这样的资金要求构成了壁垒，拖慢了收购节奏，限制了可购买的物业数量。</p>
+      <h2>CMHC如何改变计算逻辑</h2>
+      <p>CMHC抵押贷款保险允许您以<strong>低至5%的首付</strong>购买多户住宅物业（5个单元及以上）。同一栋100万加元的五单元楼，您的首付仅需5万加元。</p>
+      <div class="blog-modal__callout">
+        <strong>数字对比：</strong><br><br>
+        <strong>常规融资（20%首付）：</strong>100万加元物业首付20万加元<br>
+        <strong>CMHC保险融资（5%首付）：</strong>同一物业首付5万加元<br><br>
+        节省下来的15万加元——足以支付另外两三套物业的首付。
+      </div>
+      <h2>保险费的权衡</h2>
+      <p>CMHC保险并非免费。您须按贷款价值比缴纳保险费。以95% LTV（5%首付）为例，保险费处于较高区间——通常约为贷款金额的<strong>4.00%至6.25%</strong>，具体取决于还款期和MLI Select评分。</p>
+      <p>以95万加元的贷款（100万的95%）为例，保险费可能在3.8万至5.9万加元之间。好消息是：这笔保险费可计入抵押贷款，无需现金垫付，而是在贷款期限内逐步偿还。</p>
+      <h2>为何保险费物有所值</h2>
+      <p>通常有三个因素使保险费变得合算：</p>
+      <ul>
+        <li><strong>更低利率：</strong>CMHC保险抵押贷款的利率通常比常规低50至150个基点。以95万加元的贷款为例，1%的利率差异每年可节省约9,500加元</li>
+        <li><strong>更长还款期：</strong>可获得40至50年还款期（相比常规的25至30年），显著降低月供，改善现金流</li>
+        <li><strong>资金效率：</strong>节省下来未用于首付的资金可部署到其他投资，获取更高回报</li>
+      </ul>
+      <h2>投资组合扩张策略</h2>
+      <p>这正是CMHC融资成为投资组合加速器的原因。设想两位投资者，各自持有20万加元资金：</p>
+      <p><strong>投资者A（常规）：</strong>以20%首付购买一套100万加元的物业，所有资金集中在单一资产。</p>
+      <p><strong>投资者B（CMHC）：</strong>以5%首付（每套5万加元）购买四套100万加元的物业，资金分散在四项资产上，产生四条租金收入流。</p>
+      <p>投资者B现在持有400万加元的房地产，而投资者A仅持有100万。若物业价值上涨5%，投资者A获得5万加元的资产增值，投资者B获得20万。杠杆效应显而易见。</p>
+      <h2>需要了解的风险</h2>
+      <p>高杠杆是把双刃剑，重要注意事项：</p>
+      <ul>
+        <li><strong>现金流敏感性：</strong>在95% LTV情况下，抵押贷款还款相对收入较高。即便是小幅空置率或支出增加，也可能对现金流造成压力</li>
+        <li><strong>利率风险：</strong>续期时，较高利率对较大贷款的冲击更大。请在高出当前利率2%的情景下对预估报表进行压力测试</li>
+        <li><strong>物业状况：</strong>CMHC有物理状态标准，需要大规模维修的物业可能不符合条件</li>
+        <li><strong>DSCR要求：</strong>物业必须满足CMHC最低1.1倍的DSCR，这意味着并非所有物业都能以5%首付获批</li>
+      </ul>
+      <h2>适合使用此策略的投资者</h2>
+      <p>5%首付CMHC策略最适合以下投资者：</p>
+      <ul>
+        <li>希望比常规融资更快地扩大投资组合</li>
+        <li>目标是已经产生正现金流的物业（而非增值改造项目）</li>
+        <li>了解杠杆风险，并为意外支出预留储备金</li>
+        <li>在租赁需求稳定的市场购买——蒙特利尔、拉瓦尔、南岸和魁北克市均符合条件</li>
+      </ul>
+      <p>如果您购买的是需要大规模翻新的问题物业，或物业当前收入不满足DSCR要求，此策略则不适用。</p>
+      <h2>如何开始</h2>
+      <p>第一步是制作预估报表，评估您的目标物业是否符合CMHC保险条件。您需要了解NOI、当前利率下的DSCR，以及物业是否满足CMHC的物理和财务标准。专注于多户住宅融资的经纪人可以与您共同核算这些数字，找出最佳前进路径。</p>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        规划您的收购策略
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
     }
   };
 
@@ -2605,24 +3090,30 @@
       }
     });
 
-    // Update nav lang toggle button
-    const langToggleBtn = document.getElementById('langToggle');
-    if (langToggleBtn) {
-      langToggleBtn.innerHTML = globeSVG + (lang === 'en' ? ' FR' : ' EN');
-    }
+    // Update nav dropdown label and active state
+    const langLabel = document.getElementById('langToggleLabel');
+    if (langLabel) langLabel.textContent = lang === 'zh' ? '中文' : lang.toUpperCase();
+    document.querySelectorAll('.nav__lang-opt').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
 
-    // Update footer lang toggle button
-    const footerLangToggleBtn = document.getElementById('footerLangToggle');
-    if (footerLangToggleBtn) {
-      footerLangToggleBtn.textContent = data['footer-lang-btn'];
-    }
+    // Update footer lang buttons active state
+    document.querySelectorAll('.footer__lang-opt').forEach(btn => {
+      const isActive = btn.getAttribute('data-lang') === lang;
+      btn.style.background = isActive ? 'rgba(255,255,255,0.12)' : 'none';
+      btn.style.color = isActive ? '#fff' : 'rgba(255,255,255,0.6)';
+      btn.style.fontWeight = isActive ? '700' : '400';
+      btn.style.borderColor = isActive ? 'rgba(255,255,255,0.25)' : 'rgba(255,255,255,0.15)';
+    });
 
     // Update video source
     const video = document.querySelector('.hero__vsl video');
     if (video) {
       const newSrc = lang === 'en'
         ? video.getAttribute('data-src-en')
-        : video.getAttribute('data-src-fr');
+        : lang === 'fr'
+          ? video.getAttribute('data-src-fr')
+          : (video.getAttribute('data-src-zh') || video.getAttribute('data-src-en'));
       const source = video.querySelector('source');
       if (source && newSrc) {
         source.src = newSrc;
@@ -2636,12 +3127,48 @@
     });
   }
 
-  // Language toggle event listeners
-  document.getElementById('langToggle').addEventListener('click', () => {
-    setLang(currentLang === 'en' ? 'fr' : 'en');
+  // Language dropdown
+  const langDropdown = document.getElementById('langDropdown');
+  const langToggleBtn = document.getElementById('langToggle');
+
+  langToggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = langDropdown.classList.toggle('open');
+    langToggleBtn.setAttribute('aria-expanded', isOpen);
   });
-  document.getElementById('footerLangToggle').addEventListener('click', () => {
-    setLang(currentLang === 'en' ? 'fr' : 'en');
+
+  document.addEventListener('click', () => {
+    langDropdown.classList.remove('open');
+    langToggleBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  document.querySelectorAll('.nav__lang-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLang(btn.getAttribute('data-lang'));
+      langDropdown.classList.remove('open');
+      langToggleBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Footer language buttons
+  document.querySelectorAll('.footer__lang-opt').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+  });
+
+  // Carousel dot indicators (only active on mobile)
+  const carouselIds = ['carousel-diff', 'carousel-services', 'carousel-results', 'carousel-blog', 'carousel-tx'];
+  carouselIds.forEach(id => {
+    const track = document.getElementById(id);
+    if (!track) return;
+    const dots = document.querySelectorAll('[data-for="' + id + '"] span');
+    if (!dots.length) return;
+    track.addEventListener('scroll', () => {
+      const cards = track.children;
+      if (!cards.length) return;
+      const cardW = cards[0].offsetWidth + parseInt(getComputedStyle(track).gap || 0);
+      const idx = Math.round(track.scrollLeft / cardW);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }, { passive: true });
   });
 </script>
 
