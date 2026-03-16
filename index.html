@@ -968,22 +968,22 @@
 <nav class="nav" id="nav">
   <a href="#" class="nav__brand">
     <div class="nav__brand-name">Hong Yue</div>
-    <div class="nav__brand-sub">Multifamily Mortgage Broker</div>
+    <div class="nav__brand-sub" data-i18n="nav-sub">Multifamily Mortgage Broker</div>
   </a>
   <ul class="nav__links" id="navLinks">
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#expertise" data-i18n="nav-expertise">Expertise</a></li>
+    <li><a href="#process" data-i18n="nav-process">Process</a></li>
+    <li><a href="#results" data-i18n="nav-results">Results</a></li>
+    <li><a href="#about" data-i18n="nav-about">About</a></li>
+    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
     <li><div class="nav__sep"></div></li>
     <li>
-      <span class="nav__lang">
+      <button type="button" id="langToggle" class="nav__lang" style="background:none;border:none;cursor:pointer;font-family:inherit;">
         <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10A15 15 0 0112 2z"/></svg>
         EN
-      </span>
+      </button>
     </li>
-    <li><a href="#" class="nav__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>Book a Call</a></li>
+    <li><a href="#" class="nav__cta" data-i18n="nav-cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>Book a Call</a></li>
   </ul>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -997,31 +997,31 @@
   <div class="hero__content">
     <div class="hero__badge reveal">
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg>
-      Multifamily Financing Specialist
+      <span data-i18n="hero-badge">Multifamily Financing Specialist</span>
     </div>
-    <h1 class="hero__title reveal reveal-d1">Scale Your Real Estate Empire</h1>
-    <p class="hero__desc reveal reveal-d2">Expert multifamily mortgage broker helping investors unlock better financing, lower downpayments, and higher ROI with Canada Mortgage and Housing Corporation (CMHC) advantages.</p>
+    <h1 class="hero__title reveal reveal-d1" data-i18n="hero-title">Scale Your Real Estate Empire</h1>
+    <p class="hero__desc reveal reveal-d2" data-i18n="hero-desc">Expert multifamily mortgage broker helping investors unlock better financing, lower downpayments, and higher ROI with Canada Mortgage and Housing Corporation (CMHC) advantages.</p>
     <div class="hero__vsl reveal reveal-d3">
-      <video controls playsinline preload="metadata">
+      <video controls playsinline preload="metadata" data-src-en="VSL/English VSL.mp4" data-src-fr="VSL/French VSL.mp4">
         <source src="VSL/English VSL.mp4" type="video/mp4">
       </video>
     </div>
     <a href="#" class="hero__cta reveal reveal-d4" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
-      Book Your Strategy Call
+      <span data-i18n="hero-cta">Book Your Strategy Call →</span>
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
     <div class="hero__stats reveal reveal-d5">
       <div>
         <div class="hero__stat-value">7+</div>
-        <div class="hero__stat-label">Years Expertise</div>
+        <div class="hero__stat-label" data-i18n="hero-stat-years">Years Expertise</div>
       </div>
       <div>
         <div class="hero__stat-value">49</div>
-        <div class="hero__stat-label">Doors Owned</div>
+        <div class="hero__stat-label" data-i18n="hero-stat-doors">Doors Owned</div>
       </div>
       <div>
         <div class="hero__stat-value">$80M+</div>
-        <div class="hero__stat-label">Annual Volume</div>
+        <div class="hero__stat-label" data-i18n="hero-stat-volume">Annual Volume</div>
       </div>
     </div>
   </div>
@@ -1031,37 +1031,37 @@
 <section class="section" id="expertise">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">What Makes Me Different</h2>
-      <p class="section__subtitle">Not just another mortgage broker. A specialized partner in your multifamily investment journey.</p>
+      <h2 class="section__title" data-i18n="diff-title">What Makes Me Different</h2>
+      <p class="section__subtitle" data-i18n="diff-sub">Not just another mortgage broker. A specialized partner in your multifamily investment journey.</p>
     </div>
     <div class="diff-grid">
       <div class="diff-card reveal reveal-d1">
         <div class="diff-card__icon">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h3 class="diff-card__title">100% Multifamily Specialized</h3>
-        <p class="diff-card__text">Exclusive focus on multifamily financing. No distractions, just deep expertise in what matters for your portfolio growth.</p>
+        <h3 class="diff-card__title" data-i18n="diff-card1-title">100% Multifamily Specialized</h3>
+        <p class="diff-card__text" data-i18n="diff-card1-text">Exclusive focus on multifamily financing. No distractions, just deep expertise in what matters for your portfolio growth.</p>
       </div>
       <div class="diff-card reveal reveal-d2">
         <div class="diff-card__icon">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <h3 class="diff-card__title">Up-to-Date Lending Policies</h3>
-        <p class="diff-card__text">Direct relationships with lenders means real-time knowledge of policy changes and opportunities before they hit the market.</p>
+        <h3 class="diff-card__title" data-i18n="diff-card2-title">Up-to-Date Lending Policies</h3>
+        <p class="diff-card__text" data-i18n="diff-card2-text">Direct relationships with lenders means real-time knowledge of policy changes and opportunities before they hit the market.</p>
       </div>
       <div class="diff-card reveal reveal-d3">
         <div class="diff-card__icon">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
         </div>
-        <h3 class="diff-card__title">In-House Underwriter</h3>
-        <p class="diff-card__text">Pre-qualify your deals with confidence. Our in-house underwriting catches issues early and positions you for success.</p>
+        <h3 class="diff-card__title" data-i18n="diff-card3-title">In-House Underwriter</h3>
+        <p class="diff-card__text" data-i18n="diff-card3-text">Pre-qualify your deals with confidence. Our in-house underwriting catches issues early and positions you for success.</p>
       </div>
       <div class="diff-card reveal reveal-d4">
         <div class="diff-card__icon">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <h3 class="diff-card__title">Efficient &amp; Honest</h3>
-        <p class="diff-card__text">No games, no surprises. Fast turnarounds, transparent communication, and solutions for complex financing scenarios.</p>
+        <h3 class="diff-card__title" data-i18n="diff-card4-title">Efficient &amp; Honest</h3>
+        <p class="diff-card__text" data-i18n="diff-card4-text">No games, no surprises. Fast turnarounds, transparent communication, and solutions for complex financing scenarios.</p>
       </div>
     </div>
   </div>
@@ -1072,15 +1072,15 @@
   <div class="container">
     <div class="split-grid reveal">
       <div>
-        <h2 class="split-block__title">Who I Work With</h2>
-        <p class="split-block__sub">From first-time multifamily investors to seasoned portfolio builders.</p>
+        <h2 class="split-block__title" data-i18n="audience-title">Who I Work With</h2>
+        <p class="split-block__sub" data-i18n="audience-sub">From first-time multifamily investors to seasoned portfolio builders.</p>
         <div class="audience-item">
           <div class="audience-item__icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2m-16 0H3m2 0V5m14 0v16M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5"/></svg>
           </div>
           <div>
-            <div class="audience-item__title">Multifamily Investors</div>
-            <div class="audience-item__text">Portfolio owners and investors scaling their multifamily holdings with strategic financing.</div>
+            <div class="audience-item__title" data-i18n="audience-item1-title">Multifamily Investors</div>
+            <div class="audience-item__text" data-i18n="audience-item1-text">Portfolio owners and investors scaling their multifamily holdings with strategic financing.</div>
           </div>
         </div>
         <div class="audience-item">
@@ -1088,27 +1088,27 @@
             <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
           </div>
           <div>
-            <div class="audience-item__title">First-Time Investors</div>
-            <div class="audience-item__text">New investors entering multifamily with proper education and financing strategy from day one.</div>
+            <div class="audience-item__title" data-i18n="audience-item2-title">First-Time Investors</div>
+            <div class="audience-item__text" data-i18n="audience-item2-text">New investors entering multifamily with proper education and financing strategy from day one.</div>
           </div>
         </div>
       </div>
       <div>
         <div class="challenge-block__title">
           <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
-          Common Challenges I Solve
+          <span data-i18n="challenges-title">Common Challenges I Solve</span>
         </div>
         <div class="challenge-item">
-          <div class="challenge-item__title">Large Downpayment Requirements</div>
-          <div class="challenge-item__text">Reduce upfront capital needs with CMHC financing strategies and optimized deal structuring.</div>
+          <div class="challenge-item__title" data-i18n="challenge1-title">Large Downpayment Requirements</div>
+          <div class="challenge-item__text" data-i18n="challenge1-text">Reduce upfront capital needs with CMHC financing strategies and optimized deal structuring.</div>
         </div>
         <div class="challenge-item">
-          <div class="challenge-item__title">Salary Limitations</div>
-          <div class="challenge-item__text">Your financing amount won't be capped by your salary.</div>
+          <div class="challenge-item__title" data-i18n="challenge2-title">Salary Limitations</div>
+          <div class="challenge-item__text" data-i18n="challenge2-text">Your financing amount won't be capped by your salary.</div>
         </div>
         <div class="challenge-item">
-          <div class="challenge-item__title">Lack of Investment Knowledge</div>
-          <div class="challenge-item__text">Full education on deal analysis, proformas, NOI, and DSCR so you understand every aspect of your investment.</div>
+          <div class="challenge-item__title" data-i18n="challenge3-title">Lack of Investment Knowledge</div>
+          <div class="challenge-item__text" data-i18n="challenge3-text">Full education on deal analysis, proformas, NOI, and DSCR so you understand every aspect of your investment.</div>
         </div>
       </div>
     </div>
@@ -1119,39 +1119,39 @@
 <section class="section">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">Your Complete Multifamily Financing Partner</h2>
-      <p class="section__subtitle">Beyond just finding you a mortgage. I optimize your entire financing strategy for maximum returns.</p>
+      <h2 class="section__title" data-i18n="services-title">Your Complete Multifamily Financing Partner</h2>
+      <p class="section__subtitle" data-i18n="services-sub">Beyond just finding you a mortgage. I optimize your entire financing strategy for maximum returns.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal reveal-d1">
         <div class="service-card__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11m16-11v11M8 14v3m4-3v3m4-3v3"/></svg></div>
-        <h3 class="service-card__title">CMHC Financing Expertise</h3>
-        <p class="service-card__text">Navigate government-backed financing with lower downpayments and competitive rates for qualified properties.</p>
+        <h3 class="service-card__title" data-i18n="svc1-title">CMHC Financing Expertise</h3>
+        <p class="service-card__text" data-i18n="svc1-text">Navigate government-backed financing with lower downpayments and competitive rates for qualified properties.</p>
       </div>
       <div class="service-card reveal reveal-d2">
         <div class="service-card__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-        <h3 class="service-card__title">Multifamily Lender Network</h3>
-        <p class="service-card__text">Exclusive access to specialized lenders who understand multifamily investments and offer better terms.</p>
+        <h3 class="service-card__title" data-i18n="svc2-title">Multifamily Lender Network</h3>
+        <p class="service-card__text" data-i18n="svc2-text">Exclusive access to specialized lenders who understand multifamily investments and offer better terms.</p>
       </div>
       <div class="service-card reveal reveal-d3">
         <div class="service-card__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
-        <h3 class="service-card__title">Build NOI, DSCR &amp; Projections</h3>
-        <p class="service-card__text">Professional financial modeling to maximize your deal appeal and secure optimal financing terms.</p>
+        <h3 class="service-card__title" data-i18n="svc3-title">Build NOI, DSCR &amp; Projections</h3>
+        <p class="service-card__text" data-i18n="svc3-text">Professional financial modeling to maximize your deal appeal and secure optimal financing terms.</p>
       </div>
       <div class="service-card reveal reveal-d1">
         <div class="service-card__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
-        <h3 class="service-card__title">Create &amp; Explain Proforma</h3>
-        <p class="service-card__text">Detailed proforma creation with clear explanations so you fully understand your investment numbers.</p>
+        <h3 class="service-card__title" data-i18n="svc4-title">Create &amp; Explain Proforma</h3>
+        <p class="service-card__text" data-i18n="svc4-text">Detailed proforma creation with clear explanations so you fully understand your investment numbers.</p>
       </div>
       <div class="service-card reveal reveal-d2">
         <div class="service-card__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
-        <h3 class="service-card__title">Optimize Financing Strategy</h3>
-        <p class="service-card__text">Strategic planning to structure deals for maximum leverage, cash flow, and long-term portfolio growth.</p>
+        <h3 class="service-card__title" data-i18n="svc5-title">Optimize Financing Strategy</h3>
+        <p class="service-card__text" data-i18n="svc5-text">Strategic planning to structure deals for maximum leverage, cash flow, and long-term portfolio growth.</p>
       </div>
       <div class="service-card reveal reveal-d3">
         <div class="service-card__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
-        <h3 class="service-card__title">Deal Analysis Education</h3>
-        <p class="service-card__text">Hands-on teaching so you become a more sophisticated investor with every transaction.</p>
+        <h3 class="service-card__title" data-i18n="svc6-title">Deal Analysis Education</h3>
+        <p class="service-card__text" data-i18n="svc6-text">Hands-on teaching so you become a more sophisticated investor with every transaction.</p>
       </div>
     </div>
   </div>
@@ -1161,8 +1161,8 @@
 <section class="section section--gray" id="process">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">The Client Process</h2>
-      <p class="section__subtitle">A proven 7-step system that takes you from property analysis to keys in hand.</p>
+      <h2 class="section__title" data-i18n="process-title">The Client Process</h2>
+      <p class="section__subtitle" data-i18n="process-sub">A proven 7-step system that takes you from property analysis to keys in hand.</p>
     </div>
     <div class="timeline">
       <div class="tl-item reveal">
@@ -1170,9 +1170,9 @@
         <div class="tl-item__content">
           <div class="tl-item__header">
             <div class="tl-item__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
-            <h3 class="tl-item__title">Proforma Creation</h3>
+            <h3 class="tl-item__title" data-i18n="step1-title">Proforma Creation</h3>
           </div>
-          <p class="tl-item__text">Build detailed financial projections including NOI, DSCR, and cash flow analysis for your property.</p>
+          <p class="tl-item__text" data-i18n="step1-text">Build detailed financial projections including NOI, DSCR, and cash flow analysis for your property.</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -1180,9 +1180,9 @@
         <div class="tl-item__content">
           <div class="tl-item__header">
             <div class="tl-item__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
-            <h3 class="tl-item__title">Strategy Explanation</h3>
+            <h3 class="tl-item__title" data-i18n="step2-title">Strategy Explanation</h3>
           </div>
-          <p class="tl-item__text">Walk through financing options, CMHC advantages, and optimal structuring for your specific deal.</p>
+          <p class="tl-item__text" data-i18n="step2-text">Walk through financing options, CMHC advantages, and optimal structuring for your specific deal.</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -1190,9 +1190,9 @@
         <div class="tl-item__content">
           <div class="tl-item__header">
             <div class="tl-item__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"/></svg></div>
-            <h3 class="tl-item__title">Build Financing File</h3>
+            <h3 class="tl-item__title" data-i18n="step3-title">Build Financing File</h3>
           </div>
-          <p class="tl-item__text">Compile comprehensive documentation package with in-house underwriting to ensure approval readiness.</p>
+          <p class="tl-item__text" data-i18n="step3-text">Compile comprehensive documentation package with in-house underwriting to ensure approval readiness.</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -1200,9 +1200,9 @@
         <div class="tl-item__content">
           <div class="tl-item__header">
             <div class="tl-item__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg></div>
-            <h3 class="tl-item__title">Submit to Lenders</h3>
+            <h3 class="tl-item__title" data-i18n="step4-title">Submit to Lenders</h3>
           </div>
-          <p class="tl-item__text">Present your deal to our network of multifamily-specialized lenders and CMHC when applicable.</p>
+          <p class="tl-item__text" data-i18n="step4-text">Present your deal to our network of multifamily-specialized lenders and CMHC when applicable.</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -1210,9 +1210,9 @@
         <div class="tl-item__content">
           <div class="tl-item__header">
             <div class="tl-item__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <h3 class="tl-item__title">Follow-Up &amp; Approval</h3>
+            <h3 class="tl-item__title" data-i18n="step5-title">Follow-Up &amp; Approval</h3>
           </div>
-          <p class="tl-item__text">Manage lender communication, answer questions, and navigate the approval process to closing.</p>
+          <p class="tl-item__text" data-i18n="step5-text">Manage lender communication, answer questions, and navigate the approval process to closing.</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -1220,9 +1220,9 @@
         <div class="tl-item__content">
           <div class="tl-item__header">
             <div class="tl-item__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
-            <h3 class="tl-item__title">Review Terms</h3>
+            <h3 class="tl-item__title" data-i18n="step6-title">Review Terms</h3>
           </div>
-          <p class="tl-item__text">Detailed review of engagement letter, rate, terms, and conditions to ensure you understand everything.</p>
+          <p class="tl-item__text" data-i18n="step6-text">Detailed review of engagement letter, rate, terms, and conditions to ensure you understand everything.</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -1230,9 +1230,9 @@
         <div class="tl-item__content">
           <div class="tl-item__header">
             <div class="tl-item__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></div>
-            <h3 class="tl-item__title">Coordinate Closing</h3>
+            <h3 class="tl-item__title" data-i18n="step7-title">Coordinate Closing</h3>
           </div>
-          <p class="tl-item__text">Work with notary and all parties to ensure smooth, on-time closing with all documents in order.</p>
+          <p class="tl-item__text" data-i18n="step7-text">Work with notary and all parties to ensure smooth, on-time closing with all documents in order.</p>
         </div>
       </div>
     </div>
@@ -1242,9 +1242,9 @@
 <!-- CTA BAND -->
 <section class="cta-band">
   <div class="cta-band__inner reveal">
-    <h2 class="cta-band__title">Ready to Improve Your Deal Terms?</h2>
-    <p class="cta-band__text">See how strategic financing can transform your multifamily investment returns.</p>
-    <a href="#" class="btn-dark" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>Schedule Your Consultation</a>
+    <h2 class="cta-band__title" data-i18n="cta-band-title">Ready to Improve Your Deal Terms?</h2>
+    <p class="cta-band__text" data-i18n="cta-band-text">See how strategic financing can transform your multifamily investment returns.</p>
+    <a href="#" class="btn-dark" data-i18n="cta-band-btn" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>Schedule Your Consultation</a>
   </div>
 </section>
 
@@ -1252,29 +1252,29 @@
 <section class="section section--gray" id="results">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">Client Results</h2>
-      <p class="section__subtitle">Numbers that speak for themselves.</p>
+      <h2 class="section__title" data-i18n="results-title">Client Results</h2>
+      <p class="section__subtitle" data-i18n="results-sub">Numbers that speak for themselves.</p>
     </div>
     <div class="results-grid">
       <div class="result-card reveal reveal-d1">
         <div class="result-card__value">1.5%</div>
-        <div class="result-card__label">Lower Interest Rates</div>
-        <div class="result-card__desc">Access to specialized lenders and CMHC programs means better rates than conventional financing.</div>
+        <div class="result-card__label" data-i18n="result1-label">Lower Interest Rates</div>
+        <div class="result-card__desc" data-i18n="result1-desc">Access to specialized lenders and CMHC programs means better rates than conventional financing.</div>
       </div>
       <div class="result-card reveal reveal-d2">
         <div class="result-card__value">5%</div>
-        <div class="result-card__label">Reduced Downpayment</div>
-        <div class="result-card__desc">CMHC financing can reduce downpayment requirements significantly for qualified properties.</div>
+        <div class="result-card__label" data-i18n="result2-label">Reduced Downpayment</div>
+        <div class="result-card__desc" data-i18n="result2-desc">CMHC financing can reduce downpayment requirements significantly for qualified properties.</div>
       </div>
       <div class="result-card reveal reveal-d3">
         <div class="result-card__value">98%</div>
-        <div class="result-card__label">Approval Rate</div>
-        <div class="result-card__desc">In-house underwriting and expert file preparation means fewer surprises and faster closings.</div>
+        <div class="result-card__label" data-i18n="result3-label">Approval Rate</div>
+        <div class="result-card__desc" data-i18n="result3-desc">In-house underwriting and expert file preparation means fewer surprises and faster closings.</div>
       </div>
       <div class="result-card reveal reveal-d4">
         <div class="result-card__value">100%</div>
-        <div class="result-card__label">Educated Investors</div>
-        <div class="result-card__desc">Leave every conversation understanding your numbers, strategy, and why each decision was made.</div>
+        <div class="result-card__label" data-i18n="result4-label">Educated Investors</div>
+        <div class="result-card__desc" data-i18n="result4-desc">Leave every conversation understanding your numbers, strategy, and why each decision was made.</div>
       </div>
     </div>
   </div>
@@ -1284,8 +1284,8 @@
 <section class="section">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">Recent Transactions</h2>
-      <p class="section__subtitle">Real deals, real results. I help investors secure high-leverage financing with optimal terms.</p>
+      <h2 class="section__title" data-i18n="tx-title">Recent Transactions</h2>
+      <p class="section__subtitle" data-i18n="tx-sub">Real deals, real results. I help investors secure high-leverage financing with optimal terms.</p>
     </div>
 
     <div class="tx-card reveal">
@@ -1294,19 +1294,19 @@
         <div class="tx-card__header">
           <div>
             <div class="tx-card__name">6plex in Laval</div>
-            <div class="tx-card__type">Residential Refinance</div>
+            <div class="tx-card__type" data-i18n="tx-type-refinance">Residential Refinance</div>
           </div>
-          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Funded June 2025</div>
+          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> <span data-i18n="tx-date-jun">Funded June 2025</span></div>
         </div>
         <div class="tx-card__stats">
-          <div><div class="tx-stat__label">Purchase Price</div><div class="tx-stat__value">$1,350,000</div></div>
-          <div><div class="tx-stat__label">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$115,905</div></div>
-          <div><div class="tx-stat__label">Interest Rate</div><div class="tx-stat__value">4.00%</div></div>
-          <div><div class="tx-stat__label">Amortization</div><div class="tx-stat__value">50 Years</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-purchase-price">Purchase Price</div><div class="tx-stat__value">$1,350,000</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-down-payment">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$115,905</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-interest-rate">Interest Rate</div><div class="tx-stat__value">4.00%</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-amortization">Amortization</div><div class="tx-stat__value">50 Years</div></div>
         </div>
         <div class="tx-card__footer">
-          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> 5-Year Fixed Term Secured</span>
-          <span class="tx-card__footer-badge">Optimized Leverage</span>
+          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> <span data-i18n="tx-fixed-term">5-Year Fixed Term Secured</span></span>
+          <span class="tx-card__footer-badge" data-i18n="tx-opt-leverage">Optimized Leverage</span>
         </div>
       </div>
     </div>
@@ -1317,19 +1317,19 @@
         <div class="tx-card__header">
           <div>
             <div class="tx-card__name">18plex in South-Shore</div>
-            <div class="tx-card__type">New Construction</div>
+            <div class="tx-card__type" data-i18n="tx-type-construction">New Construction</div>
           </div>
-          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Funded July 2025</div>
+          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> <span data-i18n="tx-date-jul">Funded July 2025</span></div>
         </div>
         <div class="tx-card__stats">
-          <div><div class="tx-stat__label">Purchase Price</div><div class="tx-stat__value">$5,350,000</div></div>
-          <div><div class="tx-stat__label">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$683,000</div></div>
-          <div><div class="tx-stat__label">Interest Rate</div><div class="tx-stat__value">4.02%</div></div>
-          <div><div class="tx-stat__label">Amortization</div><div class="tx-stat__value">40 Years</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-purchase-price">Purchase Price</div><div class="tx-stat__value">$5,350,000</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-down-payment">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$683,000</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-interest-rate">Interest Rate</div><div class="tx-stat__value">4.02%</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-amortization">Amortization</div><div class="tx-stat__value">40 Years</div></div>
         </div>
         <div class="tx-card__footer">
-          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> 5-Year Fixed Term Secured</span>
-          <span class="tx-card__footer-badge">Optimized Leverage</span>
+          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> <span data-i18n="tx-fixed-term">5-Year Fixed Term Secured</span></span>
+          <span class="tx-card__footer-badge" data-i18n="tx-opt-leverage">Optimized Leverage</span>
         </div>
       </div>
     </div>
@@ -1340,19 +1340,19 @@
         <div class="tx-card__header">
           <div>
             <div class="tx-card__name">17plex in Montreal</div>
-            <div class="tx-card__type">Strategic Acquisition</div>
+            <div class="tx-card__type" data-i18n="tx-type-acquisition">Strategic Acquisition</div>
           </div>
-          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Funded February 2025</div>
+          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> <span data-i18n="tx-date-feb">Funded February 2025</span></div>
         </div>
         <div class="tx-card__stats">
-          <div><div class="tx-stat__label">Purchase Price</div><div class="tx-stat__value">$4,050,000</div></div>
-          <div><div class="tx-stat__label">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$268,800</div></div>
-          <div><div class="tx-stat__label">Interest Rate</div><div class="tx-stat__value">3.70%</div></div>
-          <div><div class="tx-stat__label">Amortization</div><div class="tx-stat__value">50 Years</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-purchase-price">Purchase Price</div><div class="tx-stat__value">$4,050,000</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-down-payment">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$268,800</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-interest-rate">Interest Rate</div><div class="tx-stat__value">3.70%</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-amortization">Amortization</div><div class="tx-stat__value">50 Years</div></div>
         </div>
         <div class="tx-card__footer">
-          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> 5-Year Fixed Term Secured</span>
-          <span class="tx-card__footer-badge">Optimized Leverage</span>
+          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> <span data-i18n="tx-fixed-term">5-Year Fixed Term Secured</span></span>
+          <span class="tx-card__footer-badge" data-i18n="tx-opt-leverage">Optimized Leverage</span>
         </div>
       </div>
     </div>
@@ -1363,19 +1363,19 @@
         <div class="tx-card__header">
           <div>
             <div class="tx-card__name">5plex in Montreal</div>
-            <div class="tx-card__type">Portfolio Growth</div>
+            <div class="tx-card__type" data-i18n="tx-type-portfolio">Portfolio Growth</div>
           </div>
-          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Funded April 2025</div>
+          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> <span data-i18n="tx-date-apr">Funded April 2025</span></div>
         </div>
         <div class="tx-card__stats">
-          <div><div class="tx-stat__label">Purchase Price</div><div class="tx-stat__value">$1,550,000</div></div>
-          <div><div class="tx-stat__label">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$232,500</div></div>
-          <div><div class="tx-stat__label">Interest Rate</div><div class="tx-stat__value">3.79%</div></div>
-          <div><div class="tx-stat__label">Amortization</div><div class="tx-stat__value">40 Years</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-purchase-price">Purchase Price</div><div class="tx-stat__value">$1,550,000</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-down-payment">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$232,500</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-interest-rate">Interest Rate</div><div class="tx-stat__value">3.79%</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-amortization">Amortization</div><div class="tx-stat__value">40 Years</div></div>
         </div>
         <div class="tx-card__footer">
-          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> 5-Year Fixed Term Secured</span>
-          <span class="tx-card__footer-badge">Optimized Leverage</span>
+          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> <span data-i18n="tx-fixed-term">5-Year Fixed Term Secured</span></span>
+          <span class="tx-card__footer-badge" data-i18n="tx-opt-leverage">Optimized Leverage</span>
         </div>
       </div>
     </div>
@@ -1386,26 +1386,26 @@
         <div class="tx-card__header">
           <div>
             <div class="tx-card__name">24plex in Longueuil</div>
-            <div class="tx-card__type">High Leverage CMHC</div>
+            <div class="tx-card__type" data-i18n="tx-type-cmhc">High Leverage CMHC</div>
           </div>
-          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Funded April 2025</div>
+          <div class="tx-card__date"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> <span data-i18n="tx-date-apr">Funded April 2025</span></div>
         </div>
         <div class="tx-card__stats">
-          <div><div class="tx-stat__label">Purchase Price</div><div class="tx-stat__value">$5,110,000</div></div>
-          <div><div class="tx-stat__label">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$549,000</div></div>
-          <div><div class="tx-stat__label">Interest Rate</div><div class="tx-stat__value">3.65%</div></div>
-          <div><div class="tx-stat__label">Amortization</div><div class="tx-stat__value">50 Years</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-purchase-price">Purchase Price</div><div class="tx-stat__value">$5,110,000</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-down-payment">Down Payment</div><div class="tx-stat__value tx-stat__value--green">$549,000</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-interest-rate">Interest Rate</div><div class="tx-stat__value">3.65%</div></div>
+          <div><div class="tx-stat__label" data-i18n="tx-amortization">Amortization</div><div class="tx-stat__value">50 Years</div></div>
         </div>
         <div class="tx-card__footer">
-          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> 5-Year Fixed Term Secured</span>
-          <span class="tx-card__footer-badge">Optimized Leverage</span>
+          <span class="tx-card__footer-text"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg> <span data-i18n="tx-fixed-term">5-Year Fixed Term Secured</span></span>
+          <span class="tx-card__footer-badge" data-i18n="tx-opt-leverage">Optimized Leverage</span>
         </div>
       </div>
     </div>
 
-    <p class="tx-note reveal">* All deals represent actual client successes. Detailed proformas available upon request.</p>
+    <p class="tx-note reveal" data-i18n="tx-note">* All deals represent actual client successes. Detailed proformas available upon request.</p>
     <div style="text-align:center; margin-top:1.5rem;" class="reveal">
-      <a href="#contact" class="btn-dark">Analyze Your Deal</a>
+      <a href="#contact" class="btn-dark" data-i18n="tx-cta">Analyze Your Deal</a>
     </div>
   </div>
 </section>
@@ -1414,28 +1414,28 @@
 <section class="section section--gray" id="story">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">How I Became a Mortgage Broker</h2>
+      <h2 class="section__title" data-i18n="story-title">How I Became a Mortgage Broker</h2>
     </div>
     <div class="story-box reveal">
-      <p>I never planned to become a mortgage broker. Like many of you, I started as a multifamily investor looking to build wealth through real estate. During my own investment journey, I experienced firsthand the frustration of working with brokers who didn't understand multifamily properties.</p>
-      <p>They couldn't explain the numbers, didn't know about CMHC advantages, and treated every deal like a residential mortgage. I became a broker by accident while trying to solve my own financing challenges.</p>
-      <p>What started as learning how to properly analyze and finance my own deals turned into a passion for helping other investors avoid the mistakes I made and access the opportunities I discovered.</p>
-      <p>Today, I focus exclusively on multifamily financing because I know the questions you have, the challenges you face, and the strategies that actually work. I'm not just your broker. I'm an investor who happens to have the license and lender relationships to help you succeed.</p>
+      <p data-i18n="story-p1">I never planned to become a mortgage broker. Like many of you, I started as a multifamily investor looking to build wealth through real estate. During my own investment journey, I experienced firsthand the frustration of working with brokers who didn't understand multifamily properties.</p>
+      <p data-i18n="story-p2">They couldn't explain the numbers, didn't know about CMHC advantages, and treated every deal like a residential mortgage. I became a broker by accident while trying to solve my own financing challenges.</p>
+      <p data-i18n="story-p3">What started as learning how to properly analyze and finance my own deals turned into a passion for helping other investors avoid the mistakes I made and access the opportunities I discovered.</p>
+      <p data-i18n="story-p4">Today, I focus exclusively on multifamily financing because I know the questions you have, the challenges you face, and the strategies that actually work. I'm not just your broker. I'm an investor who happens to have the license and lender relationships to help you succeed.</p>
       <div class="story-milestones">
         <div>
           <div class="story-ms__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
-          <div class="story-ms__title">Started as Investor</div>
-          <div class="story-ms__text">Learned through real experience, not just theory</div>
+          <div class="story-ms__title" data-i18n="ms1-title">Started as Investor</div>
+          <div class="story-ms__text" data-i18n="ms1-text">Learned through real experience, not just theory</div>
         </div>
         <div>
           <div class="story-ms__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
-          <div class="story-ms__title">Became Specialized</div>
-          <div class="story-ms__text">100% focus on what actually matters</div>
+          <div class="story-ms__title" data-i18n="ms2-title">Became Specialized</div>
+          <div class="story-ms__text" data-i18n="ms2-text">100% focus on what actually matters</div>
         </div>
         <div>
           <div class="story-ms__icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
-          <div class="story-ms__title">Now Helping Others</div>
-          <div class="story-ms__text">Sharing knowledge and connections gained</div>
+          <div class="story-ms__title" data-i18n="ms3-title">Now Helping Others</div>
+          <div class="story-ms__text" data-i18n="ms3-text">Sharing knowledge and connections gained</div>
         </div>
       </div>
     </div>
@@ -1446,21 +1446,21 @@
 <section class="section" id="about">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">About Me</h2>
+      <h2 class="section__title" data-i18n="about-title">About Me</h2>
     </div>
     <div class="about-grid">
       <div class="reveal">
-        <p class="about__text">With over 7 years of specialized experience in multifamily investing and financing, I have helped investors close $80M+ in annual volume. My unique background as both investor and broker means I understand your goals, challenges, and the questions you're afraid to ask.</p>
-        <p class="about__text">I educate while I finance, ensuring every client becomes a more sophisticated investor. My approach combines technical expertise in CMHC financing and deal analysis with a genuine commitment to transparent, honest communication. No surprises, no games, just results.</p>
+        <p class="about__text" data-i18n="about-p1">With over 7 years of specialized experience in multifamily investing and financing, I have helped investors close $80M+ in annual volume. My unique background as both investor and broker means I understand your goals, challenges, and the questions you're afraid to ask.</p>
+        <p class="about__text" data-i18n="about-p2">I educate while I finance, ensuring every client becomes a more sophisticated investor. My approach combines technical expertise in CMHC financing and deal analysis with a genuine commitment to transparent, honest communication. No surprises, no games, just results.</p>
         <div class="about__values">
-          <div class="about__values-title">Core Values</div>
+          <div class="about__values-title" data-i18n="about-values-title">Core Values</div>
           <div class="about__values-grid">
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div> Authentic</div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div> Honest</div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> Responsible</div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div> Efficient</div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> Fast</div>
-            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg></div> Integrous</div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div> <span data-i18n="val-authentic">Authentic</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div> <span data-i18n="val-honest">Honest</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> <span data-i18n="val-responsible">Responsible</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div> <span data-i18n="val-efficient">Efficient</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div> <span data-i18n="val-fast">Fast</span></div>
+            <div class="about__value-item"><div class="about__value-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg></div> <span data-i18n="val-integrous">Integrous</span></div>
           </div>
         </div>
       </div>
@@ -1471,15 +1471,15 @@
         <div class="about__stats-row">
           <div class="about__stat-cell">
             <div class="about__stat-num">7+</div>
-            <div class="about__stat-text">Years</div>
+            <div class="about__stat-text" data-i18n="about-stat-years">Years</div>
           </div>
           <div class="about__stat-cell">
             <div class="about__stat-num">49</div>
-            <div class="about__stat-text">Doors Owned</div>
+            <div class="about__stat-text" data-i18n="about-stat-doors">Doors Owned</div>
           </div>
           <div class="about__stat-cell">
             <div class="about__stat-num">$80M+</div>
-            <div class="about__stat-text">Annual Volume</div>
+            <div class="about__stat-text" data-i18n="about-stat-volume">Annual Volume</div>
           </div>
         </div>
       </div>
@@ -1491,51 +1491,51 @@
 <section class="section section--gray" id="faq">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">Frequently Asked Questions</h2>
-      <p class="section__subtitle">Common questions about multifamily financing and the CMHC process.</p>
+      <h2 class="section__title" data-i18n="faq-title">Frequently Asked Questions</h2>
+      <p class="section__subtitle" data-i18n="faq-sub">Common questions about multifamily financing and the CMHC process.</p>
     </div>
     <div class="faq-list">
       <div class="faq-item reveal">
         <button type="button" class="faq-item__q" aria-expanded="false">
-          What is CMHC multifamily financing and how does it help investors?
+          <span data-i18n="faq-q1">What is CMHC multifamily financing and how does it help investors?</span>
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-item__a"><p>CMHC (Canada Mortgage and Housing Corporation) multifamily financing provides mortgage insurance for properties with 5 or more units. This allows investors to secure financing with as low as 5% down payment, access lower interest rates (up to 1.5% lower than conventional), and benefit from amortization periods of up to 50 years — significantly reducing monthly payments and improving cash flow.</p></div>
+        <div class="faq-item__a" data-i18n-html="faq-a1"><p>CMHC (Canada Mortgage and Housing Corporation) multifamily financing provides mortgage insurance for properties with 5 or more units. This allows investors to secure financing with as low as 5% down payment, access lower interest rates (up to 1.5% lower than conventional), and benefit from amortization periods of up to 50 years — significantly reducing monthly payments and improving cash flow.</p></div>
       </div>
       <div class="faq-item reveal reveal-d1">
         <button type="button" class="faq-item__q" aria-expanded="false">
-          What is the minimum down payment for a multifamily property in Canada?
+          <span data-i18n="faq-q2">What is the minimum down payment for a multifamily property in Canada?</span>
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-item__a"><p>With CMHC-insured financing, the minimum down payment for a multifamily property (5+ units) can be as low as 5% of the purchase price. This is significantly lower than the 20-35% typically required for conventional commercial mortgages, allowing investors to preserve capital and scale their portfolio faster.</p></div>
+        <div class="faq-item__a" data-i18n-html="faq-a2"><p>With CMHC-insured financing, the minimum down payment for a multifamily property (5+ units) can be as low as 5% of the purchase price. This is significantly lower than the 20-35% typically required for conventional commercial mortgages, allowing investors to preserve capital and scale their portfolio faster.</p></div>
       </div>
       <div class="faq-item reveal reveal-d2">
         <button type="button" class="faq-item__q" aria-expanded="false">
-          Do I need a high salary to qualify for multifamily financing?
+          <span data-i18n="faq-q3">Do I need a high salary to qualify for multifamily financing?</span>
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-item__a"><p>No. Unlike residential mortgages, multifamily commercial financing is primarily based on the property's income (NOI — Net Operating Income) and its Debt Service Coverage Ratio (DSCR), not your personal salary. This means the property's ability to generate rental income is the key qualification factor, allowing investors with modest salaries to finance multi-million dollar properties.</p></div>
+        <div class="faq-item__a" data-i18n-html="faq-a3"><p>No. Unlike residential mortgages, multifamily commercial financing is primarily based on the property's income (NOI — Net Operating Income) and its Debt Service Coverage Ratio (DSCR), not your personal salary. This means the property's ability to generate rental income is the key qualification factor, allowing investors with modest salaries to finance multi-million dollar properties.</p></div>
       </div>
       <div class="faq-item reveal reveal-d3">
         <button type="button" class="faq-item__q" aria-expanded="false">
-          What is NOI and DSCR in multifamily investing?
+          <span data-i18n="faq-q4">What is NOI and DSCR in multifamily investing?</span>
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-item__a"><p>NOI (Net Operating Income) is the total rental income minus operating expenses (excluding mortgage payments). DSCR (Debt Service Coverage Ratio) measures whether the property generates enough income to cover its debt payments — calculated as NOI divided by total debt service. Lenders typically require a DSCR of 1.1x or higher. These are the two most important metrics in multifamily financing.</p></div>
+        <div class="faq-item__a" data-i18n-html="faq-a4"><p>NOI (Net Operating Income) is the total rental income minus operating expenses (excluding mortgage payments). DSCR (Debt Service Coverage Ratio) measures whether the property generates enough income to cover its debt payments — calculated as NOI divided by total debt service. Lenders typically require a DSCR of 1.1x or higher. These are the two most important metrics in multifamily financing.</p></div>
       </div>
       <div class="faq-item reveal reveal-d4">
         <button type="button" class="faq-item__q" aria-expanded="false">
-          What is a proforma and why is it important for multifamily investment?
+          <span data-i18n="faq-q5">What is a proforma and why is it important for multifamily investment?</span>
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-item__a"><p>A proforma is a financial projection document that outlines a property's expected income, expenses, NOI, DSCR, and return on investment. It is essential for both securing lender approval and evaluating whether a deal meets your investment criteria. A well-built proforma includes current and projected rents, vacancy rates, operating expenses, and financing terms.</p></div>
+        <div class="faq-item__a" data-i18n-html="faq-a5"><p>A proforma is a financial projection document that outlines a property's expected income, expenses, NOI, DSCR, and return on investment. It is essential for both securing lender approval and evaluating whether a deal meets your investment criteria. A well-built proforma includes current and projected rents, vacancy rates, operating expenses, and financing terms.</p></div>
       </div>
       <div class="faq-item reveal reveal-d5">
         <button type="button" class="faq-item__q" aria-expanded="false">
-          How long does the multifamily mortgage process take?
+          <span data-i18n="faq-q6">How long does the multifamily mortgage process take?</span>
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-item__a"><p>The typical multifamily mortgage process takes 4 to 8 weeks from initial proforma creation to closing. This includes proforma and strategy creation, building the financing file, submitting to lenders, follow-up and approval, reviewing terms, and coordinating closing with notary and all parties involved.</p></div>
+        <div class="faq-item__a" data-i18n-html="faq-a6"><p>The typical multifamily mortgage process takes 4 to 8 weeks from initial proforma creation to closing. This includes proforma and strategy creation, building the financing file, submitting to lenders, follow-up and approval, reviewing terms, and coordinating closing with notary and all parties involved.</p></div>
       </div>
     </div>
   </div>
@@ -1545,32 +1545,32 @@
 <section class="section" id="blog">
   <div class="container">
     <div class="section__header reveal">
-      <h2 class="section__title">Resources & Insights</h2>
-      <p class="section__subtitle">Educational content to help you make smarter multifamily investment decisions.</p>
+      <h2 class="section__title" data-i18n="blog-title">Resources & Insights</h2>
+      <p class="section__subtitle" data-i18n="blog-sub">Educational content to help you make smarter multifamily investment decisions.</p>
     </div>
     <div class="blog-grid">
       <article class="blog-card reveal" data-blog="cmhc-guide">
         <div class="blog-card__body">
-          <span class="blog-card__badge">CMHC Guide</span>
-          <h3 class="blog-card__title">CMHC Multifamily Financing: The Complete Guide for Quebec Investors</h3>
-          <p class="blog-card__excerpt">Everything you need to know about CMHC-insured financing for 5+ unit properties — eligibility, down payments, amortization, and how to maximize leverage.</p>
-          <span class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="blog-card__badge" data-i18n="blog1-badge">CMHC Guide</span>
+          <h3 class="blog-card__title" data-i18n="blog1-title">CMHC Multifamily Financing: The Complete Guide for Quebec Investors</h3>
+          <p class="blog-card__excerpt" data-i18n="blog1-excerpt">Everything you need to know about CMHC-insured financing for 5+ unit properties — eligibility, down payments, amortization, and how to maximize leverage.</p>
+          <span class="blog-card__link"><span data-i18n="blog-read-more">Read More →</span> <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </article>
       <article class="blog-card reveal reveal-d1" data-blog="proforma">
         <div class="blog-card__body">
-          <span class="blog-card__badge">Deal Analysis</span>
-          <h3 class="blog-card__title">How to Build a Proforma for Your First Multifamily Property</h3>
-          <p class="blog-card__excerpt">Step-by-step breakdown of how to create a proforma that lenders respect — including NOI calculation, DSCR targets, and expense assumptions.</p>
-          <span class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="blog-card__badge" data-i18n="blog2-badge">Deal Analysis</span>
+          <h3 class="blog-card__title" data-i18n="blog2-title">How to Build a Proforma for Your First Multifamily Property</h3>
+          <p class="blog-card__excerpt" data-i18n="blog2-excerpt">Step-by-step breakdown of how to create a proforma that lenders respect — including NOI calculation, DSCR targets, and expense assumptions.</p>
+          <span class="blog-card__link"><span data-i18n="blog-read-more">Read More →</span> <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </article>
       <article class="blog-card reveal reveal-d2" data-blog="5-percent-down">
         <div class="blog-card__body">
-          <span class="blog-card__badge">Strategy</span>
-          <h3 class="blog-card__title">5% Down on a 5-Plex: How CMHC Makes It Possible</h3>
-          <p class="blog-card__excerpt">How strategic use of CMHC insurance lets investors acquire multifamily properties with minimal capital — and why this changes the math on portfolio scaling.</p>
-          <span class="blog-card__link">Read More <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="blog-card__badge" data-i18n="blog3-badge">Strategy</span>
+          <h3 class="blog-card__title" data-i18n="blog3-title">5% Down on a 5-Plex: How CMHC Makes It Possible</h3>
+          <p class="blog-card__excerpt" data-i18n="blog3-excerpt">How strategic use of CMHC insurance lets investors acquire multifamily properties with minimal capital — and why this changes the math on portfolio scaling.</p>
+          <span class="blog-card__link"><span data-i18n="blog-read-more">Read More →</span> <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
       </article>
     </div>
@@ -1583,13 +1583,13 @@
     <div class="reveal">
       <div class="contact__label">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        Book a Call
+        <span data-i18n="contact-label">Book a Call</span>
       </div>
-      <h2 class="contact__heading">Let's Talk<br><span>Multifamily</span></h2>
-      <p class="contact__text">Ready to discuss your next deal? Book a strategy call to learn how CMHC advantages and specialized lending can improve your returns.</p>
+      <h2 class="contact__heading" data-i18n-html="contact-heading">Let's Talk<br><span>Multifamily</span></h2>
+      <p class="contact__text" data-i18n="contact-text">Ready to discuss your next deal? Book a strategy call to learn how CMHC advantages and specialized lending can improve your returns.</p>
       <a href="#" class="contact__book-btn" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        Schedule Your 30-Min Call
+        <span data-i18n="contact-btn">Schedule Your 30-Min Call</span>
         <svg class="contact__book-arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -1603,38 +1603,38 @@
   <div class="footer__inner">
     <div>
       <div class="footer__brand-name">Hong Yue</div>
-      <p class="footer__brand-text">Your trusted partner in securing competitive financing for multifamily real estate investments.</p>
+      <p class="footer__brand-text" data-i18n="footer-brand-text">Your trusted partner in securing competitive financing for multifamily real estate investments.</p>
     </div>
     <div>
-      <div class="footer__col-title">Quick Links</div>
-      <a href="#expertise" class="footer__link">Expertise</a>
-      <a href="#process" class="footer__link">Process</a>
-      <a href="#results" class="footer__link">Results</a>
-      <a href="#about" class="footer__link">About</a>
+      <div class="footer__col-title" data-i18n="footer-quick-links">Quick Links</div>
+      <a href="#expertise" class="footer__link" data-i18n="nav-expertise">Expertise</a>
+      <a href="#process" class="footer__link" data-i18n="nav-process">Process</a>
+      <a href="#results" class="footer__link" data-i18n="nav-results">Results</a>
+      <a href="#about" class="footer__link" data-i18n="nav-about">About</a>
       <a href="#faq" class="footer__link">FAQ</a>
       <a href="#blog" class="footer__link">Resources</a>
       <a href="#story" class="footer__link">Personal Story</a>
     </div>
     <div>
-      <div class="footer__col-title">Contact Information</div>
+      <div class="footer__col-title" data-i18n="footer-contact-info">Contact Information</div>
       <a href="mailto:multifamilymortgage@outlook.com" class="footer__link">multifamilymortgage@outlook.com</a>
       <a href="tel:4389908124" class="footer__link">438-990-8124</a>
     </div>
     <div>
-      <div class="footer__col-title">Office Hours</div>
-      <span class="footer__link" style="cursor:default;">Mon - Fri: 9:00 AM - 6:00 PM EST</span>
+      <div class="footer__col-title" data-i18n="footer-office-hours">Office Hours</div>
+      <span class="footer__link" style="cursor:default;" data-i18n="footer-hours-text">Mon - Fri: 9:00 AM - 6:00 PM EST</span>
       <div style="margin-top:1rem;">
-        <div class="footer__col-title">Language</div>
-        <span class="footer__link" style="border:1px solid rgba(255,255,255,0.15); display:inline-block; padding:0.4rem 1rem; border-radius:6px; cursor:pointer;">Passer au Fran&ccedil;ais</span>
+        <div class="footer__col-title" data-i18n="footer-lang-title">Language</div>
+        <button type="button" id="footerLangToggle" class="footer__link" style="border:1px solid rgba(255,255,255,0.15); display:inline-block; padding:0.4rem 1rem; border-radius:6px; cursor:pointer; background:none; font-family:inherit; font-size:inherit; color:inherit;">Passer au Français</button>
       </div>
     </div>
   </div>
   <div class="footer__bottom">
-    <div class="footer__copy">&copy; 2026 Hong Yue. All rights reserved.</div>
+    <div class="footer__copy">&copy; 2026 Hong Yue. <span data-i18n="footer-rights">All rights reserved.</span></div>
     <div class="footer__legal">
-      <a href="#">Brokerage Disclaimer</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+      <a href="#" data-i18n="footer-disclaimer">Brokerage Disclaimer</a>
+      <a href="#" data-i18n="footer-privacy">Privacy Policy</a>
+      <a href="#" data-i18n="footer-terms">Terms of Service</a>
     </div>
   </div>
 </footer>
@@ -1644,14 +1644,14 @@
   <div class="blog-modal">
     <div class="blog-modal__header">
       <div>
-        <span class="blog-modal__badge">CMHC Guide</span>
-        <h2 class="blog-modal__title">CMHC Multifamily Financing: The Complete Guide for Quebec Investors</h2>
+        <span class="blog-modal__badge" data-i18n="blog1-badge">CMHC Guide</span>
+        <h2 class="blog-modal__title" data-i18n="blog1-title">CMHC Multifamily Financing: The Complete Guide for Quebec Investors</h2>
       </div>
       <button type="button" class="blog-modal__close" aria-label="Close">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <div class="blog-modal__body">
+    <div class="blog-modal__body" data-i18n-html="modal1-body">
       <h2>What Is CMHC Multifamily Insurance?</h2>
       <p>Canada Mortgage and Housing Corporation (CMHC) offers mortgage loan insurance for rental properties with <strong>5 or more units</strong>. This insurance protects lenders against borrower default, which allows them to offer significantly better terms than conventional financing.</p>
       <p>For Quebec investors, CMHC-insured financing is one of the most powerful tools available. It reduces your required down payment, extends your amortization period, and typically offers lower interest rates than conventional mortgages.</p>
@@ -1709,14 +1709,14 @@
   <div class="blog-modal">
     <div class="blog-modal__header">
       <div>
-        <span class="blog-modal__badge">Deal Analysis</span>
-        <h2 class="blog-modal__title">How to Build a Proforma for Your First Multifamily Property</h2>
+        <span class="blog-modal__badge" data-i18n="blog2-badge">Deal Analysis</span>
+        <h2 class="blog-modal__title" data-i18n="blog2-title">How to Build a Proforma for Your First Multifamily Property</h2>
       </div>
       <button type="button" class="blog-modal__close" aria-label="Close">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <div class="blog-modal__body">
+    <div class="blog-modal__body" data-i18n-html="modal2-body">
       <h2>What Is a Proforma and Why Does It Matter?</h2>
       <p>A proforma is a financial projection that estimates a property's income, expenses, and cash flow. It is the single most important document in your financing application. Lenders use it to determine whether your property can service the debt, and they will scrutinize every line.</p>
       <p>A well-built proforma does not just help you get approved — it helps you make better investment decisions. If the numbers do not work on paper, they will not work in reality.</p>
@@ -1783,14 +1783,14 @@
   <div class="blog-modal">
     <div class="blog-modal__header">
       <div>
-        <span class="blog-modal__badge">Strategy</span>
-        <h2 class="blog-modal__title">5% Down on a 5-Plex: How CMHC Makes It Possible</h2>
+        <span class="blog-modal__badge" data-i18n="blog3-badge">Strategy</span>
+        <h2 class="blog-modal__title" data-i18n="blog3-title">5% Down on a 5-Plex: How CMHC Makes It Possible</h2>
       </div>
       <button type="button" class="blog-modal__close" aria-label="Close">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <div class="blog-modal__body">
+    <div class="blog-modal__body" data-i18n-html="modal3-body">
       <h2>The Conventional Problem</h2>
       <p>If you want to buy a multifamily property with conventional financing, most lenders require a <strong>20% to 25% down payment</strong>. On a $1,000,000 five-plex, that means you need $200,000 to $250,000 in cash just for the down payment — before closing costs, inspections, and reserves.</p>
       <p>For most investors, especially those building their first portfolio, that kind of capital requirement is a barrier. It slows down acquisition timelines and limits how many properties you can purchase.</p>
@@ -1924,6 +1924,724 @@
         window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
       }
     });
+  });
+
+  // ===== LANGUAGE TOGGLE =====
+  let currentLang = 'en';
+
+  const i18nData = {
+    en: {
+      // NAV
+      'nav-sub': 'Multifamily Mortgage Broker',
+      'nav-expertise': 'Expertise',
+      'nav-process': 'Process',
+      'nav-results': 'Results',
+      'nav-about': 'About',
+      'nav-contact': 'Contact',
+      'nav-cta': 'Book a Call',
+      // HERO
+      'hero-badge': 'Multifamily Financing Specialist',
+      'hero-title': 'Scale Your Real Estate Empire',
+      'hero-desc': 'Expert multifamily mortgage broker helping investors unlock better financing, lower downpayments, and higher ROI with Canada Mortgage and Housing Corporation (CMHC) advantages.',
+      'hero-cta': 'Book Your Strategy Call →',
+      'hero-stat-years': 'Years Expertise',
+      'hero-stat-doors': 'Doors Owned',
+      'hero-stat-volume': 'Annual Volume',
+      // DIFFERENTIATORS
+      'diff-title': 'What Makes Me Different',
+      'diff-sub': 'Not just another mortgage broker. A specialized partner in your multifamily investment journey.',
+      'diff-card1-title': '100% Multifamily Specialized',
+      'diff-card1-text': 'Exclusive focus on multifamily financing. No distractions, just deep expertise in what matters for your portfolio growth.',
+      'diff-card2-title': 'Up-to-Date Lending Policies',
+      'diff-card2-text': 'Direct relationships with lenders means real-time knowledge of policy changes and opportunities before they hit the market.',
+      'diff-card3-title': 'In-House Underwriter',
+      'diff-card3-text': 'Pre-qualify your deals with confidence. Our in-house underwriting catches issues early and positions you for success.',
+      'diff-card4-title': 'Efficient & Honest',
+      'diff-card4-text': 'No games, no surprises. Fast turnarounds, transparent communication, and solutions for complex financing scenarios.',
+      // AUDIENCE
+      'audience-title': 'Who I Work With',
+      'audience-sub': 'From first-time multifamily investors to seasoned portfolio builders.',
+      'audience-item1-title': 'Multifamily Investors',
+      'audience-item1-text': 'Portfolio owners and investors scaling their multifamily holdings with strategic financing.',
+      'audience-item2-title': 'First-Time Investors',
+      'audience-item2-text': 'New investors entering multifamily with proper education and financing strategy from day one.',
+      'challenges-title': 'Common Challenges I Solve',
+      'challenge1-title': 'Large Downpayment Requirements',
+      'challenge1-text': 'Reduce upfront capital needs with CMHC financing strategies and optimized deal structuring.',
+      'challenge2-title': 'Salary Limitations',
+      'challenge2-text': "Your financing amount won't be capped by your salary.",
+      'challenge3-title': 'Lack of Investment Knowledge',
+      'challenge3-text': 'Full education on deal analysis, proformas, NOI, and DSCR so you understand every aspect of your investment.',
+      // SERVICES
+      'services-title': 'Your Complete Multifamily Financing Partner',
+      'services-sub': 'Beyond just finding you a mortgage. I optimize your entire financing strategy for maximum returns.',
+      'svc1-title': 'CMHC Financing Expertise',
+      'svc1-text': 'Navigate government-backed financing with lower downpayments and competitive rates for qualified properties.',
+      'svc2-title': 'Multifamily Lender Network',
+      'svc2-text': 'Exclusive access to specialized lenders who understand multifamily investments and offer better terms.',
+      'svc3-title': 'Build NOI, DSCR & Projections',
+      'svc3-text': 'Professional financial modeling to maximize your deal appeal and secure optimal financing terms.',
+      'svc4-title': 'Create & Explain Proforma',
+      'svc4-text': 'Detailed proforma creation with clear explanations so you fully understand your investment numbers.',
+      'svc5-title': 'Optimize Financing Strategy',
+      'svc5-text': 'Strategic planning to structure deals for maximum leverage, cash flow, and long-term portfolio growth.',
+      'svc6-title': 'Deal Analysis Education',
+      'svc6-text': 'Hands-on teaching so you become a more sophisticated investor with every transaction.',
+      // PROCESS
+      'process-title': 'The Client Process',
+      'process-sub': 'A proven 7-step system that takes you from property analysis to keys in hand.',
+      'step1-title': 'Proforma Creation',
+      'step1-text': 'Build detailed financial projections including NOI, DSCR, and cash flow analysis for your property.',
+      'step2-title': 'Strategy Explanation',
+      'step2-text': 'Walk through financing options, CMHC advantages, and optimal structuring for your specific deal.',
+      'step3-title': 'Build Financing File',
+      'step3-text': 'Compile comprehensive documentation package with in-house underwriting to ensure approval readiness.',
+      'step4-title': 'Submit to Lenders',
+      'step4-text': 'Present your deal to our network of multifamily-specialized lenders and CMHC when applicable.',
+      'step5-title': 'Follow-Up & Approval',
+      'step5-text': 'Manage lender communication, answer questions, and navigate the approval process to closing.',
+      'step6-title': 'Review Terms',
+      'step6-text': 'Detailed review of engagement letter, rate, terms, and conditions to ensure you understand everything.',
+      'step7-title': 'Coordinate Closing',
+      'step7-text': 'Work with notary and all parties to ensure smooth, on-time closing with all documents in order.',
+      // CTA BAND
+      'cta-band-title': 'Ready to Improve Your Deal Terms?',
+      'cta-band-text': 'See how strategic financing can transform your multifamily investment returns.',
+      'cta-band-btn': 'Schedule Your Consultation',
+      // RESULTS
+      'results-title': 'Client Results',
+      'results-sub': 'Numbers that speak for themselves.',
+      'result1-label': 'Lower Interest Rates',
+      'result1-desc': 'Access to specialized lenders and CMHC programs means better rates than conventional financing.',
+      'result2-label': 'Reduced Downpayment',
+      'result2-desc': 'CMHC financing can reduce downpayment requirements significantly for qualified properties.',
+      'result3-label': 'Approval Rate',
+      'result3-desc': 'In-house underwriting and expert file preparation means fewer surprises and faster closings.',
+      'result4-label': 'Educated Investors',
+      'result4-desc': 'Leave every conversation understanding your numbers, strategy, and why each decision was made.',
+      // TRANSACTIONS
+      'tx-title': 'Recent Transactions',
+      'tx-sub': 'Real deals, real results. I help investors secure high-leverage financing with optimal terms.',
+      'tx-purchase-price': 'Purchase Price',
+      'tx-down-payment': 'Down Payment',
+      'tx-interest-rate': 'Interest Rate',
+      'tx-amortization': 'Amortization',
+      'tx-date-jun': 'Funded June 2025',
+      'tx-date-jul': 'Funded July 2025',
+      'tx-date-feb': 'Funded February 2025',
+      'tx-date-apr': 'Funded April 2025',
+      'tx-type-refinance': 'Residential Refinance',
+      'tx-type-construction': 'New Construction',
+      'tx-type-acquisition': 'Strategic Acquisition',
+      'tx-type-portfolio': 'Portfolio Growth',
+      'tx-type-cmhc': 'High Leverage CMHC',
+      'tx-fixed-term': '5-Year Fixed Term Secured',
+      'tx-opt-leverage': 'Optimized Leverage',
+      'tx-note': '* All deals represent actual client successes. Detailed proformas available upon request.',
+      'tx-cta': 'Analyze Your Deal',
+      // STORY
+      'story-title': 'How I Became a Mortgage Broker',
+      'story-p1': "I never planned to become a mortgage broker. Like many of you, I started as a multifamily investor looking to build wealth through real estate. During my own investment journey, I experienced firsthand the frustration of working with brokers who didn't understand multifamily properties.",
+      'story-p2': "They couldn't explain the numbers, didn't know about CMHC advantages, and treated every deal like a residential mortgage. I became a broker by accident while trying to solve my own financing challenges.",
+      'story-p3': 'What started as learning how to properly analyze and finance my own deals turned into a passion for helping other investors avoid the mistakes I made and access the opportunities I discovered.',
+      'story-p4': "Today, I focus exclusively on multifamily financing because I know the questions you have, the challenges you face, and the strategies that actually work. I'm not just your broker. I'm an investor who happens to have the license and lender relationships to help you succeed.",
+      'ms1-title': 'Started as Investor',
+      'ms1-text': 'Learned through real experience, not just theory',
+      'ms2-title': 'Became Specialized',
+      'ms2-text': '100% focus on what actually matters',
+      'ms3-title': 'Now Helping Others',
+      'ms3-text': 'Sharing knowledge and connections gained',
+      // ABOUT
+      'about-title': 'About Me',
+      'about-p1': 'With over 7 years of specialized experience in multifamily investing and financing, I have helped investors close $80M+ in annual volume. My unique background as both investor and broker means I understand your goals, challenges, and the questions you\'re afraid to ask.',
+      'about-p2': 'I educate while I finance, ensuring every client becomes a more sophisticated investor. My approach combines technical expertise in CMHC financing and deal analysis with a genuine commitment to transparent, honest communication. No surprises, no games, just results.',
+      'about-values-title': 'Core Values',
+      'val-authentic': 'Authentic',
+      'val-honest': 'Honest',
+      'val-responsible': 'Responsible',
+      'val-efficient': 'Efficient',
+      'val-fast': 'Fast',
+      'val-integrous': 'Integrous',
+      'about-stat-years': 'Years',
+      'about-stat-doors': 'Doors Owned',
+      'about-stat-volume': 'Annual Volume',
+      // FAQ
+      'faq-title': 'Frequently Asked Questions',
+      'faq-sub': 'Common questions about multifamily financing and the CMHC process.',
+      'faq-q1': 'What is CMHC multifamily financing and how does it help investors?',
+      'faq-a1': '<p>CMHC (Canada Mortgage and Housing Corporation) multifamily financing provides mortgage insurance for properties with 5 or more units. This allows investors to secure financing with as low as 5% down payment, access lower interest rates (up to 1.5% lower than conventional), and benefit from amortization periods of up to 50 years — significantly reducing monthly payments and improving cash flow.</p>',
+      'faq-q2': 'What is the minimum down payment for a multifamily property in Canada?',
+      'faq-a2': '<p>With CMHC-insured financing, the minimum down payment for a multifamily property (5+ units) can be as low as 5% of the purchase price. This is significantly lower than the 20-35% typically required for conventional commercial mortgages, allowing investors to preserve capital and scale their portfolio faster.</p>',
+      'faq-q3': 'Do I need a high salary to qualify for multifamily financing?',
+      'faq-a3': "<p>No. Unlike residential mortgages, multifamily commercial financing is primarily based on the property's income (NOI — Net Operating Income) and its Debt Service Coverage Ratio (DSCR), not your personal salary. This means the property's ability to generate rental income is the key qualification factor, allowing investors with modest salaries to finance multi-million dollar properties.</p>",
+      'faq-q4': 'What is NOI and DSCR in multifamily investing?',
+      'faq-a4': '<p>NOI (Net Operating Income) is the total rental income minus operating expenses (excluding mortgage payments). DSCR (Debt Service Coverage Ratio) measures whether the property generates enough income to cover its debt payments — calculated as NOI divided by total debt service. Lenders typically require a DSCR of 1.1x or higher. These are the two most important metrics in multifamily financing.</p>',
+      'faq-q5': 'What is a proforma and why is it important for multifamily investment?',
+      'faq-a5': "<p>A proforma is a financial projection document that outlines a property's expected income, expenses, NOI, DSCR, and return on investment. It is essential for both securing lender approval and evaluating whether a deal meets your investment criteria. A well-built proforma includes current and projected rents, vacancy rates, operating expenses, and financing terms.</p>",
+      'faq-q6': 'How long does the multifamily mortgage process take?',
+      'faq-a6': '<p>The typical multifamily mortgage process takes 4 to 8 weeks from initial proforma creation to closing. This includes proforma and strategy creation, building the financing file, submitting to lenders, follow-up and approval, reviewing terms, and coordinating closing with notary and all parties involved.</p>',
+      // BLOG CARDS
+      'blog-title': 'Resources & Insights',
+      'blog-sub': 'Educational content to help you make smarter multifamily investment decisions.',
+      'blog1-badge': 'CMHC Guide',
+      'blog1-title': 'CMHC Multifamily Financing: The Complete Guide for Quebec Investors',
+      'blog1-excerpt': 'Everything you need to know about CMHC-insured financing for 5+ unit properties — eligibility, down payments, amortization, and how to maximize leverage.',
+      'blog2-badge': 'Deal Analysis',
+      'blog2-title': 'How to Build a Proforma for Your First Multifamily Property',
+      'blog2-excerpt': 'Step-by-step breakdown of how to create a proforma that lenders respect — including NOI calculation, DSCR targets, and expense assumptions.',
+      'blog3-badge': 'Strategy',
+      'blog3-title': '5% Down on a 5-Plex: How CMHC Makes It Possible',
+      'blog3-excerpt': 'How strategic use of CMHC insurance lets investors acquire multifamily properties with minimal capital — and why this changes the math on portfolio scaling.',
+      'blog-read-more': 'Read More →',
+      // CONTACT
+      'contact-label': 'Book a Call',
+      'contact-heading': "Let's Talk<br><span>Multifamily</span>",
+      'contact-text': 'Ready to discuss your next deal? Book a strategy call to learn how CMHC advantages and specialized lending can improve your returns.',
+      'contact-btn': 'Schedule Your 30-Min Call',
+      // FOOTER
+      'footer-brand-text': 'Your trusted partner in securing competitive financing for multifamily real estate investments.',
+      'footer-quick-links': 'Quick Links',
+      'footer-contact-info': 'Contact Information',
+      'footer-office-hours': 'Office Hours',
+      'footer-hours-text': 'Mon - Fri: 9:00 AM - 6:00 PM EST',
+      'footer-lang-title': 'Language',
+      'footer-lang-btn': 'Passer au Français',
+      'footer-rights': 'All rights reserved.',
+      'footer-disclaimer': 'Brokerage Disclaimer',
+      'footer-privacy': 'Privacy Policy',
+      'footer-terms': 'Terms of Service',
+      // BLOG MODAL 1
+      'modal1-body': `<h2>What Is CMHC Multifamily Insurance?</h2>
+      <p>Canada Mortgage and Housing Corporation (CMHC) offers mortgage loan insurance for rental properties with <strong>5 or more units</strong>. This insurance protects lenders against borrower default, which allows them to offer significantly better terms than conventional financing.</p>
+      <p>For Quebec investors, CMHC-insured financing is one of the most powerful tools available. It reduces your required down payment, extends your amortization period, and typically offers lower interest rates than conventional mortgages.</p>
+      <h2>Eligibility Requirements</h2>
+      <p>To qualify for CMHC multifamily insurance, your property must meet several criteria:</p>
+      <ul>
+        <li><strong>Minimum 5 residential rental units</strong> — this is the threshold that separates multifamily from residential</li>
+        <li><strong>Property must be in Canada</strong> and meet CMHC's physical condition standards</li>
+        <li><strong>Minimum Debt Service Coverage Ratio (DSCR) of 1.1x</strong> — meaning the property's net operating income must cover at least 110% of the mortgage payments</li>
+        <li><strong>Environmental assessment</strong> may be required depending on the property</li>
+        <li><strong>Property appraisal</strong> from a CMHC-approved appraiser</li>
+      </ul>
+      <p>In Quebec specifically, properties must comply with the Régie du logement regulations, and rental income projections must reflect Quebec market rents.</p>
+      <h2>Down Payment: As Low as 5%</h2>
+      <p>This is the headline benefit. With CMHC insurance, you can acquire a multifamily property with <strong>as little as 5% down</strong>. Compare that to conventional financing, which typically requires 20-25% down for the same property.</p>
+      <p>On a $1,000,000 six-plex, that is the difference between putting down $50,000 and $200,000. That freed-up capital can go toward your next acquisition or property improvements.</p>
+      <h2>Amortization: Up to 50 Years</h2>
+      <p>Through the <strong>CMHC MLI Select</strong> program, qualifying properties can access amortization periods of up to 50 years. Standard CMHC-insured multifamily loans typically offer up to 40 years, and MLI Select extends this further for properties that meet specific social, accessibility, or climate compatibility criteria.</p>
+      <p>Longer amortization means lower monthly payments, which improves your cash flow from day one. A 50-year amortization versus a 25-year amortization can reduce your monthly payment by roughly 30%.</p>
+      <div class="blog-modal__callout">
+        <strong>MLI Select Scoring:</strong> Properties earn points for affordability (rents below median market rent), accessibility (barrier-free units), and energy efficiency (GHG reductions). Higher scores unlock longer amortization and lower insurance premiums.
+      </div>
+      <h2>Insurance Premiums</h2>
+      <p>CMHC charges an insurance premium based on the loan-to-value ratio and the amortization period. Premiums typically range from <strong>1.00% to 6.25%</strong> of the loan amount. This premium can be added to the mortgage, so you do not need to pay it upfront out of pocket.</p>
+      <p>While the premium adds to your total cost, the math usually works in your favour: the lower interest rate you receive with CMHC insurance often more than offsets the premium cost over the life of the loan.</p>
+      <h2>Interest Rates</h2>
+      <p>Because CMHC insurance eliminates lender risk, insured multifamily mortgages typically carry interest rates that are <strong>50 to 150 basis points lower</strong> than conventional rates. On a million-dollar mortgage, that can save you $5,000 to $15,000 per year in interest.</p>
+      <h2>Quebec-Specific Considerations</h2>
+      <ul>
+        <li><strong>Régie du logement:</strong> Quebec's rental regulations affect how quickly you can increase rents, which impacts your proforma projections</li>
+        <li><strong>Municipal taxes:</strong> Property transfer taxes (welcome tax) in Quebec are calculated on a progressive scale and can be significant on multifamily transactions</li>
+        <li><strong>Language requirements:</strong> Documentation and tenant communications in Quebec must comply with language laws</li>
+        <li><strong>Energy efficiency:</strong> Quebec's climate programs can complement MLI Select scoring for better terms</li>
+      </ul>
+      <h2>When CMHC Makes Sense</h2>
+      <p>CMHC-insured financing is not always the right choice. It works best when you want to <strong>maximize leverage</strong>, preserve capital for multiple acquisitions, or when the property meets MLI Select criteria for extended amortization. If you are buying a property that needs significant renovation, conventional financing with a value-add strategy may be more appropriate.</p>
+      <p>The best approach is to run the numbers both ways — CMHC-insured versus conventional — and see which path delivers better returns for your specific situation.</p>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Discuss Your CMHC Options
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+      // BLOG MODAL 2
+      'modal2-body': `<h2>What Is a Proforma and Why Does It Matter?</h2>
+      <p>A proforma is a financial projection that estimates a property's income, expenses, and cash flow. It is the single most important document in your financing application. Lenders use it to determine whether your property can service the debt, and they will scrutinize every line.</p>
+      <p>A well-built proforma does not just help you get approved — it helps you make better investment decisions. If the numbers do not work on paper, they will not work in reality.</p>
+      <h2>Step 1: Calculate Gross Potential Revenue</h2>
+      <p>Start with the total rental income the property could generate if every unit were occupied at market rent for the full year.</p>
+      <ul>
+        <li><strong>List each unit</strong> with its current rent and the market rent for comparable units in the area</li>
+        <li><strong>Include other income</strong> such as parking, laundry, storage lockers, or any other revenue the property generates</li>
+        <li>In Quebec, be realistic about rent increases — the Tribunal administratif du logement publishes annual guidelines that limit how much you can raise rents on existing tenants</li>
+      </ul>
+      <h2>Step 2: Apply Vacancy and Bad Debt Allowance</h2>
+      <p>No property stays 100% occupied year-round. Lenders expect you to account for vacancy, typically <strong>3% to 5%</strong> of gross revenue for well-located Quebec multifamily properties. If the property is in a secondary market or has higher turnover, use 5% or more.</p>
+      <p>This gives you your <strong>Effective Gross Income (EGI)</strong> — the revenue you can realistically expect to collect.</p>
+      <h2>Step 3: Itemize Operating Expenses</h2>
+      <p>This is where most first-time investors make mistakes. Lenders will reject a proforma with unrealistic expense assumptions. Key expense categories include:</p>
+      <ul>
+        <li><strong>Municipal and school taxes:</strong> Verify the exact amounts from the municipal tax bill. In Quebec, these are publicly available through the role d'évaluation</li>
+        <li><strong>Insurance:</strong> Get an actual quote for the specific property. Multifamily insurance costs vary significantly based on building age, construction type, and location</li>
+        <li><strong>Heating and utilities:</strong> If the landlord pays heating (common in older Quebec buildings), this is a major expense line. Budget $800–$1,500 per unit annually depending on the building</li>
+        <li><strong>Maintenance and repairs:</strong> Budget 3–5% of gross revenue for ongoing maintenance. Older buildings need more</li>
+        <li><strong>Property management:</strong> Even if you self-manage, lenders typically want to see 3–5% of EGI allocated here. If you hire a manager, the actual cost is usually 4–7%</li>
+        <li><strong>Snow removal and landscaping:</strong> A Quebec-specific line item that is often overlooked. Budget $1,500–$4,000+ depending on property size</li>
+        <li><strong>Common area electricity:</strong> Hallway lighting, exterior lights, laundry room — typically $500–$1,500 per year</li>
+      </ul>
+      <h2>Step 4: Calculate Net Operating Income (NOI)</h2>
+      <p>NOI is the most important number in your proforma:</p>
+      <div class="blog-modal__callout">
+        <strong>NOI = Effective Gross Income – Total Operating Expenses</strong><br><br>
+        This number represents the property's income before debt service. It is what the lender uses to evaluate the deal, and it is the basis for the property's value in the income approach to appraisal.
+      </div>
+      <h2>Step 5: Calculate DSCR</h2>
+      <p>The <strong>Debt Service Coverage Ratio</strong> tells the lender whether the property generates enough income to cover the mortgage payments:</p>
+      <p><strong>DSCR = NOI ÷ Annual Debt Service (mortgage payments)</strong></p>
+      <p>CMHC requires a minimum DSCR of <strong>1.10x</strong>, meaning the property must produce at least 10% more income than the mortgage costs. Most lenders prefer to see 1.15x or higher for conventional deals. The higher your DSCR, the stronger your application.</p>
+      <h2>Step 6: Cap Rate Analysis</h2>
+      <p>The capitalization rate helps you evaluate whether the purchase price is reasonable:</p>
+      <p><strong>Cap Rate = NOI ÷ Purchase Price</strong></p>
+      <p>In Montreal, multifamily cap rates currently range from <strong>4% to 6%</strong> depending on location and building quality. South Shore and Laval properties may offer slightly higher cap rates. A lower cap rate means you are paying more per dollar of income.</p>
+      <h2>What Lenders Look For</h2>
+      <p>Lenders want to see conservative, defensible assumptions. They will compare your projected rents to market data, verify your expense ratios against industry benchmarks, and stress-test your numbers at higher interest rates. The most common reasons proformas get rejected:</p>
+      <ul>
+        <li>Rents above market without justification</li>
+        <li>Missing expense categories</li>
+        <li>Vacancy allowance below 3%</li>
+        <li>No management fee even if self-managing</li>
+      </ul>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Get Help With Your Proforma
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+      // BLOG MODAL 3
+      'modal3-body': `<h2>The Conventional Problem</h2>
+      <p>If you want to buy a multifamily property with conventional financing, most lenders require a <strong>20% to 25% down payment</strong>. On a $1,000,000 five-plex, that means you need $200,000 to $250,000 in cash just for the down payment — before closing costs, inspections, and reserves.</p>
+      <p>For most investors, especially those building their first portfolio, that kind of capital requirement is a barrier. It slows down acquisition timelines and limits how many properties you can purchase.</p>
+      <h2>How CMHC Changes the Math</h2>
+      <p>CMHC mortgage loan insurance allows you to purchase a multifamily property (5+ units) with <strong>as little as 5% down</strong>. On that same $1,000,000 five-plex, your down payment drops to $50,000.</p>
+      <div class="blog-modal__callout">
+        <strong>The Numbers Side by Side:</strong><br><br>
+        <strong>Conventional (20% down):</strong> $200,000 down payment on a $1M property<br>
+        <strong>CMHC-insured (5% down):</strong> $50,000 down payment on the same $1M property<br><br>
+        That is $150,000 in freed-up capital — enough for a down payment on two or three additional properties.
+      </div>
+      <h2>The Insurance Premium Trade-Off</h2>
+      <p>CMHC insurance is not free. You pay a premium based on your loan-to-value ratio. At 95% LTV (5% down), the premium is at the higher end of the scale — typically around <strong>4.00% to 6.25%</strong> of the loan amount depending on the amortization period and MLI Select scoring.</p>
+      <p>On a $950,000 mortgage (95% of $1M), that could mean a premium of $38,000 to $59,000. The good news: this premium gets added to the mortgage, so you do not pay it out of pocket. You pay it down gradually over the life of the loan.</p>
+      <h2>Why the Premium Is Worth It</h2>
+      <p>Three factors usually make the premium worthwhile:</p>
+      <ul>
+        <li><strong>Lower interest rate:</strong> CMHC-insured mortgages typically carry rates 50–150 basis points below conventional. On a $950,000 mortgage, a 1% rate difference saves you roughly $9,500 per year</li>
+        <li><strong>Longer amortization:</strong> Access to 40–50 year amortization (versus 25–30 conventional) lowers your monthly payments significantly, improving cash flow</li>
+        <li><strong>Capital efficiency:</strong> The money you did not spend on a larger down payment can be deployed elsewhere for higher returns</li>
+      </ul>
+      <h2>The Portfolio Scaling Strategy</h2>
+      <p>This is where CMHC financing becomes a portfolio accelerator. Consider two investors, each starting with $200,000 in capital:</p>
+      <p><strong>Investor A (conventional):</strong> Buys one $1M property with 20% down. Entire capital is deployed in a single asset.</p>
+      <p><strong>Investor B (CMHC):</strong> Buys four $1M properties with 5% down ($50,000 each). Capital is spread across four assets generating four streams of rental income.</p>
+      <p>Investor B now controls $4,000,000 in real estate versus $1,000,000. If property values increase by 5%, Investor A gains $50,000 in equity. Investor B gains $200,000. The leverage effect is significant.</p>
+      <h2>The Risks to Understand</h2>
+      <p>Higher leverage is a double-edged sword. Important considerations:</p>
+      <ul>
+        <li><strong>Cash flow sensitivity:</strong> With 95% LTV, your mortgage payments are higher relative to income. Even small increases in vacancy or expenses can pressure your cash flow</li>
+        <li><strong>Interest rate risk:</strong> At renewal, higher rates hit harder on larger mortgages. Stress-test your proforma at rates 2% above current levels</li>
+        <li><strong>Property condition:</strong> CMHC has physical condition standards. Properties needing major repairs may not qualify</li>
+        <li><strong>DSCR requirements:</strong> The property must meet CMHC's minimum 1.1x DSCR, which means not every property qualifies at 5% down</li>
+      </ul>
+      <h2>Who Should Use This Strategy?</h2>
+      <p>The 5% down CMHC strategy works best for investors who:</p>
+      <ul>
+        <li>Want to scale their portfolio faster than conventional financing allows</li>
+        <li>Are targeting properties that already cash flow positively (not value-add plays)</li>
+        <li>Understand the risks of leverage and have reserves for unexpected expenses</li>
+        <li>Are buying in markets with stable rental demand — Montreal, Laval, South Shore, and Quebec City all qualify</li>
+      </ul>
+      <p>It is not the right strategy if you are buying a distressed property that needs heavy renovation, or if the property's current income does not meet DSCR requirements.</p>
+      <h2>Getting Started</h2>
+      <p>The first step is building a proforma to see if your target property qualifies for CMHC insurance. You need to know the NOI, the DSCR at current rates, and whether the property meets CMHC's physical and financial standards. A broker who specializes in multifamily financing can run these numbers with you and identify the best path forward.</p>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Plan Your Acquisition Strategy
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+    },
+    fr: {
+      // NAV
+      'nav-sub': 'Courtier Hypothécaire Multifamilial',
+      'nav-expertise': 'Expertise',
+      'nav-process': 'Processus',
+      'nav-results': 'Résultats',
+      'nav-about': 'À propos',
+      'nav-contact': 'Contact',
+      'nav-cta': 'Réserver un appel',
+      // HERO
+      'hero-badge': 'Spécialiste en financement multifamilial',
+      'hero-title': 'Développez votre empire immobilier',
+      'hero-desc': "Courtier hypothécaire spécialisé en immobilier multifamilial, j'aide les investisseurs à accéder à un meilleur financement, des mises de fonds réduites et un meilleur rendement grâce aux avantages de la Société canadienne d'hypothèques et de logement (SCHL).",
+      'hero-cta': 'Réservez votre appel stratégique →',
+      'hero-stat-years': "Ans d'expérience",
+      'hero-stat-doors': 'Portes détenues',
+      'hero-stat-volume': 'Volume annuel',
+      // DIFFERENTIATORS
+      'diff-title': 'Ce qui me distingue',
+      'diff-sub': 'Pas un courtier ordinaire. Un partenaire spécialisé dans votre parcours d\'investissement multifamilial.',
+      'diff-card1-title': '100 % spécialisé multifamilial',
+      'diff-card1-text': 'Concentration exclusive sur le financement multifamilial. Aucune distraction, seulement une expertise approfondie pour la croissance de votre portefeuille.',
+      'diff-card2-title': 'Politiques de prêt à jour',
+      'diff-card2-text': "Des relations directes avec les prêteurs nous donnent une connaissance en temps réel des changements de politiques et des opportunités avant qu'elles n'atteignent le marché.",
+      'diff-card3-title': 'Souscripteur interne',
+      'diff-card3-text': 'Pré-qualifiez vos transactions en toute confiance. Notre souscription interne détecte les problèmes tôt et vous positionne pour le succès.',
+      'diff-card4-title': 'Efficace et honnête',
+      'diff-card4-text': 'Pas de jeux, pas de surprises. Des délais rapides, une communication transparente et des solutions pour les scénarios de financement complexes.',
+      // AUDIENCE
+      'audience-title': 'Avec qui je travaille',
+      'audience-sub': 'Des investisseurs multifamiliaux débutants aux bâtisseurs de portefeuilles aguerris.',
+      'audience-item1-title': 'Investisseurs multifamiliaux',
+      'audience-item1-text': 'Propriétaires de portefeuilles et investisseurs qui développent leurs avoirs multifamiliaux grâce à un financement stratégique.',
+      'audience-item2-title': 'Investisseurs débutants',
+      'audience-item2-text': 'Nouveaux investisseurs qui entrent dans le multifamilial avec une éducation adéquate et une stratégie de financement dès le premier jour.',
+      'challenges-title': 'Défis courants que je résous',
+      'challenge1-title': 'Exigences élevées de mise de fonds',
+      'challenge1-text': 'Réduisez les besoins en capital initial grâce aux stratégies de financement SCHL et à une structuration optimisée des transactions.',
+      'challenge2-title': 'Limitations de revenu salarial',
+      'challenge2-text': 'Votre montant de financement ne sera pas plafonné par votre salaire.',
+      'challenge3-title': 'Manque de connaissances en investissement',
+      'challenge3-text': "Formation complète sur l'analyse des transactions, les proformas, le RNE et le RADS pour que vous compreniez chaque aspect de votre investissement.",
+      // SERVICES
+      'services-title': 'Votre partenaire complet en financement multifamilial',
+      'services-sub': "Au-delà de simplement vous trouver un prêt hypothécaire. J'optimise l'ensemble de votre stratégie de financement pour maximiser vos rendements.",
+      'svc1-title': 'Expertise en financement SCHL',
+      'svc1-text': 'Naviguez dans le financement gouvernemental avec des mises de fonds réduites et des taux compétitifs pour les propriétés qualifiées.',
+      'svc2-title': 'Réseau de prêteurs multifamiliaux',
+      'svc2-text': 'Accès exclusif à des prêteurs spécialisés qui comprennent les investissements multifamiliaux et offrent de meilleures conditions.',
+      'svc3-title': 'Construire RNE, RADS et projections',
+      'svc3-text': 'Modélisation financière professionnelle pour maximiser l\'attrait de votre transaction et obtenir les meilleures conditions de financement.',
+      'svc4-title': 'Créer et expliquer le proforma',
+      'svc4-text': 'Création détaillée de proforma avec des explications claires pour que vous compreniez pleinement vos chiffres d\'investissement.',
+      'svc5-title': 'Optimiser la stratégie de financement',
+      'svc5-text': "Planification stratégique pour structurer les transactions afin d'obtenir un effet de levier maximal, un flux de trésorerie et une croissance à long terme du portefeuille.",
+      'svc6-title': "Formation en analyse de transactions",
+      'svc6-text': 'Enseignement pratique pour que vous deveniez un investisseur plus sophistiqué à chaque transaction.',
+      // PROCESS
+      'process-title': 'Le processus client',
+      'process-sub': "Un système éprouvé en 7 étapes qui vous emmène de l'analyse de la propriété aux clés en main.",
+      'step1-title': 'Création du proforma',
+      'step1-text': 'Construisez des projections financières détaillées incluant le RNE, le RADS et l\'analyse des flux de trésorerie pour votre propriété.',
+      'step2-title': 'Explication de la stratégie',
+      'step2-text': 'Parcourez les options de financement, les avantages SCHL et la structuration optimale pour votre transaction spécifique.',
+      'step3-title': 'Constitution du dossier de financement',
+      'step3-text': "Compilez un dossier de documentation complet avec souscription interne pour assurer la préparation à l'approbation.",
+      'step4-title': 'Soumission aux prêteurs',
+      'step4-text': 'Présentez votre transaction à notre réseau de prêteurs spécialisés en multifamilial et à la SCHL le cas échéant.',
+      'step5-title': 'Suivi et approbation',
+      'step5-text': "Gérez la communication avec les prêteurs, répondez aux questions et naviguez dans le processus d'approbation jusqu'à la clôture.",
+      'step6-title': 'Révision des conditions',
+      'step6-text': "Révision détaillée de la lettre d'engagement, du taux, des modalités et des conditions pour vous assurer de tout comprendre.",
+      'step7-title': 'Coordination de la clôture',
+      'step7-text': 'Travaillez avec le notaire et toutes les parties pour assurer une clôture fluide et dans les délais avec tous les documents en ordre.',
+      // CTA BAND
+      'cta-band-title': 'Prêt à améliorer les conditions de votre transaction ?',
+      'cta-band-text': 'Découvrez comment un financement stratégique peut transformer vos rendements d\'investissement multifamilial.',
+      'cta-band-btn': 'Planifiez votre consultation',
+      // RESULTS
+      'results-title': 'Résultats clients',
+      'results-sub': 'Des chiffres qui parlent d\'eux-mêmes.',
+      'result1-label': 'Taux d\'intérêt réduits',
+      'result1-desc': "L'accès à des prêteurs spécialisés et aux programmes SCHL signifie de meilleurs taux que le financement conventionnel.",
+      'result2-label': 'Mise de fonds réduite',
+      'result2-desc': 'Le financement SCHL peut réduire considérablement les exigences de mise de fonds pour les propriétés qualifiées.',
+      'result3-label': "Taux d'approbation",
+      'result3-desc': 'La souscription interne et la préparation experte des dossiers signifient moins de surprises et des clôtures plus rapides.',
+      'result4-label': 'Investisseurs formés',
+      'result4-desc': 'Quittez chaque conversation en comprenant vos chiffres, votre stratégie et pourquoi chaque décision a été prise.',
+      // TRANSACTIONS
+      'tx-title': 'Transactions récentes',
+      'tx-sub': "De vraies transactions, de vrais résultats. J'aide les investisseurs à obtenir un financement à fort effet de levier avec des conditions optimales.",
+      'tx-purchase-price': "Prix d'achat",
+      'tx-down-payment': 'Mise de fonds',
+      'tx-interest-rate': "Taux d'intérêt",
+      'tx-amortization': 'Amortissement',
+      'tx-date-jun': 'Financé en juin 2025',
+      'tx-date-jul': 'Financé en juillet 2025',
+      'tx-date-feb': 'Financé en février 2025',
+      'tx-date-apr': 'Financé en avril 2025',
+      'tx-type-refinance': 'Refinancement résidentiel',
+      'tx-type-construction': 'Nouvelle construction',
+      'tx-type-acquisition': 'Acquisition stratégique',
+      'tx-type-portfolio': 'Croissance du portefeuille',
+      'tx-type-cmhc': 'SCHL à fort effet de levier',
+      'tx-fixed-term': 'Terme fixe 5 ans sécurisé',
+      'tx-opt-leverage': 'Levier optimisé',
+      'tx-note': '* Toutes les transactions représentent de véritables succès clients. Proformas détaillés disponibles sur demande.',
+      'tx-cta': 'Analyser votre transaction',
+      // STORY
+      'story-title': 'Comment je suis devenu courtier hypothécaire',
+      'story-p1': "Je n'avais jamais prévu de devenir courtier hypothécaire. Comme beaucoup d'entre vous, j'ai commencé comme investisseur multifamilial cherchant à bâtir ma richesse par l'immobilier. Au cours de mon propre parcours d'investissement, j'ai vécu de première main la frustration de travailler avec des courtiers qui ne comprenaient pas les propriétés multifamiliales.",
+      'story-p2': "Ils ne pouvaient pas expliquer les chiffres, ne connaissaient pas les avantages de la SCHL et traitaient chaque transaction comme un prêt hypothécaire résidentiel. Je suis devenu courtier par accident en essayant de résoudre mes propres défis de financement.",
+      'story-p3': "Ce qui a commencé comme un apprentissage pour analyser et financer correctement mes propres transactions est devenu une passion pour aider d'autres investisseurs à éviter les erreurs que j'ai commises et à accéder aux opportunités que j'ai découvertes.",
+      'story-p4': "Aujourd'hui, je me concentre exclusivement sur le financement multifamilial parce que je connais les questions que vous avez, les défis auxquels vous faites face et les stratégies qui fonctionnent vraiment. Je ne suis pas seulement votre courtier. Je suis un investisseur qui possède la licence et les relations avec les prêteurs pour vous aider à réussir.",
+      'ms1-title': 'Commencé comme investisseur',
+      'ms1-text': "Appris par l'expérience réelle, pas seulement par la théorie",
+      'ms2-title': 'Devenu spécialisé',
+      'ms2-text': '100 % de concentration sur ce qui compte vraiment',
+      'ms3-title': 'Aider les autres maintenant',
+      'ms3-text': 'Partager les connaissances et les connexions acquises',
+      // ABOUT
+      'about-title': 'À propos de moi',
+      'about-p1': "Avec plus de 7 ans d'expérience spécialisée en investissement et financement multifamilial, j'ai aidé des investisseurs à conclure plus de 80 M$ en volume annuel. Mon expérience unique en tant qu'investisseur et courtier signifie que je comprends vos objectifs, vos défis et les questions que vous hésitez à poser.",
+      'about-p2': "J'éduque en même temps que je finance, en veillant à ce que chaque client devienne un investisseur plus sophistiqué. Mon approche combine l'expertise technique en financement SCHL et en analyse de transactions avec un véritable engagement envers une communication transparente et honnête. Pas de surprises, pas de jeux, juste des résultats.",
+      'about-values-title': 'Valeurs fondamentales',
+      'val-authentic': 'Authentique',
+      'val-honest': 'Honnête',
+      'val-responsible': 'Responsable',
+      'val-efficient': 'Efficace',
+      'val-fast': 'Rapide',
+      'val-integrous': 'Intègre',
+      'about-stat-years': 'Ans',
+      'about-stat-doors': 'Portes détenues',
+      'about-stat-volume': 'Volume annuel',
+      // FAQ
+      'faq-title': 'Foire aux questions',
+      'faq-sub': 'Questions courantes sur le financement multifamilial et le processus SCHL.',
+      'faq-q1': 'Qu\'est-ce que le financement multifamilial SCHL et comment aide-t-il les investisseurs ?',
+      'faq-a1': "<p>Le financement multifamilial de la SCHL (Société canadienne d'hypothèques et de logement) fournit une assurance prêt hypothécaire pour les propriétés de 5 logements et plus. Cela permet aux investisseurs d'obtenir un financement avec une mise de fonds aussi basse que 5 %, d'accéder à des taux d'intérêt plus bas (jusqu'à 1,5 % de moins que le financement conventionnel) et de bénéficier de périodes d'amortissement allant jusqu'à 50 ans — réduisant considérablement les paiements mensuels et améliorant les flux de trésorerie.</p>",
+      'faq-q2': 'Quelle est la mise de fonds minimale pour une propriété multifamiliale au Canada ?',
+      'faq-a2': "<p>Avec le financement assuré par la SCHL, la mise de fonds minimale pour une propriété multifamiliale (5 unités et plus) peut être aussi basse que 5 % du prix d'achat. C'est nettement inférieur aux 20 à 35 % généralement requis pour les prêts hypothécaires commerciaux conventionnels, ce qui permet aux investisseurs de préserver leur capital et de développer leur portefeuille plus rapidement.</p>",
+      'faq-q3': 'Ai-je besoin d\'un salaire élevé pour me qualifier pour un financement multifamilial ?',
+      'faq-a3': "<p>Non. Contrairement aux prêts hypothécaires résidentiels, le financement commercial multifamilial est principalement basé sur le revenu de la propriété (RNE — Revenu net d'exploitation) et son Ratio d'amortissement de la dette de service (RADS), et non sur votre salaire personnel. Cela signifie que la capacité de la propriété à générer des revenus locatifs est le facteur de qualification clé, permettant aux investisseurs avec des salaires modestes de financer des propriétés de plusieurs millions de dollars.</p>",
+      'faq-q4': "Qu'est-ce que le RNE et le RADS dans l'investissement multifamilial ?",
+      'faq-a4': "<p>Le RNE (Revenu net d'exploitation) est le revenu locatif total moins les charges d'exploitation (hors paiements hypothécaires). Le RADS (Ratio d'amortissement de la dette de service) mesure si la propriété génère suffisamment de revenus pour couvrir ses paiements de dette — calculé comme le RNE divisé par le service total de la dette. Les prêteurs exigent généralement un RADS de 1,1x ou plus. Ce sont les deux indicateurs les plus importants dans le financement multifamilial.</p>",
+      'faq-q5': "Qu'est-ce qu'un proforma et pourquoi est-il important pour l'investissement multifamilial ?",
+      'faq-a5': "<p>Un proforma est un document de projection financière qui décrit le revenu prévu d'une propriété, les dépenses, le RNE, le RADS et le retour sur investissement. Il est essentiel pour obtenir l'approbation du prêteur et pour évaluer si une transaction répond à vos critères d'investissement. Un proforma bien construit comprend les loyers actuels et projetés, les taux d'inoccupation, les charges d'exploitation et les conditions de financement.</p>",
+      'faq-q6': 'Combien de temps prend le processus hypothécaire multifamilial ?',
+      'faq-a6': "<p>Le processus hypothécaire multifamilial typique prend 4 à 8 semaines de la création initiale du proforma jusqu'à la clôture. Cela comprend la création du proforma et de la stratégie, la constitution du dossier de financement, la soumission aux prêteurs, le suivi et l'approbation, la révision des conditions et la coordination de la clôture avec le notaire et toutes les parties impliquées.</p>",
+      // BLOG CARDS
+      'blog-title': 'Ressources et perspectives',
+      'blog-sub': 'Contenu éducatif pour vous aider à prendre de meilleures décisions d\'investissement multifamilial.',
+      'blog1-badge': 'Guide SCHL',
+      'blog1-title': 'Financement multifamilial SCHL : le guide complet pour les investisseurs québécois',
+      'blog1-excerpt': "Tout ce que vous devez savoir sur le financement assuré par la SCHL pour les propriétés de 5 unités et plus — admissibilité, mises de fonds, amortissement et comment maximiser l'effet de levier.",
+      'blog2-badge': 'Analyse de transaction',
+      'blog2-title': 'Comment construire un proforma pour votre première propriété multifamiliale',
+      'blog2-excerpt': 'Décomposition étape par étape de la création d\'un proforma que les prêteurs respectent — incluant le calcul du RNE, les cibles de RADS et les hypothèses de dépenses.',
+      'blog3-badge': 'Stratégie',
+      'blog3-title': '5 % de mise de fonds sur un 5-plex : comment la SCHL le rend possible',
+      'blog3-excerpt': "Comment l'utilisation stratégique de l'assurance SCHL permet aux investisseurs d'acquérir des propriétés multifamiliales avec un capital minimal — et pourquoi cela change les calculs pour la croissance du portefeuille.",
+      'blog-read-more': 'Lire la suite →',
+      // CONTACT
+      'contact-label': 'Réserver un appel',
+      'contact-heading': "Parlons<br><span>multifamilial</span>",
+      'contact-text': 'Prêt à discuter de votre prochaine transaction ? Réservez un appel stratégique pour découvrir comment les avantages SCHL et les prêts spécialisés peuvent améliorer vos rendements.',
+      'contact-btn': 'Planifiez votre appel de 30 minutes',
+      // FOOTER
+      'footer-brand-text': 'Votre partenaire de confiance pour obtenir un financement compétitif pour vos investissements immobiliers multifamiliaux.',
+      'footer-quick-links': 'Liens rapides',
+      'footer-contact-info': 'Coordonnées',
+      'footer-office-hours': "Heures d'ouverture",
+      'footer-hours-text': 'Lun - Ven : 9 h 00 - 18 h 00 HNE',
+      'footer-lang-title': 'Langue',
+      'footer-lang-btn': 'Switch to English',
+      'footer-rights': 'Tous droits réservés.',
+      'footer-disclaimer': 'Avis de courtage',
+      'footer-privacy': 'Politique de confidentialité',
+      'footer-terms': "Conditions d'utilisation",
+      // BLOG MODAL 1 (FR)
+      'modal1-body': `<h2>Qu'est-ce que l'assurance multifamiliale SCHL ?</h2>
+      <p>La Société canadienne d'hypothèques et de logement (SCHL) offre une assurance prêt hypothécaire pour les propriétés locatives de <strong>5 logements et plus</strong>. Cette assurance protège les prêteurs contre le défaut de paiement des emprunteurs, ce qui leur permet d'offrir des conditions nettement meilleures que le financement conventionnel.</p>
+      <p>Pour les investisseurs québécois, le financement assuré par la SCHL est l'un des outils les plus puissants disponibles. Il réduit votre mise de fonds requise, prolonge votre période d'amortissement et offre généralement des taux d'intérêt inférieurs aux prêts hypothécaires conventionnels.</p>
+      <h2>Critères d'admissibilité</h2>
+      <p>Pour être admissible à l'assurance multifamiliale de la SCHL, votre propriété doit satisfaire plusieurs critères :</p>
+      <ul>
+        <li><strong>Minimum 5 unités résidentielles locatives</strong> — c'est le seuil qui distingue le multifamilial du résidentiel</li>
+        <li><strong>La propriété doit être au Canada</strong> et respecter les normes de condition physique de la SCHL</li>
+        <li><strong>Ratio d'amortissement de la dette de service (RADS) minimal de 1,1x</strong> — ce qui signifie que le revenu net d'exploitation de la propriété doit couvrir au moins 110 % des versements hypothécaires</li>
+        <li><strong>Une évaluation environnementale</strong> peut être requise selon la propriété</li>
+        <li><strong>Une évaluation de la propriété</strong> par un évaluateur agréé par la SCHL</li>
+      </ul>
+      <p>Au Québec en particulier, les propriétés doivent se conformer aux règlements du Tribunal administratif du logement (TAL), et les projections de revenus locatifs doivent refléter les loyers du marché québécois.</p>
+      <h2>Mise de fonds : aussi basse que 5 %</h2>
+      <p>C'est l'avantage phare. Avec l'assurance SCHL, vous pouvez acquérir une propriété multifamiliale avec <strong>seulement 5 % de mise de fonds</strong>. Comparativement au financement conventionnel, qui exige généralement 20 à 25 % pour la même propriété.</p>
+      <p>Sur un immeuble de six logements à 1 000 000 $, c'est la différence entre une mise de fonds de 50 000 $ et 200 000 $. Ce capital libéré peut être consacré à votre prochaine acquisition ou à des améliorations immobilières.</p>
+      <h2>Amortissement : jusqu'à 50 ans</h2>
+      <p>Par le biais du programme <strong>SCHL MLI Select</strong>, les propriétés admissibles peuvent accéder à des périodes d'amortissement allant jusqu'à 50 ans. Les prêts multifamiliaux assurés par la SCHL standard offrent généralement jusqu'à 40 ans, et MLI Select prolonge cela pour les propriétés répondant à des critères sociaux, d'accessibilité ou de compatibilité climatique.</p>
+      <p>Un amortissement plus long signifie des versements mensuels moins élevés, ce qui améliore vos flux de trésorerie dès le premier jour. Un amortissement de 50 ans par rapport à 25 ans peut réduire votre versement mensuel d'environ 30 %.</p>
+      <div class="blog-modal__callout">
+        <strong>Pointage MLI Select :</strong> Les propriétés obtiennent des points pour l'abordabilité (loyers inférieurs au loyer médian du marché), l'accessibilité (unités sans obstacles) et l'efficacité énergétique (réductions de GES). Des pointages plus élevés débloquent un amortissement plus long et des primes d'assurance moins élevées.
+      </div>
+      <h2>Primes d'assurance</h2>
+      <p>La SCHL facture une prime d'assurance basée sur le ratio prêt-valeur et la période d'amortissement. Les primes varient généralement de <strong>1,00 % à 6,25 %</strong> du montant du prêt. Cette prime peut être ajoutée au prêt hypothécaire, vous n'avez donc pas besoin de la payer d'avance.</p>
+      <p>Bien que la prime s'ajoute à votre coût total, le calcul joue généralement en votre faveur : le taux d'intérêt plus bas que vous obtenez avec l'assurance SCHL compense souvent plus que la prime sur la durée du prêt.</p>
+      <h2>Taux d'intérêt</h2>
+      <p>Parce que l'assurance SCHL élimine le risque pour le prêteur, les prêts hypothécaires multifamiliaux assurés portent généralement des taux d'intérêt <strong>50 à 150 points de base inférieurs</strong> aux taux conventionnels. Sur un prêt d'un million de dollars, cela peut vous faire économiser 5 000 $ à 15 000 $ par année en intérêts.</p>
+      <h2>Considérations spécifiques au Québec</h2>
+      <ul>
+        <li><strong>Tribunal administratif du logement (TAL) :</strong> Les règlements locatifs du Québec affectent la rapidité avec laquelle vous pouvez augmenter les loyers, ce qui a un impact sur vos projections de proforma</li>
+        <li><strong>Taxes municipales :</strong> Les droits de mutation immobilière (taxe de bienvenue) au Québec sont calculés sur une échelle progressive et peuvent être importants sur les transactions multifamiliales</li>
+        <li><strong>Exigences linguistiques :</strong> La documentation et les communications avec les locataires au Québec doivent respecter les lois linguistiques</li>
+        <li><strong>Efficacité énergétique :</strong> Les programmes climatiques du Québec peuvent compléter le pointage MLI Select pour de meilleures conditions</li>
+      </ul>
+      <h2>Quand la SCHL est-elle avantageuse ?</h2>
+      <p>Le financement assuré par la SCHL n'est pas toujours le bon choix. Il fonctionne mieux lorsque vous souhaitez <strong>maximiser l'effet de levier</strong>, préserver le capital pour plusieurs acquisitions, ou lorsque la propriété répond aux critères MLI Select pour un amortissement prolongé. Si vous achetez une propriété nécessitant des rénovations importantes, le financement conventionnel avec une stratégie à valeur ajoutée peut être plus approprié.</p>
+      <p>La meilleure approche est de calculer les deux scénarios — assuré par la SCHL versus conventionnel — et de voir quelle voie offre de meilleurs rendements pour votre situation spécifique.</p>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Discutez de vos options SCHL
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+      // BLOG MODAL 2 (FR)
+      'modal2-body': `<h2>Qu'est-ce qu'un proforma et pourquoi est-il important ?</h2>
+      <p>Un proforma est une projection financière qui estime les revenus, les dépenses et les flux de trésorerie d'une propriété. C'est le document le plus important de votre demande de financement. Les prêteurs l'utilisent pour déterminer si votre propriété peut assurer le service de la dette, et ils examineront chaque ligne.</p>
+      <p>Un proforma bien construit ne vous aide pas seulement à obtenir l'approbation — il vous aide à prendre de meilleures décisions d'investissement. Si les chiffres ne fonctionnent pas sur papier, ils ne fonctionneront pas dans la réalité.</p>
+      <h2>Étape 1 : Calculer le revenu brut potentiel</h2>
+      <p>Commencez par le revenu locatif total que la propriété pourrait générer si chaque unité était occupée au loyer du marché pendant toute l'année.</p>
+      <ul>
+        <li><strong>Listez chaque unité</strong> avec son loyer actuel et le loyer du marché pour des unités comparables dans la région</li>
+        <li><strong>Incluez les autres revenus</strong> tels que le stationnement, la buanderie, les casiers de rangement ou tout autre revenu que la propriété génère</li>
+        <li>Au Québec, soyez réaliste quant aux augmentations de loyer — le Tribunal administratif du logement publie des lignes directrices annuelles qui limitent les augmentations pour les locataires existants</li>
+      </ul>
+      <h2>Étape 2 : Appliquer la provision pour inoccupation et mauvaises créances</h2>
+      <p>Aucune propriété ne reste occupée à 100 % toute l'année. Les prêteurs s'attendent à ce que vous teniez compte de l'inoccupation, généralement <strong>3 % à 5 %</strong> du revenu brut pour les propriétés multifamiliales bien situées au Québec. Si la propriété est dans un marché secondaire ou a un roulement plus élevé, utilisez 5 % ou plus.</p>
+      <p>Cela vous donne votre <strong>Revenu brut effectif (RBE)</strong> — le revenu que vous pouvez raisonnablement espérer percevoir.</p>
+      <h2>Étape 3 : Détailler les charges d'exploitation</h2>
+      <p>C'est là que la plupart des investisseurs débutants font des erreurs. Les prêteurs rejetteront un proforma avec des hypothèses de dépenses irréalistes. Les principales catégories de dépenses comprennent :</p>
+      <ul>
+        <li><strong>Taxes municipales et scolaires :</strong> Vérifiez les montants exacts sur le compte de taxes municipal. Au Québec, ceux-ci sont accessibles via le rôle d'évaluation</li>
+        <li><strong>Assurance :</strong> Obtenez une soumission réelle pour la propriété spécifique. Les coûts d'assurance multifamiliale varient considérablement selon l'âge du bâtiment, le type de construction et l'emplacement</li>
+        <li><strong>Chauffage et services publics :</strong> Si le propriétaire paie le chauffage (courant dans les anciens immeubles québécois), c'est une ligne de dépense majeure. Prévoyez 800 $ à 1 500 $ par unité annuellement selon le bâtiment</li>
+        <li><strong>Entretien et réparations :</strong> Prévoyez 3 à 5 % du revenu brut pour l'entretien continu. Les bâtiments plus anciens en ont besoin de plus</li>
+        <li><strong>Gestion immobilière :</strong> Même si vous autogérez, les prêteurs souhaitent généralement voir 3 à 5 % du RBE alloué ici. Si vous embauchez un gestionnaire, le coût réel est généralement de 4 à 7 %</li>
+        <li><strong>Déneigement et aménagement paysager :</strong> Un poste de dépense spécifique au Québec souvent négligé. Prévoyez 1 500 $ à 4 000 $ et plus selon la taille de la propriété</li>
+        <li><strong>Électricité des parties communes :</strong> Éclairage des couloirs, lumières extérieures, salle de lavage — généralement 500 $ à 1 500 $ par an</li>
+      </ul>
+      <h2>Étape 4 : Calculer le Revenu net d'exploitation (RNE)</h2>
+      <p>Le RNE est le chiffre le plus important de votre proforma :</p>
+      <div class="blog-modal__callout">
+        <strong>RNE = Revenu brut effectif – Total des charges d'exploitation</strong><br><br>
+        Ce chiffre représente le revenu de la propriété avant le service de la dette. C'est ce que le prêteur utilise pour évaluer la transaction, et c'est la base de la valeur de la propriété selon l'approche du revenu en évaluation.
+      </div>
+      <h2>Étape 5 : Calculer le RADS</h2>
+      <p>Le <strong>Ratio d'amortissement de la dette de service</strong> indique au prêteur si la propriété génère suffisamment de revenus pour couvrir les versements hypothécaires :</p>
+      <p><strong>RADS = RNE ÷ Service annuel de la dette (versements hypothécaires)</strong></p>
+      <p>La SCHL exige un RADS minimal de <strong>1,10x</strong>, ce qui signifie que la propriété doit produire au moins 10 % de revenus de plus que le coût du prêt hypothécaire. La plupart des prêteurs préfèrent voir 1,15x ou plus pour les transactions conventionnelles. Plus votre RADS est élevé, plus votre demande est solide.</p>
+      <h2>Étape 6 : Analyse du taux de capitalisation</h2>
+      <p>Le taux de capitalisation vous aide à évaluer si le prix d'achat est raisonnable :</p>
+      <p><strong>Taux de capitalisation = RNE ÷ Prix d'achat</strong></p>
+      <p>À Montréal, les taux de capitalisation multifamiliaux varient actuellement de <strong>4 % à 6 %</strong> selon l'emplacement et la qualité du bâtiment. Les propriétés de la Rive-Sud et de Laval peuvent offrir des taux légèrement plus élevés. Un taux de capitalisation plus bas signifie que vous payez plus par dollar de revenu.</p>
+      <h2>Ce que les prêteurs recherchent</h2>
+      <p>Les prêteurs veulent voir des hypothèses conservatrices et défendables. Ils compareront vos loyers projetés aux données du marché, vérifieront vos ratios de dépenses par rapport aux points de référence de l'industrie et testeront vos chiffres à des taux d'intérêt plus élevés. Les raisons les plus courantes pour lesquelles les proformas sont rejetés :</p>
+      <ul>
+        <li>Loyers supérieurs au marché sans justification</li>
+        <li>Catégories de dépenses manquantes</li>
+        <li>Provision pour inoccupation inférieure à 3 %</li>
+        <li>Aucun frais de gestion même en autogestion</li>
+      </ul>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Obtenez de l'aide pour votre proforma
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+      // BLOG MODAL 3 (FR)
+      'modal3-body': `<h2>Le problème du financement conventionnel</h2>
+      <p>Si vous souhaitez acheter une propriété multifamiliale avec un financement conventionnel, la plupart des prêteurs exigent une <strong>mise de fonds de 20 % à 25 %</strong>. Sur un 5-plex à 1 000 000 $, cela signifie que vous avez besoin de 200 000 $ à 250 000 $ en espèces seulement pour la mise de fonds — avant les frais de clôture, les inspections et les réserves.</p>
+      <p>Pour la plupart des investisseurs, surtout ceux qui constituent leur premier portefeuille, ce type d'exigence en capital est un obstacle. Cela ralentit les délais d'acquisition et limite le nombre de propriétés que vous pouvez acheter.</p>
+      <h2>Comment la SCHL change les calculs</h2>
+      <p>L'assurance prêt hypothécaire de la SCHL vous permet d'acheter une propriété multifamiliale (5 unités et plus) avec <strong>seulement 5 % de mise de fonds</strong>. Sur ce même 5-plex à 1 000 000 $, votre mise de fonds tombe à 50 000 $.</p>
+      <div class="blog-modal__callout">
+        <strong>Les chiffres côte à côte :</strong><br><br>
+        <strong>Conventionnel (20 % de mise de fonds) :</strong> 200 000 $ de mise de fonds sur une propriété de 1 M$<br>
+        <strong>Assuré par la SCHL (5 % de mise de fonds) :</strong> 50 000 $ de mise de fonds sur la même propriété de 1 M$<br><br>
+        C'est 150 000 $ de capital libéré — suffisant pour une mise de fonds sur deux ou trois propriétés supplémentaires.
+      </div>
+      <h2>Le compromis de la prime d'assurance</h2>
+      <p>L'assurance SCHL n'est pas gratuite. Vous payez une prime basée sur votre ratio prêt-valeur. À 95 % RPV (5 % de mise de fonds), la prime est à l'extrémité supérieure de l'échelle — généralement environ <strong>4,00 % à 6,25 %</strong> du montant du prêt selon la période d'amortissement et le pointage MLI Select.</p>
+      <p>Sur un prêt de 950 000 $ (95 % de 1 M$), cela pourrait représenter une prime de 38 000 $ à 59 000 $. La bonne nouvelle : cette prime est ajoutée au prêt hypothécaire, vous ne la payez donc pas de votre poche. Vous la remboursez graduellement sur la durée du prêt.</p>
+      <h2>Pourquoi la prime en vaut la peine</h2>
+      <p>Trois facteurs rendent généralement la prime avantageuse :</p>
+      <ul>
+        <li><strong>Taux d'intérêt plus bas :</strong> Les prêts hypothécaires assurés par la SCHL portent généralement des taux 50 à 150 points de base inférieurs au conventionnel. Sur un prêt de 950 000 $, une différence de taux de 1 % vous fait économiser environ 9 500 $ par an</li>
+        <li><strong>Amortissement plus long :</strong> L'accès à un amortissement de 40 à 50 ans (contre 25 à 30 ans en conventionnel) réduit considérablement vos versements mensuels, améliorant les flux de trésorerie</li>
+        <li><strong>Efficacité du capital :</strong> L'argent que vous n'avez pas dépensé en mise de fonds plus importante peut être déployé ailleurs pour de meilleurs rendements</li>
+      </ul>
+      <h2>La stratégie de croissance du portefeuille</h2>
+      <p>C'est là que le financement SCHL devient un accélérateur de portefeuille. Considérez deux investisseurs, chacun commençant avec 200 000 $ en capital :</p>
+      <p><strong>Investisseur A (conventionnel) :</strong> Achète une propriété de 1 M$ avec 20 % de mise de fonds. Tout le capital est déployé dans un seul actif.</p>
+      <p><strong>Investisseur B (SCHL) :</strong> Achète quatre propriétés de 1 M$ avec 5 % de mise de fonds (50 000 $ chacune). Le capital est réparti sur quatre actifs générant quatre flux de revenus locatifs.</p>
+      <p>L'investisseur B contrôle maintenant 4 000 000 $ en immobilier contre 1 000 000 $. Si les valeurs immobilières augmentent de 5 %, l'investisseur A gagne 50 000 $ en équité. L'investisseur B en gagne 200 000 $. L'effet de levier est significatif.</p>
+      <h2>Les risques à comprendre</h2>
+      <p>Un effet de levier plus élevé est à double tranchant. Considérations importantes :</p>
+      <ul>
+        <li><strong>Sensibilité des flux de trésorerie :</strong> Avec 95 % de RPV, vos versements hypothécaires sont plus élevés par rapport au revenu. Même de petites augmentations de l'inoccupation ou des dépenses peuvent exercer une pression sur vos flux de trésorerie</li>
+        <li><strong>Risque de taux d'intérêt :</strong> Au renouvellement, des taux plus élevés ont un impact plus fort sur des prêts hypothécaires plus importants. Testez votre proforma à des taux 2 % supérieurs aux niveaux actuels</li>
+        <li><strong>Condition de la propriété :</strong> La SCHL a des normes de condition physique. Les propriétés nécessitant des réparations majeures peuvent ne pas être admissibles</li>
+        <li><strong>Exigences de RADS :</strong> La propriété doit respecter le RADS minimal de 1,1x de la SCHL, ce qui signifie que toutes les propriétés ne sont pas admissibles à 5 % de mise de fonds</li>
+      </ul>
+      <h2>Qui devrait utiliser cette stratégie ?</h2>
+      <p>La stratégie de 5 % de mise de fonds SCHL fonctionne mieux pour les investisseurs qui :</p>
+      <ul>
+        <li>Veulent développer leur portefeuille plus rapidement que le financement conventionnel le permet</li>
+        <li>Ciblent des propriétés qui génèrent déjà des flux de trésorerie positifs (pas des projets à valeur ajoutée)</li>
+        <li>Comprennent les risques de l'effet de levier et ont des réserves pour les dépenses imprévues</li>
+        <li>Achètent dans des marchés à demande locative stable — Montréal, Laval, la Rive-Sud et Québec sont tous admissibles</li>
+      </ul>
+      <p>Ce n'est pas la bonne stratégie si vous achetez une propriété en détresse nécessitant une rénovation importante, ou si le revenu actuel de la propriété ne respecte pas les exigences de RADS.</p>
+      <h2>Pour commencer</h2>
+      <p>La première étape consiste à construire un proforma pour voir si votre propriété cible est admissible à l'assurance SCHL. Vous devez connaître le RNE, le RADS aux taux actuels et si la propriété répond aux normes physiques et financières de la SCHL. Un courtier spécialisé en financement multifamilial peut calculer ces chiffres avec vous et identifier la meilleure voie à suivre.</p>
+      <a href="#" class="blog-modal__cta" data-cal-link="hongyue/30min" data-cal-config='{"layout":"modal"}'>
+        Planifiez votre stratégie d'acquisition
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>`,
+    }
+  };
+
+  const globeSVG = '<svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10A15 15 0 0112 2z"/></svg>';
+
+  function setLang(lang) {
+    currentLang = lang;
+    const data = i18nData[lang];
+
+    // Update html lang attribute
+    document.documentElement.lang = lang;
+
+    // Update all data-i18n elements (textContent)
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (data[key] !== undefined) {
+        el.textContent = data[key];
+      }
+    });
+
+    // Update all data-i18n-html elements (innerHTML)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (data[key] !== undefined) {
+        el.innerHTML = data[key];
+      }
+    });
+
+    // Update nav lang toggle button
+    const langToggleBtn = document.getElementById('langToggle');
+    if (langToggleBtn) {
+      langToggleBtn.innerHTML = globeSVG + (lang === 'en' ? ' FR' : ' EN');
+    }
+
+    // Update footer lang toggle button
+    const footerLangToggleBtn = document.getElementById('footerLangToggle');
+    if (footerLangToggleBtn) {
+      footerLangToggleBtn.textContent = data['footer-lang-btn'];
+    }
+
+    // Update video source
+    const video = document.querySelector('.hero__vsl video');
+    if (video) {
+      const newSrc = lang === 'en'
+        ? video.getAttribute('data-src-en')
+        : video.getAttribute('data-src-fr');
+      const source = video.querySelector('source');
+      if (source && newSrc) {
+        source.src = newSrc;
+        video.load();
+      }
+    }
+
+    // Re-init Cal.com on dynamically updated links if needed
+    document.querySelectorAll('[data-cal-link]').forEach(el => {
+      // Cal.com picks up data-cal-link automatically; no action needed
+    });
+  }
+
+  // Language toggle event listeners
+  document.getElementById('langToggle').addEventListener('click', () => {
+    setLang(currentLang === 'en' ? 'fr' : 'en');
+  });
+  document.getElementById('footerLangToggle').addEventListener('click', () => {
+    setLang(currentLang === 'en' ? 'fr' : 'en');
   });
 </script>
 
