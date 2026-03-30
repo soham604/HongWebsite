@@ -908,7 +908,7 @@
       display: flex; align-items: center; gap: 0.85rem;
       margin-bottom: 1.25rem; padding: 0.75rem 1rem;
       background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px; transition: all 0.25s ease;
+      border-radius: 12px; transition: all 0.25s ease; min-width: 0; overflow: hidden;
     }
     .contact__item:hover {
       background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12);
@@ -920,8 +920,8 @@
       flex-shrink: 0;
     }
     .contact__item-icon svg { width: 18px; height: 18px; color: var(--green); }
-    .contact__item-text { font-size: 0.95rem; color: #e2e8f0; }
-    .contact__item-text a { color: #e2e8f0; text-decoration: none; transition: color 0.2s; }
+    .contact__item-text { font-size: 0.95rem; color: #e2e8f0; min-width: 0; overflow-wrap: break-word; word-break: break-word; }
+    .contact__item-text a { color: #e2e8f0; text-decoration: none; transition: color 0.2s; overflow-wrap: break-word; word-break: break-word; }
     .contact__item-text a:hover { color: #fff; }
     .contact__item-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; margin-bottom: 0.15rem; }
     .contact__book-btn {
@@ -951,9 +951,9 @@
       background: var(--green); color: #fff; transform: translateY(-3px);
     }
     .contact__info-row {
-      display: flex; gap: 1rem; justify-content: center;
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
     }
-    .contact__info-row .contact__item { flex: 1; max-width: 280px; }
+    .contact__info-row .contact__item { flex: 1; min-width: 0; max-width: 320px; }
     /* ===== FOOTER ===== */
     .footer {
       background: var(--dark); border-top: 1px solid rgba(255,255,255,0.08);
