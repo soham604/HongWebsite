@@ -908,7 +908,7 @@
       display: flex; align-items: center; gap: 0.85rem;
       margin-bottom: 1.25rem; padding: 0.75rem 1rem;
       background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px; transition: all 0.25s ease; min-width: 0; overflow: hidden;
+      border-radius: 12px; transition: all 0.25s ease;
     }
     .contact__item:hover {
       background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12);
@@ -953,9 +953,8 @@
     .contact__info-row {
       display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
     }
-    .contact__info-row .contact__item { flex: 1; min-width: 0; }
-    .contact__info-row .contact__item:last-child { flex: 1.5; }
-    .contact__info-row .contact__item-text a { white-space: nowrap; font-size: 0.85rem; }
+    .contact__info-row .contact__item { flex: 0 1 auto; margin-bottom: 0; }
+    .contact__info-row .contact__item-text a { white-space: nowrap; }
     /* ===== FOOTER ===== */
     .footer {
       background: var(--dark); border-top: 1px solid rgba(255,255,255,0.08);
