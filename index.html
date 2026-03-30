@@ -953,7 +953,9 @@
     .contact__info-row {
       display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
     }
-    .contact__info-row .contact__item { flex: 1; min-width: 0; max-width: 320px; }
+    .contact__info-row .contact__item { flex: 1; min-width: 0; }
+    .contact__info-row .contact__item:last-child { flex: 1.5; }
+    .contact__info-row .contact__item-text a { white-space: nowrap; font-size: 0.85rem; }
     /* ===== FOOTER ===== */
     .footer {
       background: var(--dark); border-top: 1px solid rgba(255,255,255,0.08);
