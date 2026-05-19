@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} — Hong Yue</title>
+  <meta name="description" content="{{excerpt}}">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="canonical" href="https://hongmultifamilymortgage.com{{url}}">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#111827">
+  {{hreflang}}
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hongmultifamilymortgage.com{{url}}">
+  <meta property="og:title" content="{{title}} — Hong Yue">
+  <meta property="og:description" content="{{excerpt}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <meta property="og:site_name" content="Hong Multifamily Mortgage">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{title}} — Hong Yue">
+  <meta name="twitter:description" content="{{excerpt}}">
+  <meta name="twitter:image" content="{{og_image}}">
+  <!-- BlogPosting Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{title}}",
+    "description": "{{excerpt}}",
+    "datePublished": "{{date_iso}}",
+    "author": {
+      "@type": "Person",
+      "name": "Hong Yue",
+      "url": "https://hongmultifamilymortgage.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hong Multifamily Mortgage",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hongmultifamilymortgage.com/assets/favicon.png"
+      }
+    },
+    "inLanguage": "{{lang}}",
+    "mainEntityOfPage": "https://hongmultifamilymortgage.com{{url}}"
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/blog.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav__brand">
+    <div class="nav__brand-name">Hong Yue</div>
+    <div class="nav__brand-sub">{{nav_sub}}</div>
+  </a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="/#expertise">{{nav_expertise}}</a></li>
+    <li><a href="/#process">{{nav_process}}</a></li>
+    <li><a href="/#results">{{nav_results}}</a></li>
+    <li><a href="/blog/{{blog_prefix}}" class="active">{{nav_blog}}</a></li>
+    <li><a href="/#contact">{{nav_contact}}</a></li>
+    <li>{{nav_lang_switch}}</li>
+    <li><a href="https://bookings.cloud.microsoft/bookwithme/user/12559410ed614cd79fbab07ae5b61702%40maoki.ca?anonymous&amp;ismsaljsauthenabled=true" class="nav__cta" target="_blank" rel="noopener">{{nav_cta}}</a></li>
+  </ul>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
+</nav>
+
+<article class="blog-post">
+  <a href="/blog/{{blog_prefix}}" class="blog-post__back">← {{back_to_blog}}</a>
+
+  <span class="blog-post__badge">{{badge}}</span>
+  <h1 class="blog-post__title">{{title}}</h1>
+  <div class="blog-post__meta">{{formatted_date}}</div>
+
+  <div class="blog-post__body">
+    {{content}}
+  </div>
+
+  <a href="https://bookings.cloud.microsoft/bookwithme/user/12559410ed614cd79fbab07ae5b61702%40maoki.ca?anonymous&amp;ismsaljsauthenabled=true" class="blog-post__cta" target="_blank" rel="noopener">
+    {{cta_text}}
+    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand-name">Hong Yue</div>
+    <div class="footer__copy">&copy; 2026 Hong Yue. {{footer_rights}}</div>
+    <div class="footer__links">
+      <a href="/">{{nav_home}}</a>
+      <a href="/blog/{{blog_prefix}}">{{nav_blog}}</a>
+      <a href="/#contact">{{nav_contact}}</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile nav toggle -->
+<script>
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
