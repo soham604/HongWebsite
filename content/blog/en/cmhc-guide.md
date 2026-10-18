@@ -23,7 +23,7 @@ To qualify for CMHC multifamily insurance, your property must meet several crite
 - **Environmental assessment** may be required depending on the property
 - **Property appraisal** from a CMHC-approved appraiser
 
-In Quebec specifically, properties must comply with the Régie du logement regulations, and rental income projections must reflect Quebec market rents.
+In Quebec specifically, properties must comply with the Tribunal administratif du logement (TAL) regulations, and rental income projections must reflect Quebec market rents.
 
 ## Down Payment: As Low as 5%
 
@@ -51,7 +51,7 @@ Because CMHC insurance eliminates lender risk, insured multifamily mortgages typ
 
 ## Quebec-Specific Considerations
 
-- **Régie du logement:** Quebec's rental regulations affect how quickly you can increase rents, which impacts your proforma projections
+- **Tribunal administratif du logement (TAL):** Quebec's rental regulations affect how quickly you can increase rents, which impacts your proforma projections
 - **Municipal taxes:** Property transfer taxes (welcome tax) in Quebec are calculated on a progressive scale and can be significant on multifamily transactions
 - **Language requirements:** Documentation and tenant communications in Quebec must comply with language laws
 - **Energy efficiency:** Quebec's climate programs can complement MLI Select scoring for better terms
